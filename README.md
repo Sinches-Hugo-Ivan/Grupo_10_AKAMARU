@@ -1,6 +1,6 @@
-    [![AKAMARU-PAGINA.png](https://i.postimg.cc/13Q9DVT1/AKAMARU-PAGINA.png)](https://postimg.cc/6yMJXqtM)
-
-
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/84039185/120393567-8432ab80-c308-11eb-8066-53ded19a0915.png">
+</p>
 
 
 # Tienda  de productos  anime  merchandising 
