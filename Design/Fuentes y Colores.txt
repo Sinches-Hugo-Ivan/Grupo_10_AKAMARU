@@ -1,0 +1,2 @@
+La fuente que utilizamos en nuestro proyecto es sourcesanspro  y ninja , los colores usados fueron Rojo brillante
+#f44336 para el imagotipo en especial  y los colores  blancos  #FFFFFF  #FAFAFA  y el color negro #000000
