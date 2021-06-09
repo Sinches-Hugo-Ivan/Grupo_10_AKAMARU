@@ -5,16 +5,16 @@
 
 # Tienda  de productos  anime  merchandising 
 
-Akamaru es una empresa argentina de Merchandising de anime que nació en plena pandemia para llevarle al publico fans de anime como Naruto, Dragon Ball, etc., los mejores productos del mercado con la comodidad de comprar vía web y recibirlos en su domicilio, sin necesidad de salir de su casa.
+Akamaru es una empresa argentina de Merchandising de anime que nació en plena pandemia para llevarle al público fan del anime como Naruto, Dragon Ball, etc., los mejores productos del mercado con la comodidad de comprar vía web y recibirlos en su domicilio, sin necesidad de salir de su casa.
 
 Nuestro sitio web ofrece todo lo relacionado a:
 - Merchandising de Anime 
 - Star Wars 
 - Marvel 
 
- Algunas de  nuestras categorias  son Peluches, Figuras, Mochilas, Juegos y juguetes.
+ Algunas de  nuestras categorías  son peluches, figuras, mochilas, juegos y juguetes.
  
-Apuntamos a un publico joven  y al publico en general amantes del Anime ,Star Wars y Marvel. 
+Apuntamos a un publico jóven y al publico en general amantes del anime, Star Wars y Marvel. 
   
 
 ### DESARROLLADORES:
@@ -89,7 +89,7 @@ Por los clientes a los que apuntan.
 
 [https://www.samsung.com/ar/](https://www.samsung.com/ar/)
 >
-Por su estetica  
+Por su estética  
 
 >
 
@@ -97,7 +97,7 @@ Por su estetica
 >
 Por su funcionalidades implementadas
 >
-Por su estetica
+Por su estética
 
 
 
