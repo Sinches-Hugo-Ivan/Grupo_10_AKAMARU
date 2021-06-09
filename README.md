@@ -33,7 +33,7 @@ ___
 - 23 años.
 - Estudiante de Programación Web Full Stack en Fundación Formar y Backend Java en Ada ITW. 
 - Pilar, Buenos Aires
-- Soy una persona muy curiosa, me gusta cocinar, leer, estudiar y viajar para conocer lugares nuevos .
+- Soy una persona muy curiosa, me gusta cocinar, leer, estudiar y viajar para conocer nuevos lugares.
 - Perfil GITHUB:  [https://github.com/MariaDominguez8](https://github.com/MariaDominguez8) 
 ___
  ### PARODI, SOFIA:
