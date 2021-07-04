@@ -1,0 +1,233 @@
+footer {
+    width: 100%;
+  }
+  
+  .container-footer-m {
+    width: 100%;
+    min-width: 320px;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+  }
+  
+  .container-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Logo */
+  
+  .column0 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 41.2px;
+  }
+  
+  .column0-img {
+    object-fit: cover;
+    width: 100%;
+    height: 60px;
+  }
+  
+  /* Informacion de la empresa */
+  
+  .column1 {
+    display: none;
+    max-width: 300px;
+    margin-top: 41.2px;
+    text-align: center;
+  }
+  
+  .column1 h3 {
+    font-size: 22px;
+  }
+  
+  .column1 p {
+    font-size: 14px;
+    color: rgb(100, 93, 93);
+    margin-top: 20px;
+  }
+  
+  /* Redes sociales */
+  
+  .column2 {
+    padding-bottom: 40px;
+    width: 100%;
+    margin-top: 41.2px;
+    text-align: center;
+  }
+  
+  .column2 h3 {
+    font-size: 22px;
+  }
+  
+  .column2-row {
+    margin-top: 20px;
+  }
+  
+  .column2-row .icon {
+    font-size: 22px;
+  }
+  
+  /* Margin a los iconos y leyendas de las redes para que se separen */
+  
+  .column2-row-icon-fb, .column2-row-icon-tw, .column2-row-icon-ins, .column2-row-icon-wsp {
+    margin-bottom: 15px;
+    padding: 10px;
+    display: inline;
+  }
+  
+  /* colores al pasar el mousse por los iconos y una pequeña separación */
+  
+  .column2-row .fa-facebook:hover {
+    color: #3b5998;
+    width: 20px
+  }
+  
+  .column2-row .fa-twitter:hover {
+    color: #00acee;
+    width: 20px
+  }
+  
+  .column2-row .fa-instagram:hover {
+    color: #8a3ab9;
+    width: 20px
+  }
+  
+  .column2-row .fa-whatsapp:hover {
+    color: #128c7e;
+    width: 20px
+  }
+  
+  /* color a las leyendas de las redes */
+  
+  .column2-row label {
+    display: none;
+    font-size: 16px;
+    color: rgb(100, 93, 93);
+    margin-left: 5px;
+  }
+  
+  /* Informacion de contacto */
+  
+  .column3 {
+    width: 100%;
+    /* max-width: 300px; */
+    margin-top: 41.2px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .column3 h3 {
+    font-size: 22px;
+  }
+  
+  .column3-row {
+    margin-top: 20px;
+  }
+  
+  .column3-row .icon {
+    font-size: 20px;
+  }
+  
+  /* Separamos el contenido de informacion de contacto */
+  
+  .column3-row-icon-home, .column3-row-icon-mobile, .column3-row-icon-mail {
+    margin-bottom: 15px;
+  }
+  
+  /* color,margin y tamaño a las leyendas de informacion de contacto */
+  
+  .column3-row label {
+    font-size: 16px;
+    color: rgb(100, 93, 93);
+    margin-left: 5px;
+  }
+  
+  /* color para cuando pasamos el mousse por arriba y pequeña separación */
+  
+  .column3-row-icon-home:hover, .column3-row-icon-mobile:hover, .column3-row-icon-mail:hover {
+    color: #f44336;
+  }
+  
+  /* Copyright */
+  
+  .container-footer2 {
+    width: 100%;
+    background-color: rgb(240, 235, 235);
+  }
+  
+  .container-footer2a {
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .container-footer2 a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(100, 93, 93);
+  }
+  
+  /* formato tablet */
+  
+  @media (min-width:525px) {
+    .container-footer-m {
+      min-width: 400px;
+    }
+    .container-footer {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .column0 {
+      max-width: 250px;
+    }
+    .column0-img {
+      height: 60px;
+      width: 250px;
+    }
+    .column1, .column2 {
+      max-width: 213px;
+      margin-top: 41.2px;
+    }
+    .column3-row .fa-envelovepe .icon {
+      font-size: 20px;
+    }
+    .container-footer2a {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  /* formato desktop */
+  
+  @media (min-width:769px) {
+    .column2-row label {
+      display: inline;
+    }
+    .column2 {
+      min-width: 250px;
+    }
+    .column2-row-icon-fb, .column2-row-icon-tw, .column2-row-icon-ins, .column2-row-icon-wsp {
+      display: block;
+      padding: 0;
+    }
+    .column3 {
+      width: 250px;
+    }
+    .container-footer-m {
+      min-width: 700px;
+    }
+    .container-footer2a {
+      max-width: 1600px;
+    }
+  }
+  
+  @media (min-width:1024px) {
+    .column1 {
+      display: none;
+    }
+  }
