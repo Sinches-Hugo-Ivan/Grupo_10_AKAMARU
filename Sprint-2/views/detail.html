@@ -1,12 +1,285 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>ProductDetail prueba</title>
 </head>
+
 <body>
-    
+    <!-- h e a d e r -->
+    <header>
+        <nav class="content">
+            <!-- l o g o -->
+            <div class="logo">
+                <a href="/" class="home"><img src="/images/logo.png" alt="Akamaru"></a>
+            </div>
+
+            <!-- b o t o n e s -->
+            <div class="nav-left">
+                <ul class="menu menu_visible">
+                    <li><a href="/" class="enlaces">Inicio</a></li>
+                    <li><a href="/" class="enlaces">Productos</a>
+                        <ul class="submenu">
+                            <li><a href="/#" class="enlaces">Tazas</a></li>
+                            <li><a href="/#" class="enlaces">Mochilas y bolsos</a></li>
+                            <li><a href="/#" class="enlaces">Cartucheras</a></li>
+                            <li><a href="/#" class="enlaces">Accesorios</a></li>
+                            <li><a href="/#" class="enlaces">Figuras</a></li>
+                            <li><a href="/#" class="enlaces">Mangas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/#" class="enlaces">Nosotros</a></li>
+                    <li><a href="/#" class="enlaces">FAQ</a></li>
+                    <ul class="enlaces-resp">
+                        <li><a href="/#" class="enlaces"><b>Iniciar sesión</b></a></li>
+                        <li><a href="/#" class="enlaces"><b>Carrito</b></a></li>
+                    </ul>
+                </ul>
+            </div>
+
+            <!-- i c o n o s -->
+            <div class="nav-right">
+                <ul class="menu-icons">
+                    <li><a href="/#" class="icons"><i class="fas fa-search"></i></a></li>
+                    <li><a href="/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="/#" class="icons"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- m e n u  h a m b u r g u e s a -->
+            <button class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    <!-- d e t a l l e  d e l  p r o d u c t o -->
+    <main>
+        <div class="navegacion">
+            <ul>
+                <li><a href="#">home</a>
+                    <span>></span>
+                </li>
+                <li><a href="#">categoría </a> > </li>
+                <li><a href="#">producto</a></li>
+            </ul>
+        </div>
+        <!-- p r o d u c t o -->
+        <div class="contenedora">
+
+            <h3 class="h3-product">Producto</h3>
+            <!-- M á s    i m a g e n e s    d e l   p r o d u c t o -->
+            <div class="contenedora-img-list">
+                <img class="list" src="\images\figura6.webp" alt="">
+                <img class="list" src="\images\figura3frenteydorso.webp" alt="">
+                <img class="list" src="\images\Gaarafrentedorso.webp" alt="">
+                <img class="list" src="\images\narutofrentedorso.jpg" alt="">
+                <img class="list" src="\images\Sasuke-Kakashifrenteydorso.jpg" alt="">
+            </div>
+            <!-- I m a g e n    p r i n c i p a l -->
+            <div class="contenedora-img-principal">
+                <img class="imagen-principal" src="\images\6figuras.webp" alt="">
+            </div>
+            <!-- N o m b r e    p r o d u c t o -->
+            <div class="contenedora-product-descrip mb-3">
+                <div class="product-color">
+                    <span>Color:</span>
+                    <input class="product-color-input" type="radio" name="color" value="color1">
+                    <img class="product-color-img" src="\images\color1.jpg" alt="">
+                    <input class="product-color-input" type="radio" name="color" value="color2">
+                    <img class="product-color-img" src="\images\color2.jpg" alt="">
+                    <input class="product-color-input" type="radio" name="color" value="color3">
+                    <img class="product-color-img" src="\images\color3.webp" alt="">
+                    <input class="product-color-input" type="radio" name="color" value="color4">
+                    <img class="product-color-img" src="\images\color4.webp" alt="">
+                    <input class="product-color-input" type="radio" name="color" value="color5">
+                    <img class="product-color-img" src="\images\color5.jpg" alt="">
+                    <input class="product-color-input" type="radio" name="color" value="color6">
+                    <img class="product-color-img" src="\images\color6.jpg" alt="">
+                </div>
+                <h3>nombre producto</h3>
+                <div class="contenedor-precio-opcion">
+                    <div class="product-precio-cuota">
+                        <span class="product-precio">$0.00,00</span>
+                        <span class="product-cuota">En 12x $0.00,00</span>
+                    </div>
+                    <div class="product-envio">
+                        <i class="fas fa-truck"></i>
+                        <span><a href="#">calcular envio</a></span>
+                        <div>
+                            <span class="p-cantidad">cantidad: 1 unidad </span> <span>(99 disponibles)</span>
+                        </div>
+                    </div>
+                    <div class="product-financiamiento mb-3">
+                        <button class="product-ver-opciones">
+                            <i class="far fa-credit-card"></i>
+                            Ver más opciones de financiación
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-comprar-ahora">
+                    <button class="boton-compra">Comprar ahora</button>
+                </div>
+                <div class="product-carrito">
+                    <button class="product-carrito-boton">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <!-- D e s c r i p c i ó n -->
+        <div class="product-descrip">
+            <h4>Descripción</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium
+                voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto.
+                Minus velit itaque voluptatum.</p>
+        </div>
+        <!-- s l i d e r   p r o d u c t -->
+        <div id="carouselExampleControls" class="carousel slide carousel-articulos-banner" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <section class="contiene-s">
+                        <article>
+                            <img class="caja1" src="/images/libreta-dn.jpg" alt="">
+                        </article>
+                        <article>
+                            <img class="caja2" src="/images/libreta-dn.jpg" alt="">
+                        </article>
+                        <article class="articulo-3">
+                            <img class="caja4" src="/images/libreta-dn.jpg" alt="">
+                        </article>
+                        <article class="articulo-4">
+                            <img class="caja4" src="/images/libreta-dn.jpg" alt="">
+                        </article>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="contiene-s">
+                        <article>
+                            <img class="caja1" src="/images/taza-db.jpg" alt="">
+                        </article>
+                        <article>
+                            <img class="caja2" src="/images/taza-db.jpg" alt="">
+                        </article>
+                        <article class="articulo-3">
+                            <img class="caja4" src="/images/taza-db.jpg" alt="">
+                        </article>
+                        <article class="articulo-4">
+                            <img class="caja4" src="/images/taza-db.jpg" alt="">
+                        </article>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="contiene-s">
+                        <article>
+                            <img class="caja1" src="/images/goku-db.jpg" alt="">
+                        </article>
+                        <article>
+                            <img class="caja2" src="/images/goku-db.jpg" alt="">
+                        </article>
+                        <article class="articulo-3">
+                            <img class="caja4" src="/images/goku-db.jpg" alt="">
+                        </article>
+                        <article class="articulo-4">
+                            <img class="caja4" src="/images/taza-db.jpg" alt="">
+                        </article>
+                    </section>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+    <!-- F o o t e r -->
+    <footer>
+        <div class="container-footer-m">
+            <div class="container-footer">
+                <div class="column0">
+                    <img class="column0-img" src="\images\AKAMARU-banner.png" alt="">
+                </div>
+                <div class="column1">
+                    <h3>Información de la Empresa </h3>
+                    <p>Akamaru es una empresa argentina de Merchandising de anime que nació en plena pandemia para
+                        llevarle
+                        al público fan del anime como Naruto, Dragon Ball, etc., los mejores productos del mercado con
+                        la
+                        comodidad de comprar vía web y recibirlos en su domicilio, sin necesidad de salir de su casa.
+                    </p>
+                </div>
+                <div class="column2">
+                    <h3>Redes Sociales</h3>
+                    <!-- row = fila -->
+                    <div class="column2-row">
+                        <div class="column2-row-icon-fb">
+                            <i class="fab fa-facebook icon"></i>
+                            <label for="">Siguenos en Facebook</label>
+                        </div>
+                        <div class="column2-row-icon-tw">
+                            <i class="fab fa-twitter icon"></i>
+                            <label for="">Siguenos en Twitter</label>
+                        </div>
+                        <div class="column2-row-icon-ins">
+                            <i class="fab fa-instagram icon"></i>
+                            <label for="">Siguenos en Instagram</label>
+                        </div>
+                        <div class="column2-row-icon-wsp">
+                            <i class="fab fa-whatsapp icon"></i>
+                            <label for="">Contactanos por Whatsapp</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column3">
+                    <h3>Información de contacto</h3>
+                    <div class="column3-row">
+                        <div class="column3-row-icon-home">
+                            <i class="fas fa-home"></i>
+                            <label for="">Calle falsa 123, Buenos Aires, Argentina</label>
+                        </div>
+                        <div class="column3-row-icon-mobile">
+                            <i class="fas fa-mobile-alt"></i>
+                            <label for="">+54 1234-4526</label>
+                        </div>
+                        <div class="column3-row-icon-mail">
+                            <i class="fas fa-envelope"></i>
+                            <label for="">akamaru.ventas@gmail.com</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-footer2">
+                <div class="container-footer2a">
+                    <div class="container-footer2-copyright">
+                        <a href="">Copyright © 1999-2021 Akamaru S.R.L
+                        </a>
+                    </div>
+                    <div class="container-footer2-terminos">
+                        <a href="">Términos y Condiciones</a> |
+                        <a href="">Politica de Cookies</a> |
+                        <a href="">Politica de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

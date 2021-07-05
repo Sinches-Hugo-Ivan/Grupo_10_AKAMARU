@@ -4,9 +4,217 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compras</title>
+
+    <!-- e s t i l o s -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- j a v a s c r i p t -->
+    <script defer src="/js/index.js"></script>
+
+    <!-- f o n t s -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <!-- i c o n o s -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    
+    <!-- v i e w p o r t -->
+    <meta name="viewport" content="width=device-diw th, initial-scale=1">
 </head>
 <body>
-    
+      <!-- h e a d e r -->
+    <header>
+        <nav class="content">
+            <!-- l o g o -->
+            <div class="logo">
+                <a href="/" class="home"><img src="/images/logo.png" alt="Akamaru"></a>
+            </div>
+
+             <!-- b o t o n e s -->
+            <div class="nav-left">
+                <ul class="menu menu_visible">
+                    <li><a href="/" class="enlaces">Inicio</a></li>
+                    <li><a href="/" class="enlaces">Productos</a>
+                        <ul class="submenu">
+                            <li><a href="/#" class="enlaces">Tazas</a></li>
+                            <li><a href="/#" class="enlaces">Mochilas y bolsos</a></li>
+                            <li><a href="/#" class="enlaces">Cartucheras</a></li>
+                            <li><a href="/#" class="enlaces">Accesorios</a></li>
+                            <li><a href="/#" class="enlaces">Figuras</a></li>
+                            <li><a href="/#" class="enlaces">Mangas</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="/#" class="enlaces">Nosotros</a></li>
+                    <li><a href="/#" class="enlaces">FAQ</a></li>
+                    <ul class="enlaces-resp">
+                        <li><a href="/login" class="enlaces"><b>Iniciar sesión</b></a></li>
+                        <li><a href="/register" class="enlaces"><b>Registrate</b></a></li>
+                        <li><a href="/cart" class="enlaces"><b>Carrito</b></a></li>
+                    </ul>
+                </ul>
+            </div>
+              
+            <!-- i c o n o s -->
+            <div class="nav-right">
+                <ul class="menu-icons">
+                    <li><a href="/#" class="icons"><i class="fas fa-search"></i></a></li>
+                    <li><a href="/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="/login" class="icons"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- m e n u  h a m b u r g u e s a -->
+            <button class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+   
+    <main>
+        <div class="carrito">
+            <div class="titulos">
+                <h3 class="left-title">Carrito de compras</h3>
+                <div class="right-title">
+                    <p class="cantidad"><b>Cantidad</b></p>
+                    <p class="precio"><b>Precio</b></p>
+                </div>
+
+            </div>
+            <article>
+                <div class="img-articulo">
+                    <img src="/images/Gatito.jpg" alt="producto">
+                </div>
+
+                <p class="titulo-prod">Producto</p>
+
+                <button class="eliminar-prod">Eliminar producto</button>
+
+                <div class="cant-input">
+                    <input type="button" value="-" class="menos"><input type="number" class="cantidad-prod" name="cantidad-prod"
+                     min="1" max="100"><input type="button" value="+" class="mas">
+                </div>
+
+                <p class="precio-prod">$0000,00</p>
+            </article>
+
+            <article>
+                <div class="img-articulo">
+                    <img src="/images/Gatito.jpg" alt="producto">
+                </div>
+
+                <p class="titulo-prod">Producto</p>
+
+                <button class="eliminar-prod">Eliminar producto</button>
+            
+            <div class="cant-input">
+                 <button class="input-boton">-</button><input type="number" class="cantidad-prod" name="cantidad-prod"
+                 min="1" max="100"><button class="input-boton">+</button>
+            </div>
+
+                <p class="precio-prod">$0000,00</p>
+            </article>
+            
+            <section class="envio">
+                <div class="cp-envio">
+                <i class="fas fa-truck"></i>
+                <p class="envio-cp">Envío a C.P. 0000, Buenos Aires</p>
+                <p class="gratis">Gratis</p>
+            </div>
+
+                <div class="act-vac-cesta">
+                    <button class="actualizar">Actualizar cesta</button>
+                    <button class="vaciar">Vaciar cesta</button>
+                </div>
+            </section>
+
+            <section class="finalizar-compra">
+                <div class="subt-precio">
+                    <p class="subtotal"><b>Subtotal:</b></p>
+                    <p class="precio">$0000,00</p>
+                </div>
+
+            <div class="fin-compra-boton">
+                <button class="detalles-fin-compra"><i class="fas fa-lock"></i>Finalizar compra</button>
+            </div>
+            </section>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="container-footer-m">
+            <div class="container-footer">
+                <div class="column0">
+                    <img class="column0-img" src="\images\AKAMARU-banner.png" alt="">
+                </div>
+                <div class="column1">
+                    <h3>Información de la Empresa </h3>
+                    <p>Akamaru es una empresa argentina de Merchandising de anime que nació en plena pandemia para
+                        llevarle
+                        al público fan del anime como Naruto, Dragon Ball, etc., los mejores productos del mercado con
+                        la
+                        comodidad de comprar vía web y recibirlos en su domicilio, sin necesidad de salir de su casa.
+                    </p>
+                </div>
+                <div class="column2">
+                    <h3>Redes Sociales</h3>
+                    <!-- row = fila -->
+                    <div class="column2-row">
+                        <div class="column2-row-icon-fb">
+                            <i class="fab fa-facebook icon"></i>
+                            <label for="">Siguenos en Facebook</label>
+                        </div>
+                        <div class="column2-row-icon-tw">
+                            <i class="fab fa-twitter icon"></i>
+                            <label for="">Siguenos en Twitter</label>
+                        </div>
+                        <div class="column2-row-icon-ins">
+                            <i class="fab fa-instagram icon"></i>
+                            <label for="">Siguenos en Instagram</label>
+                        </div>
+                        <div class="column2-row-icon-wsp">
+                            <i class="fab fa-whatsapp icon"></i>
+                            <label for="">Contactanos por Whatsapp</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column3">
+                    <h3>Información de contacto</h3>
+                    <div class="column3-row">
+                        <div class="column3-row-icon-home">
+                            <i class="fas fa-home icon"></i>
+                            <label for="">Calle falsa 123, Buenos Aires, Argentina</label>
+                        </div>
+                        <div class="column3-row-icon-mobile">
+                            <i class="fas fa-mobile-alt icon"></i>
+                            <label for="">+54 1234-4526</label>
+                        </div>
+                        <div class="column3-row-icon-mail icon">
+                            <i class="fas fa-envelope"></i>
+                            <label for="">akamaru.ventas@gmail.com</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-footer2">
+                <div class="container-footer2a">
+                    <div class="container-footer2-copyright">
+                        <a href="">Copyright © 1999-2021 Akamaru S.R.L
+                        </a>
+                    </div>
+                    <div class="container-footer2-terminos">
+                        <a href="">Términos y Condiciones</a> |
+                        <a href="">Politica de Cookies</a> |
+                        <a href="">Politica de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

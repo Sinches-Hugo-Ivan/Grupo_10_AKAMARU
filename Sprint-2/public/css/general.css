@@ -1,10 +1,17 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+     margin: 0;
 }
 
-a{
-    text-decoration: none;
+main {
+    padding: 20px;
+}
+
+body{
+    background-color: #F4F4F4;
 }
