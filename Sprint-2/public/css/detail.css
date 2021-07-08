@@ -1,42 +1,61 @@
 /*modifica slider de articulos en movil*/
 
+.main .product-destacado-h4 {
+    padding: 30px 10px 5px 10px;
+    font-weight: bold;
+}
+
 .main .carousel-articulos-banner {
-    display: none;
+    min-width: 320px;
 }
 
 .contiene-s {
     background-color: #cdcdcd;
-    padding: 0 50px;
-    margin: 20px auto;
+    padding: 0 5px;
+    margin: 0 auto 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 90%;
-    height: 200px;
+    width: 95%;
+    height: 120px;
 }
 
 .main .contiene-s article {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px;
-    width: 35%;
-    height: 150px;
+    margin: 5px;
+    width: 37%;
+    height: 110px;
 }
 
 .caja1, .caja2, .caja3, .caja4 {
     display: block;
+    object-fit: cover;
+    /* para no deformar la img */
     border: 1px black solid;
-    width: 219px;
+    width: 300px;
     height: 100%;
 }
 
-.main .contiene-s .articulo-4 {
+.main .carousel-item .contiene-s .articulo-4 {
     display: none;
 }
 
-.main .contiene-s .articulo-3 {
+.main .carousel-item .contiene-s .articulo-3 {
     display: none;
+}
+
+/* centramos los botones del carousel */
+
+.carousel-control-prev {
+    padding-top: 55px;
+    padding-right: 8px;
+}
+
+.carousel-control-next {
+    padding-top: 55px;
+    padding-left: 8px;
 }
 
 /*hasta aca*/
@@ -48,6 +67,7 @@ a {
 
 main {
     margin: auto;
+    padding: 0;
 }
 
 /* Navegacion es donde te muestra en que sección de la página estas HOME/CATEGORIA/PRODUCTO */
@@ -263,6 +283,26 @@ main .product-precio-cuota .product-precio {
     .main .article-4 {
         display: none;
     }
+    .contiene-s {
+        padding: 0 50px;
+    }
+    .main .contiene-s article {
+        margin: 5px;
+        width: 100px;
+        height: 110px;
+    }
+    .main .carousel-item .contiene-s .articulo-3 {
+        display: block;
+    }
+    .main .producto-slider {
+        display: block;
+        width: 100px;
+    }
+    /* cambiamos el tamaño de las cajas con width */
+    .caja1, .caja2, .caja3, .caja4 {
+        width: 100px;
+        display: block;
+    }
 }
 
 /* tablet */
@@ -380,12 +420,27 @@ main .product-precio-cuota .product-precio {
         margin-right: 3px;
     }
     /*modifica slider de articulos en tablet*/
-    .main .contiene-s .articulo-3 {
+    .contiene-s {
+        padding: 0 90px;
+    }
+    .main .product-destacado-h4 {
+        padding: 30px 17px 5px 17px;
+    }
+    .main .carousel-item .contiene-s .articulo-3 {
+        display: block;
+        width: 100px;
+    }
+    .main .carousel-item .contiene-s .articulo-4 {
+        display: block;
+        width: 100px;
+    }
+    .caja1, .caja2, .caja3, .caja4 {
+        width: 100px;
         display: block;
     }
-    .main .contiene-s article {
+    /* .main .contiene-s article {
         width: 20%;
-    }
+    } */
 }
 
 /*hasta aca*/
@@ -414,33 +469,42 @@ main .product-precio-cuota .product-precio {
     .contenedora {
         padding: 0 60px;
     }
+    .main .contiene-s {
+        padding: 0 50px;
+        height: 190px;
+    }
+    .main .product-destacado-h4 {
+        padding: 30px 90px 5px 90px;
+    }
+    .main .contiene-s article {
+        margin: 5px;
+        width: 190px;
+        height: 180px;
+    }
+    .main .carousel-item .contiene-s .articulo-3 {
+        width: 190px;
+    }
+    .main .carousel-item .contiene-s .articulo-4 {
+        width: 190px;
+    }
     .product-descrip {
         padding: 15px 90px;
     }
+    .caja1, .caja2, .caja3, .caja4 {
+        width: 190px;
+        margin: auto;
+    }
+    .carousel-control-prev {
+        padding-top: 45px;
+    }
+    .carousel-control-next {
+        padding-top: 45px;
+    }
     /*modifica slider de articulos en desktop*/
-    .main .conteiner-products {
+    /* .main .conteiner-products {
         width: 90%;
-    }
-    .main .contiene-s .articulo-4 {
+    } */
+    /* .main .contiene-s .articulo-4 {
         display: block;
-    }
-    .main .contiene-s {
-        background-color: #cdcdcd;
-        padding: 0 50px;
-        margin: 20px auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 90%;
-        height: 200px;
-    }
-    .main .contiene-s article {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: green;
-        margin: 18px;
-        width: 18%;
-        height: 150px;
-    }
+    } */
 }
