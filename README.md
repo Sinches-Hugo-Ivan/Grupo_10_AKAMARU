@@ -104,6 +104,11 @@ Por su estética
 
 ___
 
+Enlace al  Tablero de trabajo trello:
+
+https://trello.com/b/3BiGAbUs/grupo-10-comision-6
+
+___
 
 ### WIREFRAMES:
 
