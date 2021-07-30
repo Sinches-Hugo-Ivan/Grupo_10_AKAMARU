@@ -1,0 +1,90 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: #fafafa;
+    color: black ;
+    letter-spacing: .05rem;
+    margin-bottom: 50px;
+}
+
+
+.container {
+    width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    margin: 2em auto;  
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: rgb(0, 0, 0);
+    box-shadow: 7px 13px 37px #000;
+}
+
+.btn {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    min-width: 100%;
+    color:black;
+    background: #e4e1e1;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+     
+}
+
+
+.facebook .btn{
+    background: #0432ff;
+    color:rgb(255, 255, 255);
+}
+
+.google .btn{
+    background: #ff0404;
+    color:rgb(255, 255, 255);
+}
+
+.form-control {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: .2rem;
+    padding: 1.5rem 1rem;
+}
+
+
+
+
+
+
+/*  TABLETS   */
+
+@media (min-width: 768px) {
+   
+    section.container {
+        padding: 5;
+        width: 650px;
+       
+    }
+
+    .g-recaptcha{
+        display:flex;
+        justify-content: center;
+    }
+    
+}
+
+
+
+/*  DESKTOP */
+@media (min-width: 1024px) { 
+    section.container {
+        padding: 5;
+        width: 900px;
+       
+    }
+
+   
+    
+}

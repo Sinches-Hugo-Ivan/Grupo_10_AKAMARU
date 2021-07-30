@@ -1,0 +1,510 @@
+/*modifica slider de articulos en movil*/
+
+.main .product-destacado-h4 {
+    padding: 30px 10px 5px 10px;
+    font-weight: bold;
+}
+
+.main .carousel-articulos-banner {
+    min-width: 320px;
+}
+
+.contiene-s {
+    background-color: #cdcdcd;
+    padding: 0 5px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    height: 120px;
+}
+
+.main .contiene-s article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 37%;
+    height: 110px;
+}
+
+.caja1, .caja2, .caja3, .caja4 {
+    display: block;
+    object-fit: cover;
+    /* para no deformar la img */
+    border: 1px black solid;
+    width: 300px;
+    height: 100%;
+}
+
+.main .carousel-item .contiene-s .articulo-4 {
+    display: none;
+}
+
+.main .carousel-item .contiene-s .articulo-3 {
+    display: none;
+}
+
+/* centramos los botones del carousel */
+
+.carousel-control-prev {
+    padding-top: 55px;
+    padding-right: 8px;
+}
+
+.carousel-control-next {
+    padding-top: 55px;
+    padding-left: 8px;
+}
+
+/*hasta aca*/
+
+a {
+    text-decoration: none;
+    /* si no lo especifico sobre la (a) no funciona */
+}
+
+main {
+    margin: auto;
+    padding: 0;
+}
+
+/* Navegacion es donde te muestra en que sección de la página estas HOME/CATEGORIA/PRODUCTO */
+
+.navegacion {
+    display: none;
+    background-color: #fafafa;
+    padding: 20px 20px 10px 25px;
+    min-width: 320px;
+}
+
+.navegacion ul li {
+    display: inline;
+    justify-content: flex-start;
+    min-width: 320px;
+    padding: 0 5px 0 5px;
+    text-transform: capitalize;
+}
+
+.navegacion ul li a {
+    color: black;
+    padding-right: 5px;
+}
+
+/* Producto */
+
+/* contenedora es el contenedor de todo el producto menos la descripción y los productos destacados */
+
+.contenedora {
+    background-color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+}
+
+.contenedora h3 {
+    padding: 10px 10px;
+    margin: 0;
+    color: #545454;
+    font-weight: normal;
+}
+
+/* ocultamos las imagenes del costado del producto en modo mobile y tablet */
+
+.contenedora-img-list {
+    display: none;
+}
+
+/* la contenedora de la imagen principal del producto */
+
+.contenedora-img-principal {
+    min-width: 300px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Aca modificamos la imagen sola sin caja */
+
+.imagen-principal {
+    max-width: 300px;
+    height: auto
+}
+
+/* La caja que tiene  el nombre del producto, precio, botones, calcular envio,etc */
+
+.contenedora-product-descrip {
+    min-width: 320px;
+    padding: 10px;
+}
+
+/* ocultamos el nombre del producto arriba en modo mobile  */
+
+.contenedora-product-descrip h3 {
+    display: none;
+}
+
+/* seleccion de producto ("color") con imagenes pequeñas */
+
+.product-color {
+    padding: 10px;
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(204, 194, 194);
+    border-radius: 5px;
+}
+
+/* letras que dicen color */
+
+/* .product-color span {
+    padding-right: 4px;
+} */
+
+/* Imagenes chiquitas para seleccionar */
+
+.product-color-img {
+    width: 25px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+/*  */
+
+.product-color-input {
+    padding: 30px;
+    margin: auto;
+}
+
+/* se oculta en modo mobile calcular envio */
+
+.product-envio {
+    display: none;
+}
+
+/* Caja contenedora de el boton de ver más opciones de financiación */
+
+.product-financiamiento {
+    margin-top: 18px;
+    width: 60%;
+}
+
+/* esta caja contiene el precio y las cuotas del producto */
+
+.contenedor-precio-opcion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.product-precio-cuota {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70px;
+    font-size: 20px;
+}
+
+/* estylos de span cuotas */
+
+main .product-precio-cuota .product-precio {
+    font-size: 25px;
+}
+
+.product-cuota {
+    display: block;
+    font-size: 14px;
+    margin: center;
+}
+
+/* Boton de ver más opciones de financiación */
+
+.product-ver-opciones {
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(204, 194, 194);
+    border-radius: 3px;
+    border: none;
+}
+
+/* Boton compra ahora */
+
+.product-compra-ahora {
+    background-color: lightcoral;
+    width: 90%;
+}
+
+.boton-compra {
+    display: block;
+    background-color: rgb(153, 149, 149);
+    border-radius: 3px;
+    width: 100%;
+    height: 50px;
+    margin: center;
+    text-align: center;
+    border: none;
+}
+
+/* Se oculta el boton de agregar al carrito */
+
+.product-carrito {
+    display: none;
+}
+
+/* La descripción del producto en una caja */
+
+.product-descrip {
+    min-width: 300px;
+    padding: 10px;
+}
+
+/* Productos destacados */
+
+.product-destacado {
+    margin-left: 11px;
+}
+
+@media(min-width:460px) {
+    .main .product {
+        width: 45%;
+        height: 400px;
+    }
+    .main .carousel-articulos-banner {
+        display: block;
+    }
+    .main .article-4 {
+        display: none;
+    }
+    .contiene-s {
+        padding: 0 50px;
+    }
+    .main .contiene-s article {
+        margin: 5px;
+        width: 100px;
+        height: 110px;
+    }
+    .main .carousel-item .contiene-s .articulo-3 {
+        display: block;
+    }
+    .main .producto-slider {
+        display: block;
+        width: 100px;
+    }
+    /* cambiamos el tamaño de las cajas con width */
+    .caja1, .caja2, .caja3, .caja4 {
+        width: 100px;
+        display: block;
+    }
+}
+
+/* tablet */
+
+@media (min-width:768px) {
+    .navegacion {
+        display: inline;
+    }
+    .h3-product {
+        display: none;
+    }
+    .contenedora h3 {
+        padding-left: 0;
+    }
+    .contenedora {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    /*lista de imagenes a la izquierda del contenido*/
+    .contenedora-img-list {
+        display: block;
+        padding: 0px 30px;
+    }
+    .contenedora-img-list .list {
+        margin-bottom: 10px;
+        display: block;
+        width: 40px;
+        border: 1px #000000 solid;
+    }
+    .contenedora-img-principal {
+        width: 20%;
+        padding: 10px;
+    }
+    .contenedora-product-descrip {
+        width: 10%;
+    }
+    .contenedor-precio-opcion {
+        display: block;
+        align-items: center;
+        width: 100%;
+    }
+    .contenedora h3 {
+        padding: 10px 0;
+        margin: 0;
+        color: #2a2a2a;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .product-cuota {
+        color: green;
+        padding: 5px 0;
+        font-size: 12px;
+    }
+    .product-carrito {
+        margin-top: 15px;
+        display: block;
+        background-color: lightcoral;
+        width: 100%;
+    }
+    .product-ver-opciones {
+        border: solid 1px #a8a8a8;
+        border-radius: 0px;
+        background-color: #fafafa;
+        border-color: 1px red solid;
+    }
+    .boton-compra {
+        border-radius: 0px;
+    }
+    .product-carrito-boton {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: center;
+        text-align: center;
+        background-color: #fafafa;
+        border: solid 1px #a8a8a8;
+    }
+    .contenedora-img-list {
+        display: block;
+    }
+    .product-descrip {
+        min-width: 300px;
+        padding: 20px;
+    }
+    .contenedora-product-descrip h3 {
+        display: inline;
+        text-transform: capitalize;
+    }
+    .contenedora-product-descrip {
+        display: inline;
+    }
+    .product-color {
+        display: none;
+    }
+    .product-envio {
+        display: block;
+    }
+    .imagen-principal {
+        width: 400px;
+    }
+    .product-precio-cuota {
+        font-size: 30px;
+        text-align: left;
+    }
+    .product-financiamiento {
+        width: 300px;
+    }
+    .product-ver-opciones {
+        padding: 12px 20px;
+    }
+    .product-financiamiento-icon {
+        margin-right: 3px;
+    }
+    /*modifica slider de articulos en tablet*/
+    .contiene-s {
+        padding: 0 90px;
+    }
+    .main .product-destacado-h4 {
+        padding: 30px 17px 5px 17px;
+    }
+    .main .carousel-item .contiene-s .articulo-3 {
+        display: block;
+        width: 100px;
+    }
+    .main .carousel-item .contiene-s .articulo-4 {
+        display: block;
+        width: 100px;
+    }
+    .caja1, .caja2, .caja3, .caja4 {
+        width: 100px;
+        display: block;
+    }
+    /* .main .contiene-s article {
+        width: 20%;
+    } */
+}
+
+/*hasta aca*/
+
+/* Desktop */
+
+@media(min-width:950px) {
+    .contenedora {
+        padding: 0 20px;
+    }
+    .imagen-principal {
+        padding: 40px 0;
+        min-width: 450px;
+        height: auto
+    }
+    .contenedora-img-list .list {
+        margin-bottom: 10px;
+        display: block;
+        background-color: green;
+        width: 60px;
+        border: 1px #000000 solid;
+    }
+}
+
+@media(min-width:1024px) {
+    .contenedora {
+        padding: 0 60px;
+    }
+    .main .contiene-s {
+        padding: 0 50px;
+        height: 190px;
+    }
+    .main .product-destacado-h4 {
+        padding: 30px 90px 5px 90px;
+    }
+    .main .contiene-s article {
+        margin: 5px;
+        width: 190px;
+        height: 180px;
+    }
+    .main .carousel-item .contiene-s .articulo-3 {
+        width: 190px;
+    }
+    .main .carousel-item .contiene-s .articulo-4 {
+        width: 190px;
+    }
+    .product-descrip {
+        padding: 15px 90px;
+    }
+    .caja1, .caja2, .caja3, .caja4 {
+        width: 190px;
+        margin: auto;
+    }
+    .carousel-control-prev {
+        padding-top: 45px;
+    }
+    .carousel-control-next {
+        padding-top: 45px;
+    }
+    /*modifica slider de articulos en desktop*/
+    /* .main .conteiner-products {
+        width: 90%;
+    } */
+    /* .main .contiene-s .articulo-4 {
+        display: block;
+    } */
+}
