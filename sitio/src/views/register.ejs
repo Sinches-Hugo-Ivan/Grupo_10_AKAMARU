@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+<body>
+   <!-- h e a d e r -->
+   <%- include('./partials/header.ejs') %>
+
+
+    <main>
+
+        <section class="container">
+            <h3 class="font-weight-bold">Crea tu cuenta </h3>
+            <p class="text-muted mb-5">Los campos marcados con <span class="text-danger">*</span> son requeridos</p>
+
+            <form>
+
+                <!-- Grupo: Nombre y Apellido -->
+                <div class="row g-3 mb-2">
+                    <div class="form-group col-md-6">
+                        <label for="nombre" class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" id="nombre">
+                        <span> </span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellido" class="font-weight-bold">Apellido <span
+                                class="text-danger">*</span></label>
+                        <input type="text" name="apellido" class="form-control" placeholder="Tu apellido" id="apellido">
+                        <span> </span>
+                    </div>
+                </div>
+                <!-- Grupo: Correo electronico -->
+                <div class="form-group mb-3">
+                    <label for="correo" class="font-weight-bold">Correo electrónico <span
+                            class="text-danger">*</span></label>
+                    <input type="email" name="correo" class="form-control" placeholder="Ingresa tu correo electrónico"
+                        id="correo">
+                    <span> </span>
+                </div>
+                <!-- Grupo: Contraseña -->
+                <div class="row g-3 mb-2">
+                    <div class="form-group col-md-6">
+                        <label for="contraseña" class="font-weight-bold">Contraseña <span
+                                class="text-danger">*</span></label>
+                        <input type="password" name="contraseña" class="form-control" placeholder="Tu contraseña"
+                            id="contraseña">
+                        <span> </span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="contraseña2" class="font-weight-bold"> Repetir Contraseña <span
+                                class="text-danger">*</span></label>
+                        <input type="password" name="contraseña2" class="form-control"
+                            placeholder="Repeti tu contraseña" id="contraseña2">
+                        <span> </span>
+                    </div>
+                </div>
+                <!-- Grupo: Fecha de nacimiento y Genero -->
+                <div class="row g-3 mb-2">
+                    <div class="form-group col-md-6">
+                        <label for="fecha" class="font-weight-bold"> Fecha de nacimiento <span
+                                class="text-danger">*</span></label>
+                        <input type="date" name="fecha" class="form-control" placeholder="dd/mm/aaaa" id="fecha">
+                        <span> </span>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="genero" class="font-weight-bold"> Genero<span class="text-danger">*</span></label>
+                        <input list="Genero" name="genero" type="text" class="form-control" placeholder="select"
+                            id="genero">
+                        <datalist id="Genero">
+                            <option value="Masculino"></option>
+                            <option value="Femenino"></option>
+                        </datalist>
+                        <span> </span>
+                    </div>
+
+
+
+                    <!-- recaptcha -->
+                    <form action="?" method="POST">
+                        <div class="g-recaptcha" data-sitekey=" 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+
+                    </form>
+
+
+                    <!-- BOTON -->
+                    <div>
+                        <button class="btn btn-primary btn-sm ">Regístrarse</button>
+
+                    </div>
+
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <%- include('./partials/footer.ejs') %>
+
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
