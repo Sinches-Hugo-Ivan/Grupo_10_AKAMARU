@@ -1,0 +1,352 @@
+
+
+ .carrito {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* t i t u l o s */
+
+ .titulos{
+    margin: auto;
+    padding: 0 0 15px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 3px grey;
+}
+
+
+.right-title{
+    display: absolute;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+
+}
+
+.precio {
+    padding: 20px;
+}
+
+
+.cantidad{
+    visibility: hidden;
+}
+
+
+
+
+/* a r t i c u l o */
+
+.art-carrito{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px grey;
+    padding: 10px;
+    width: 90%;
+}
+
+.img-articulo img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.fa-trash-alt {
+    font-size: 15px;
+}
+
+.titulo-prod{
+    font-size: 10px;
+    
+}
+
+.precio-prod {
+    font-size: 10px;
+}
+
+.cant-input{
+    display:none;
+}
+
+/* e n v i o s */
+
+.envio {
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    border-bottom: solid 3px grey;
+}
+
+.cp-envio {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+.fa-truck{
+    padding: 10px;
+}
+
+.gratis {
+    color: green;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.act-vac-cesta {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actualizar {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    font-size: 10px;
+}
+
+.vaciar {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    font-size: 10px;
+}
+
+/* f i n a l i z a r  c o m p r a */
+.subt-precio {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+}
+
+.subtotal{
+    padding: 10px;
+}
+
+.precio{
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.fa-lock{
+    margin: 5px;
+}
+
+.fin-compra-boton{
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+    
+}
+
+.detalles-fin-compra{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    font-size: 10px;
+    width: 50%;
+}
+
+
+/* t a b l e t */
+
+@media (min-width:768px) {
+    .img-articulo img {
+        width: 70px;
+        height: 70px;
+    }
+    
+  
+
+    .precio {
+        font-size: 15px;
+    }
+
+    .titulo-prod{
+        font-size: 15px;
+    }
+    
+    .precio-prod{
+        font-size: 15px;
+    }
+
+
+
+}
+
+
+/* d e s k t o p */
+
+@media (min-width:1024px) {
+
+/* t i t u l o s */
+
+.titulos{
+    margin: auto;
+    padding: 15px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 3px grey;
+    font-size: 20px;
+}
+
+.right-title{
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+
+/* a r t i c u l o */
+
+.art-carrito{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px grey;
+    padding: 10px;
+    width: 90%;
+}
+
+.img-articulo img {
+    width: 70px;
+    height: 70px;
+}
+
+
+
+.fa-trash-alt{
+    display: none;
+}
+
+.titulo-prod{
+    font-size: 15px;
+}
+
+.precio-prod{
+    font-size: 15px;
+}
+
+.cant-input{
+    display:block;
+    justify-content: stretch;
+    align-items: center;
+}
+
+/* e n v i o s */
+
+.envio {
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    border-bottom: solid 3px grey;
+}
+
+.cp-envio {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.fa-truck{
+    padding: 10px;
+}
+
+.gratis {
+    color: green;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.act-vac-cesta {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actualizar {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+.vaciar {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+/* f i n a l i z a r  c o m p r a */
+.subt-precio {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+}
+
+.subtotal{
+    padding: 10px;
+}
+
+.precio{
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.fa-lock{
+    margin: 5px;
+}
+
+.fin-compra-boton{
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+}
+
+.detalles-fin-compra{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    font-size: 15px;
+    width: 15%;
+}
+}
