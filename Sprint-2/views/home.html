@@ -25,50 +25,54 @@
 <body>
     <!-- h e a d e r -->
     <header>
-        <nav class="content">
-            <!-- l o g o -->
-            <div class="logo">
-                <a href="/" class="home"><img src="/images/logo.png" alt="Akamaru"></a>
-            </div>
-
-             <!-- b o t o n e s -->
-            <div class="nav-left">
-                <ul class="menu menu_visible">
-                    <li><a href="/" class="enlaces">Inicio</a></li>
-                    <li><a href="/" class="enlaces">Productos</a>
-                        <ul class="submenu">
-                            <li><a href="/#" class="enlaces">Tazas</a></li>
-                            <li><a href="/#" class="enlaces">Mochilas y bolsos</a></li>
-                            <li><a href="/#" class="enlaces">Cartucheras</a></li>
-                            <li><a href="/#" class="enlaces">Accesorios</a></li>
-                            <li><a href="/#" class="enlaces">Figuras</a></li>
-                            <li><a href="/#" class="enlaces">Mangas</a></li>
-                        </ul> 
-                    </li>
-                    <li><a href="/#" class="enlaces">Nosotros</a></li>
-                    <li><a href="/#" class="enlaces">FAQ</a></li>
-                    <ul class="enlaces-resp">
-                        <li><a href="/login" class="enlaces"><b>Iniciar sesión</b></a></li>
-                        <li><a href="/register" class="enlaces"><b>Registrate</b></a></li>
-                        <li><a href="/cart" class="enlaces"><b>Carrito</b></a></li>
+        <div class = "div-contenedor">
+            <nav class="content">
+                <!-- l o g o -->
+                <div class="logo">
+                    <a href="/" class="home"><img src="/images/LOGO_TRANSPARENTE.png" alt="Akamaru"></a>
+                </div>
+    
+                 <!-- b o t o n e s -->
+                <div class="nav-left">
+                    <ul class="menu menu_visible">
+                        <li><a href="/" class="enlaces">Inicio</a></li>
+                        <li><a href="/" class="enlaces">Productos</a>
+                            <ul class="submenu">
+                                <li><a href="/#" class="enlaces">Tazas</a></li>
+                                <li><a href="/#" class="enlaces">Mochilas y bolsos</a></li>
+                                <li><a href="/#" class="enlaces">Cartucheras</a></li>
+                                <li><a href="/#" class="enlaces">Accesorios</a></li>
+                                <li><a href="/#" class="enlaces">Figuras</a></li>
+                                <li><a href="/#" class="enlaces">Mangas</a></li>
+                            </ul> 
+                        </li>
+                        <li><a href="/#" class="enlaces">Nosotros</a></li>
+                        <li><a href="/#" class="enlaces">FAQ</a></li>
+                        <ul class="enlaces-resp">
+                            <li><a href="/login" class="enlaces"><b>Iniciar sesión</b></a></li>
+                            <li><a href="/register" class="enlaces"><b>Registrate</b></a></li>
+                            <li><a href="/cart" class="enlaces"><b>Carrito</b></a></li>
+                        </ul>
                     </ul>
-                </ul>
-            </div>
-              
-            <!-- i c o n o s -->
-            <div class="nav-right">
-                <ul class="menu-icons">
-                    <li><a href="/#" class="icons"><i class="fas fa-search"></i></a></li>
-                    <li><a href="/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="/login" class="icons"><i class="fas fa-user"></i></a></li>
-                </ul>
-            </div>
-
-            <!-- m e n u  h a m b u r g u e s a -->
-            <button class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
+                </div>
+                  
+                <!-- i c o n o s -->
+                <div class="nav-right">
+                    <ul class="menu-icons">
+                        <li><a href="/#" class="icons"><i class="fas fa-search"></i></a></li>
+                        <li><a href="/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li><a href="/login" class="icons"><i class="fas fa-user"></i></a></li>
+                    </ul>
+                </div>
+    
+                <!-- m e n u  h a m b u r g u e s a -->
+                <button class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+        
+        
     </header>
     <main class = "main">
 
@@ -99,68 +103,84 @@
         <!--  P r o d u c t o s   -->
         <section class = "conteiner-products">
             <article class = "product">
-                <img class = "img-product" src="/images/goku-db.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product" src="/images/goku-db.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
             <article class = "product">
-                <img class = "img-product"src="/images/luffy-op.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product"src="/images/luffy-op.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
             <article class = "product">
-                <img class = "img-product" src="/images/libreta-dn.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product" src="/images/libreta-dn.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
             <article class = "product">
-                <img class = "img-product" src="/images/taza-db.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product" src="/images/taza-db.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
             <article class = "product">
-                <img class = "img-product" src="/images/luffy-02-op.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product" src="/images/luffy-02-op.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
             <article class = "product">
-                <img class = "img-product" src="/images/gorro-dn.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product" src="/images/gorro-dn.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
             <article class = "product">
-                <img class = "img-product" src="/images/goku-db.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product" src="/images/goku-db.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
             <article class = "product">
-                <img class = "img-product" src="/images/libreta-dn.jpg" alt="">
-                <div class = "product-description">
-                    <h3 class = "name-product">Producto</h3>
-                    <p>$0.000,00</p>
-                    <p>6 <span>cuotas de </span>$0.000,00</p>
-                </div>
+                <a href="/detail">
+                    <img class = "img-product" src="/images/libreta-dn.jpg" alt="">
+                    <div class = "product-description">
+                        <h3 class = "name-product">Producto</h3>
+                        <p>$0.000,00</p>
+                        <p>6 <span>cuotas de </span>$0.000,00</p>
+                    </div>
+                </a>
             </article>
         </section>
     </main>
