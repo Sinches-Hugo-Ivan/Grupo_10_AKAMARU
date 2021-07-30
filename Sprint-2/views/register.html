@@ -84,31 +84,31 @@
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
                         <label for = "nombre" class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="Tu nombre" id="nombre">
+                        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" id="nombre">
                         <span> </span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for = "apellido" class="font-weight-bold">Apellido <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="Tu apellido" id="apellido">
+                        <input type="text" name="apellido" class="form-control" placeholder="Tu apellido" id="apellido">
                         <span> </span>
                     </div>
                 </div>
                 <!-- Grupo: Correo electronico -->
                 <div class="form-group mb-3">
                     <label for ="correo" class="font-weight-bold">Correo electrónico <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico" id="correo">
+                    <input type="email" name="correo" class="form-control" placeholder="Ingresa tu correo electrónico" id="correo">
                     <span> </span>
                 </div>
                 <!-- Grupo: Contraseña -->
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
                         <label for ="contraseña" class="font-weight-bold">Contraseña <span class="text-danger">*</span></label>
-                        <input type="password" class="form-control" placeholder="Tu contraseña" id="contraseña">
+                        <input type="password" name="contraseña" class="form-control" placeholder="Tu contraseña" id="contraseña">
                         <span> </span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for ="contraseña2"class="font-weight-bold"> Repetir Contraseña <span class="text-danger">*</span></label>
-                        <input type="password" class="form-control" placeholder="Repeti tu contraseña" id="contraseña2">
+                        <input type="password" name="contraseña2" class="form-control" placeholder="Repeti tu contraseña" id="contraseña2">
                         <span> </span>
                     </div>
                 </div>
@@ -116,13 +116,13 @@
                  <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
                         <label for ="fecha"class="font-weight-bold"> Fecha de nacimiento <span class="text-danger">*</span></label>
-                        <input type="date" class="form-control" placeholder="dd/mm/aaaa" id="fecha">
+                        <input type="date" name="fecha" class="form-control" placeholder="dd/mm/aaaa" id="fecha">
                         <span> </span>
                     </div>
     
                     <div class="form-group col-md-6">
                     <label for ="genero" class="font-weight-bold"> Genero<span class="text-danger">*</span></label>
-                    <input list="Genero" name="Genero" type="text" class="form-control" placeholder="select"
+                    <input list="Genero" name="genero" type="text" class="form-control" placeholder="select"
                     id="genero">
                     <datalist id="Genero">
                         <option value="Masculino"></option>
