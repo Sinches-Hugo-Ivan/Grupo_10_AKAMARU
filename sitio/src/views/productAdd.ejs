@@ -1,1 +1,59 @@
- 
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head')  %> 
+<body class="productAdd">
+
+    <%- include('./partials/header')  %> 
+
+    <section class="container">
+        <div class="formulario mt-5">
+          <h2>Agregar Producto</h2>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" name="title">
+                  </div>
+                  <div class="mb-3">
+                    <label for="floatingTextarea">Descripción</label>
+                    <textarea class="form-control" id="floatingTextarea" name="description"></textarea>
+                  </div>
+                  <div class = "mb-3">
+                    <label for="productImagen" class = "form-label">Imagen</label>
+                    <input type="file" class ="form control" id = "productImagen" name = "image">
+                </div>
+                <div class="mb-3" class="categorias">
+                <label for="category" class="form-label">Categoría</label>
+                <select name="category" id="category">
+                <option value="tazas">Tazas</option>
+                <option value="figuras">Figuras</option>
+                <option value="mangas">Mangas</option>
+              </select>
+                </div>
+                <div class="mb-3">
+                  <label for="colors" class="form-label">Elije un color </label>
+                <select name="colors" id="colors" class="colors">
+                <option value="red"> Rojo </option>
+                <option value="blue">Azul </option>
+                <option value="black">Negro</option>
+              </select>
+                </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput2" name="price">
+                  </div>
+                  
+                  <button class="btn btn-primary" type="submit">Guardar</button>
+            </form>
+        </div>
+    </section>
+
+
+     <!-- Footer -->
+     <%- include('./partials/footer.ejs') %>
+
+
+
+
+
+</body>
+</html>
