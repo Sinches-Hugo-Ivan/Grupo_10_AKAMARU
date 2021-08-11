@@ -1,166 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 
-   <!-- head -->
+<!-- head -->
 <%- include('./partials/head.ejs') %>
 
-<body>
- 
-    <!-- h e a d e r -->
-<%- include('./partials/header.ejs') %>
+    <body>
 
-    <!-- d e t a l l e  d e l  p r o d u c t o -->
-    <main class="main">
-        <div class="navegacion">
-            <ul>
-                <li><a href="#">home</a>
-                    <span>></span>
-                </li>
-                <li><a href="#">categoría </a> > </li>
-                <li><a href="#">producto</a></li>
-            </ul>
-        </div>
-        <!-- p r o d u c t o -->
-        <div class="contenedora">
+        <!-- h e a d e r -->
+        <%- include('./partials/header.ejs') %>
 
-            <h3 class="h3-product">Producto</h3>
-            <!-- M á s    i m a g e n e s    d e l   p r o d u c t o -->
-            <div class="contenedora-img-list">
-                <img class="list" src="\images\figura6.webp" alt="">
-                <img class="list" src="\images\figura3frenteydorso.webp" alt="">
-                <img class="list" src="\images\Gaarafrentedorso.webp" alt="">
-                <img class="list" src="\images\narutofrentedorso.jpg" alt="">
-                <img class="list" src="\images\Sasuke-Kakashifrenteydorso.jpg" alt="">
-            </div>
-            <!-- I m a g e n    p r i n c i p a l -->
-            <div class="contenedora-img-principal">
-                <img class="imagen-principal" src="\images\6figuras.webp" alt="">
-            </div>
-            <!-- N o m b r e    p r o d u c t o -->
-            <div class="contenedora-product-descrip mb-3">
-                <div class="product-color">
-                    <span>Color:</span>
-                    <input class="product-color-input" type="radio" name="color" value="color1">
-                    <img class="product-color-img" src="\images\color1.jpg" alt="">
-                    <input class="product-color-input" type="radio" name="color" value="color2">
-                    <img class="product-color-img" src="\images\color2.jpg" alt="">
-                    <input class="product-color-input" type="radio" name="color" value="color3">
-                    <img class="product-color-img" src="\images\color3.webp" alt="">
-                    <input class="product-color-input" type="radio" name="color" value="color4">
-                    <img class="product-color-img" src="\images\color4.webp" alt="">
-                    <input class="product-color-input" type="radio" name="color" value="color5">
-                    <img class="product-color-img" src="\images\color5.jpg" alt="">
-                    <input class="product-color-input" type="radio" name="color" value="color6">
-                    <img class="product-color-img" src="\images\color6.jpg" alt="">
+            <!-- d e t a l l e  d e l  p r o d u c t o -->
+            <main class="main">
+                <div class="navegacion">
+                    <ul>
+                        <li><a href="/">home</a>
+                            <span>></span>
+                        </li>
+                        <li><a href="#">categoría </a> > </li>
+                        <li><a href="#">producto</a></li>
+                    </ul>
                 </div>
-                <h3>nombre producto</h3>
-                <div class="contenedor-precio-opcion">
-                    <div class="product-precio-cuota">
-                        <span class="product-precio">$0.00,00</span>
-                        <span class="product-cuota">En 12x $0.00,00</span>
+                <!-- p r o d u c t o -->
+                <div class="contenedora">
+
+                    <h3 class="h3-product">Producto</h3>
+                    <!-- M á s    i m a g e n e s    d e l   p r o d u c t o -->
+
+                    <div class="contenedora-img-list">
+                        <img class="list" src="\images\<%= producto.image1 %>" alt="">
+                        <img class="list" src="\images\<%= producto.image2 %>" alt="">
+                        <img class="list" src="\images\<%= producto.image3 %>" alt="">
+                        <img class="list" src="\images\<%= producto.image4 %>" alt="">
+                        <img class="list" src="\images\<%= producto.image5 %>" alt="">
                     </div>
-                    <div class="product-envio">
-                        <i class="fas fa-truck"></i>
-                        <span><a href="#">calcular envio</a></span>
-                        <div>
-                            <span class="p-cantidad">cantidad: 1 unidad </span> <span>(99 disponibles)</span>
+                    <!-- I m a g e n    p r i n c i p a l -->
+                    <div class="contenedora-img-principal">
+                        <img class="imagen-principal" src="<%= producto.image %>" alt="">
+                    </div>
+                    <!-- N o m b r e    p r o d u c t o -->
+                    <div class="contenedora-product-descrip mb-3">
+                        <div class="product-color">
+                            <span>Color:</span>
+                            <input class="product-color-input" type="radio" name="color" value="color1">
+                            <img class="product-color-img" src="\images\color1.jpg" alt="">
+                            <input class="product-color-input" type="radio" name="color" value="color2">
+                            <img class="product-color-img" src="\images\color2.jpg" alt="">
+                            <input class="product-color-input" type="radio" name="color" value="color3">
+                            <img class="product-color-img" src="\images\color3.webp" alt="">
+                            <input class="product-color-input" type="radio" name="color" value="color4">
+                            <img class="product-color-img" src="\images\color4.webp" alt="">
+                            <input class="product-color-input" type="radio" name="color" value="color5">
+                            <img class="product-color-img" src="\images\color5.jpg" alt="">
+                            <input class="product-color-input" type="radio" name="color" value="color6">
+                            <img class="product-color-img" src="\images\color6.jpg" alt="">
+                        </div>
+                        <h3>
+                            <%= producto.name %>
+                        </h3>
+                        <div class="contenedor-precio-opcion">
+                            <div class="product-precio-cuota">
+                                <span class="product-precio">$ <%= producto.price %></span>
+                                <span class="product-cuota">En <%= producto.discount %>x $ <%= (producto.price /
+                                            producto.discount).toFixed(0) %></span>
+                            </div>
+                            <div class="product-envio">
+                                <i class="fas fa-truck"></i>
+                                <span><a href="#">calcular envio</a></span>
+                                <div>
+                                    <span class="p-cantidad">cantidad: 1 unidad </span> <span>(99 disponibles)</span>
+                                </div>
+                            </div>
+                            <div class="product-financiamiento mb-3">
+                                <button class="product-ver-opciones">
+                                    <i class="far fa-credit-card"></i>
+                                    Ver más opciones de financiación
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-comprar-ahora">
+                            <button class="boton-compra">Comprar ahora</button>
+                        </div>
+                        <div class="product-carrito">
+                            <button class="product-carrito-boton">Agregar al carrito</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- D e s c r i p c i ó n -->
+                <div class="product-descrip">
+                    <h4>Descripción</h4>
+                    <p>
+                        <%= producto.description %>
+                    </p>
+                </div>
+                <!-- s l i d e r   p r o d u c t -->
+                <div id="carouselExampleControls" class="carousel slide carousel-articulos-banner"
+                    data-bs-ride="carousel">
+                    <h4 class="product-destacado-h4">Productos Destacados</h4>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <section class="contiene-s">
+                                    <article>
+                                        <img class="caja1" src="/images/libreta-dn.jpg" alt="">
+                                    </article>
+                                    <article>
+                                        <img class="caja2" src="/images/goku-db.jpg" alt="">
+                                    </article>
+                                    <article class="articulo-3">
+                                        <img class="caja3" src="/images/carousel-img4.jpg" alt="">
+                                    </article>
+                                    <article class="articulo-4">
+                                        <img class="caja4" src="/images/gorro-dn.jpg" alt="">
+                                    </article>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="contiene-s">
+                                <article>
+                                    <img class="caja1" src="/images/goku-db.jpg" alt="">
+                                </article>
+                                <article>
+                                    <img class="caja2" src="/images/gorro-dn.jpg" alt="">
+                                </article>
+                                <article class="articulo-3">
+                                    <img class="caja3" src="/images/libreta-dn.jpg" alt="">
+                                </article>
+                                <article class="articulo-4">
+                                    <img class="caja4" src="/images/carousel-img4.jpg" alt="">
+                                </article>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="contiene-s">
+                                <article>
+                                    <img class="caja1" src="/images/libreta-dn.jpg" alt="">
+                                </article>
+                                <article>
+                                    <img class="caja2" src="/images/goku-db.jpg" alt="">
+                                </article>
+                                <article class="articulo-3">
+                                    <img class="caja3" src="/images/carousel-img4.jpg" alt="">
+                                </article>
+                                <article class="articulo-4">
+                                    <img class="caja4" src="/images/taza-db.jpg" alt="">
+                                </article>
+                            </section>
                         </div>
                     </div>
-                    <div class="product-financiamiento mb-3">
-                        <button class="product-ver-opciones">
-                            <i class="far fa-credit-card"></i>
-                            Ver más opciones de financiación
-                        </button>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
+            </main>
 
-                <div class="product-comprar-ahora">
-                    <button class="boton-compra">Comprar ahora</button>
-                </div>
-                <div class="product-carrito">
-                    <button class="product-carrito-boton">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-        <!-- D e s c r i p c i ó n -->
-        <div class="product-descrip">
-            <h4>Descripción</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium
-                voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto.
-                Minus velit itaque voluptatum.</p>
-        </div>
-        <!-- s l i d e r   p r o d u c t -->
-        <div id="carouselExampleControls" class="carousel slide carousel-articulos-banner" data-bs-ride="carousel">
-            <h4 class="product-destacado-h4">Productos Destacados</h4>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <section class="contiene-s">
-                        <article>
-                            <img class="caja1" src="/images/libreta-dn.jpg" alt="">
-                        </article>
-                        <article>
-                            <img class="caja2" src="/images/goku-db.jpg" alt="">
-                        </article>
-                        <article class="articulo-3">
-                            <img class="caja3" src="/images/carousel-img4.jpg" alt="">
-                        </article>
-                        <article class="articulo-4">
-                            <img class="caja4" src="/images/gorro-dn.jpg" alt="">
-                        </article>
-                    </section>
-                </div>
-                <div class="carousel-item">
-                    <section class="contiene-s">
-                        <article>
-                            <img class="caja1" src="/images/goku-db.jpg" alt="">
-                        </article>
-                        <article>
-                            <img class="caja2" src="/images/gorro-dn.jpg" alt="">
-                        </article>
-                        <article class="articulo-3">
-                            <img class="caja3" src="/images/libreta-dn.jpg" alt="">
-                        </article>
-                        <article class="articulo-4">
-                            <img class="caja4" src="/images/carousel-img4.jpg" alt="">
-                        </article>
-                    </section>
-                </div>
-                <div class="carousel-item">
-                    <section class="contiene-s">
-                        <article>
-                            <img class="caja1" src="/images/libreta-dn.jpg" alt="">
-                        </article>
-                        <article>
-                            <img class="caja2" src="/images/goku-db.jpg" alt="">
-                        </article>
-                        <article class="articulo-3">
-                            <img class="caja3" src="/images/carousel-img4.jpg" alt="">
-                        </article>
-                        <article class="articulo-4">
-                            <img class="caja4" src="/images/taza-db.jpg" alt="">
-                        </article>
-                    </section>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </main>
+            <!-- Footer -->
+            <%- include('./partials/footer.ejs') %>
 
-    <!-- Footer -->
-    <%- include('./partials/footer.ejs') %>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-</body>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                    crossorigin="anonymous"></script>
+    </body>
 
 </html>

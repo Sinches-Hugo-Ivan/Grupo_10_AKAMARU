@@ -1,0 +1,60 @@
+.main .tituloAdmin {
+    text-align: center;
+    margin: 50px;
+}
+
+.tablaProducts {
+    border: 1px solid grey;
+    margin: 50px auto 200px;
+}
+
+.tablaProducts thead {
+    border: 1px solid grey;
+}
+
+.tablaProducts thead tr th {
+    padding: 10px;
+    background-color: seagreen;
+}
+
+.tablaProducts tr td {
+    width: 250px;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.fa-trash-alt {
+    color: red;
+}
+
+.fa-edit {
+    color: steelblue;
+}
+
+.tablaProducts .img-product-admin {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: center;
+    padding: 5px;
+}
+
+.tablaProducts .tdsize {
+    width: 140px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.tablaProducts .delete {
+    color: red;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 30px;
+}
+
+.tablaProducts .edit {
+    color: steelblue;
+    padding: 12px;
+    border: 1px solid steelblue;
+    border-radius: 30px;
+}

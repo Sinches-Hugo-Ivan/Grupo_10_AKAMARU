@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head')  %> 
-<body  >
+<%- include('./partials/head') %>
 
-    <%- include('./partials/header')  %> 
-    
-    <section class="container">
+  <body>
+
+    <%- include('./partials/header') %>
+
+      <section class="container">
         <div class="formulario mt-5">
-            <h2>Editar Producto</h2>
-            <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" name="title" value="<%= producto.title %>">
-                  </div>
-                  <div class="mb-3">
-                    <label for="floatingTextarea">Descripción</label>
-                    <textarea class="form-control" id="floatingTextarea" name="description"><%= producto.description %> </textarea>
-                  </div>
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Precio</label>
-                    <input type="number" class="form-control" id="formGroupExampleInput2" name="price" value=<%= producto.price %>>
-                  </div>
-                 
-                  <button class="btn btn-primary" type="submit">Guardar</button>
+          <h2>Editar <%= producto.name %>
+          </h2>
+          <form action="/products/edit/<%=producto.id %>?_method=PUT" method="POST">
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label"> Nombre </label>
+              <input type="text" class="form-control" id="formGroupExampleInput" name="name"
+                value="<%= producto.name %>">
+            </div>
+            <div class="text-center">
+              <img src=" <%= producto.image %> " alt="">
+            </div>
+            <div class="mb-3">
+              <label for="floatingTextarea">Descripción</label>
+              <textarea class="form-control" id="floatingTextarea"
+                name="description"><%= producto.description %> </textarea>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Precio</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="price" value="<%=producto.price%>">
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Cuotas</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="discount">
+            </div>
+            <button class="btn btn-primary" type="submit">Guardar</button>
             </form>
+
         </div>
-    </section>
+      </section>
 
-     <!-- Footer -->
-     <%- include('./partials/footer.ejs') %>
+      <!-- Footer -->
+      <%- include('./partials/footer.ejs') %>
 
-</body>
+  </body>
+
 </html>
