@@ -5,8 +5,15 @@
 
 # Retroespectiva del Sprint 1
 
-Una de las principales conclusiones del sprint 1 es la de plasmar nuestras ideas en discord para tenerlas mas seguras.
+Tenemos que seguir haciendo 2 reuniones semanales y tener una comunicación fluida,
+actualizar más seguido Trello. Comenzar con el maquetado de la página y tener un esquema 
+de los temas a ver en cada reunión.
+No tenemos que aplazar tareas   y plasmar la menor cantidad de ideas en WhatsApp y manejarnos 
+con discord para no perder la información.
+
 
 # Retroespectiva del Sprint 2
 
-En el sprint 2 coincidimos en continuar  con sesiones de ayuda para fortalecernos como equipo.
+Tenemos que seguir haciendo sesiones de ayuda y hacer más reuniones entre semana.
+Comenzar a organizar mejor las tareas a realizar en cada reunión para no hacer reuniones
+extensas y en lo posible no re agendar reuniones.
