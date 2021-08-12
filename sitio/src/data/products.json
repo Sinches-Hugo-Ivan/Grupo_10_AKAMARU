@@ -1,113 +1,105 @@
 [
-    {
-      "id": 1,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-      "image": "/images/goku-db.jpg",
-      "image1": "deathnote1.webp",
-      "image2": "deathnote2.webp",
-      "image3": "deathnote3.webp",
-      "image4": "deathnote4.webp",
-      "price": 500,
-      "name": "Goku",
-      "discount": 3
-    },
-    {
-      "id": 2,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.    ",
-      "image": "/images/deathnote.webp",
-      "image1": "deathnote1.webp",
-      "image2": "deathnote2.webp",
-      "image3": "deathnote3.webp",
-      "image4": "deathnote4.webp",
-      "price": 1500,
-      "name": "Producto2",
-      "discount": 5
-    },
-    {
-      "id": 3,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-      "image": "/images/gorro-dn.jpg",
-      "image1": "deathnote1.webp",
-      "image2": "deathnote2.webp",
-      "image3": "deathnote3.webp",
-      "image4": "deathnote4.webp",
-      "price": 300,
-      "name": "Gorro ",
-      "discount": 2
-    },
-    {
-      "id": 4,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-      "image": "/images/luffy-op.jpg",
-      "image1": "deathnote1.webp",
-      "image2": "deathnote2.webp",
-      "image3": "deathnote3.webp",
-      "image4": "deathnote4.webp",
-      "price": 350,
-      "name": "Muñeco",
-      "discount": 6
-    },
-    {
-      "id": 5,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-      "image": "/images/taza-db.jpg",
-      "image1": "deathnote1.webp",
-      "image2": "deathnote2.webp",
-      "image3": "deathnote3.webp",
-      "image4": "deathnote4.webp",
-      "price": 400,
-      "name": "Taza Dragon Ball",
-      "discount": 6
-    },
-    {
-      "id": 6,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-      "image": "/images/figura6.webp",
-      "image1": "deathnote1.webp",
-      "image2": "deathnote2.webp",
-      "image3": "deathnote3.webp",
-      "image4": "deathnote4.webp",
-      "price": 250,
-      "name": "Figuras Naruto",
-      "discount": 6
-    },
-    {
-      "id": 7,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-      "image": "/images/6figuras.webp",
-      "image1": "deathnote1.webp",
-      "image2": "deathnote2.webp",
-      "image3": "deathnote3.webp",
-      "image4": "deathnote4.webp",
-      "price": 250,
-      "name": "Figuras Naruto opc2",
-      "discount": 6
-    },
-    {
-      "id": 9,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-      "price": 600,
-      "image": "images/default-image.png",
-      "name": "Producto9",
-      "discount": 6
-    },
-    {
-      "id": 10,
-      "name": "Collar ",
-      "description": "Lorem ipsum ......",
-      "price": 250,
-      "image": "/images/image-1628705132662.jpg",
-      "discount": 3,
-      "category": "figuras"
-    },
-    {
-      "id": 11,
-      "name": "Remera Sasuke",
-      "description": "Lorem ipsum .........",
-      "price": 800,
-      "image": "/images/image-1628706583923.jpeg",
-      "discount": 6,
-      "category": "mangas",
-      "colors": "black"
-    }
+  {
+    "id": 1,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
+    "image": "/images/goku-db.jpg",
+    "image1": "deathnote1.webp",
+    "image2": "deathnote2.webp",
+    "image3": "deathnote3.webp",
+    "image4": "deathnote4.webp",
+    "price": 500,
+    "name": "Goku",
+    "discount": 3
+  },
+  {
+    "id": 2,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.    ",
+    "image": "/images/deathnote.webp",
+    "image1": "deathnote1.webp",
+    "image2": "deathnote2.webp",
+    "image3": "deathnote3.webp",
+    "image4": "deathnote4.webp",
+    "price": 1500,
+    "name": "Producto2",
+    "discount": 5
+  },
+  {
+    "id": 3,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
+    "image": "/images/gorro-dn.jpg",
+    "image1": "deathnote1.webp",
+    "image2": "deathnote2.webp",
+    "image3": "deathnote3.webp",
+    "image4": "deathnote4.webp",
+    "price": 300,
+    "name": "Gorro ",
+    "discount": 2
+  },
+  {
+    "id": 4,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
+    "image": "/images/luffy-op.jpg",
+    "image1": "deathnote1.webp",
+    "image2": "deathnote2.webp",
+    "image3": "deathnote3.webp",
+    "image4": "deathnote4.webp",
+    "price": 350,
+    "name": "Muñeco",
+    "discount": 6
+  },
+  {
+    "id": 5,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
+    "image": "/images/taza-db.jpg",
+    "image1": "deathnote1.webp",
+    "image2": "deathnote2.webp",
+    "image3": "deathnote3.webp",
+    "image4": "deathnote4.webp",
+    "price": 400,
+    "name": "Taza Dragon Ball",
+    "discount": 6
+  },
+  {
+    "id": 6,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
+    "image": "/images/figura6.webp",
+    "image1": "deathnote1.webp",
+    "image2": "deathnote2.webp",
+    "image3": "deathnote3.webp",
+    "image4": "deathnote4.webp",
+    "price": 250,
+    "name": "Figuras Naruto",
+    "discount": 6
+  },
+  {
+    "id": 7,
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
+    "image": "/images/6figuras.webp",
+    "image1": "deathnote1.webp",
+    "image2": "deathnote2.webp",
+    "image3": "deathnote3.webp",
+    "image4": "deathnote4.webp",
+    "price": 250,
+    "name": "Figuras Naruto opc2",
+    "discount": 6
+  },
+  {
+    "id": 10,
+    "name": "Collar ",
+    "description": "Lorem ipsum ......",
+    "price": 250,
+    "image": "/images/image-1628705132662.jpg",
+    "discount": 3,
+    "category": "figuras"
+  },
+  {
+    "id": 11,
+    "name": "Remera Sasuke",
+    "description": "Lorem ipsum .........",
+    "price": 800,
+    "image": "/images/image-1628706583923.jpeg",
+    "discount": 6,
+    "category": "mangas",
+    "colors": "black"
+  }
 ]
