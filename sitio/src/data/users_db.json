@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Sofia",
+    "surname": "Parodi",
+    "email": "sofia.parodi@gmail.com",
+    "password": "$2b$12$f4bZpX7opm.mGVqJXQTb0.nepM1DB/DYnshf/cK5yNLBV33Yx/3Sa",
+    "date": "2000-05-02",
+    "gender": "Femenino"
+  }
+]

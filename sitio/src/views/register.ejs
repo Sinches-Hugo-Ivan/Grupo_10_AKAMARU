@@ -15,66 +15,89 @@
             <h3 class="font-weight-bold">Crea tu cuenta </h3>
             <p class="text-muted mb-5">Los campos marcados con <span class="text-danger">*</span> son requeridos</p>
 
-            <form>
+            <form action="/users/register" method="POST">
 
                 <!-- Grupo: Nombre y Apellido -->
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
-                        <label for="nombre" class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" id="nombre">
+                        <label for="name" class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                        <input type="text" name="name" class="form-control" placeholder="Tu nombre" id="name">
+                        <%if (locals.errors && errors.name){%>
+                            <p style="color: red;"> <%=errors.name.msg%> </p>
+                        <%}%>
                         <span> </span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="apellido" class="font-weight-bold">Apellido <span
+                        <label for="surname" class="font-weight-bold">Apellido <span
                                 class="text-danger">*</span></label>
-                        <input type="text" name="apellido" class="form-control" placeholder="Tu apellido" id="apellido">
+                        <input type="text" name="surname" class="form-control" placeholder="Tu apellido" id="surname">
+                        <%if (locals.errors && errors.surname){%>
+                            <p style="color: red;"> <%=errors.surname.msg%> </p>
+                        <%}%>
                         <span> </span>
                     </div>
                 </div>
                 <!-- Grupo: Correo electronico -->
                 <div class="form-group mb-3">
-                    <label for="correo" class="font-weight-bold">Correo electrónico <span
+                    <label for="email" class="font-weight-bold">Correo electrónico <span
                             class="text-danger">*</span></label>
-                    <input type="email" name="correo" class="form-control" placeholder="Ingresa tu correo electrónico"
-                        id="correo">
+                    <input type="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico"
+                        id="email">
+                        <%if (locals.errors && errors.email){%>
+                            <p style="color: red;"> <%=errors.email.msg%> </p>
+                        <%}%>
                     <span> </span>
                 </div>
                 <!-- Grupo: Contraseña -->
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
-                        <label for="contraseña" class="font-weight-bold">Contraseña <span
+                        <label for="password" class="font-weight-bold">Contraseña<span
                                 class="text-danger">*</span></label>
-                        <input type="password" name="contraseña" class="form-control" placeholder="Tu contraseña"
-                            id="contraseña">
+                        <input type="password" name="password" class="form-control" placeholder="Tu contraseña"
+                            id="password">
+                        <%if (locals.errors && errors.password){%>
+                                <p style="color: red;"> <%=errors.password.msg%> </p>
+                        <%}%>
                         <span> </span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="contraseña2" class="font-weight-bold"> Repetir Contraseña <span
+                        <label for="password2" class="font-weight-bold"> Repetir Contraseña <span
                                 class="text-danger">*</span></label>
-                        <input type="password" name="contraseña2" class="form-control"
-                            placeholder="Repeti tu contraseña" id="contraseña2">
+                        <input type="password" name="password2" class="form-control"
+                            placeholder="Repeti tu contraseña" id="password2">
+                        <%if (locals.errors && errors.password2){%>
+                                <p style="color: red;"> <%=errors.password2.msg%> </p>
+                        <%}%>
                         <span> </span>
                     </div>
                 </div>
                 <!-- Grupo: Fecha de nacimiento y Genero -->
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
-                        <label for="fecha" class="font-weight-bold"> Fecha de nacimiento <span
+                        <label for="date" class="font-weight-bold"> Fecha de nacimiento <span
                                 class="text-danger">*</span></label>
-                        <input type="date" name="fecha" class="form-control" placeholder="dd/mm/aaaa" id="fecha">
+                        <input type="date" name="date" class="form-control" placeholder="dd/mm/aaaa" id="date">
+                        <%if (locals.errors && errors.date){%>
+                            <p style="color: red;"> <%=errors.date.msg%> </p>
+                        <%}%>
                         <span> </span>
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="genero" class="font-weight-bold"> Genero<span class="text-danger">*</span></label>
-                        <input list="Genero" name="genero" type="text" class="form-control" placeholder="select"
-                            id="genero">
-                        <datalist id="Genero">
+                        <label for="gender" class="font-weight-bold"> Genero<span class="text-danger">*</span></label>
+                        <input list="gender" name="gender" type="text" class="form-control" placeholder="select"
+                            id="gender">
+                        <datalist id="gender">
                             <option value="Masculino"></option>
                             <option value="Femenino"></option>
                         </datalist>
+                        <%if (locals.errors && errors.gender){%>
+                            <p style="color: red;"> <%=errors.gender.msg%> </p>
+                        <%}%>
                         <span> </span>
-                    </div>
+                    </div> 
+
+
 
 
 
