@@ -45,18 +45,14 @@
 					<section class="conteiner-products">
 						<% productos.forEach(producto=> { %>
 							<article class="product">
-								<a href="/products/detail/<%= producto.id %>">
-									<img class="img-product" src="<%= producto.image %> " alt="">
+								<a href="/products/detail/:id">
+									<img class="img-product" src="/images/<%= producto.images[0] %> " alt="">
 									<div class="product-description">
 										<h3 class="name-product">
 											<%= producto.name %>
 										</h3>
-										<p>$ <%=producto.price%>
-										</p>
-										<p>
-											<%=producto.discount%> <span>cuotas de </span>$ <%=( producto.price
-													/ producto.discount).toFixed(0) %>
-										</p>
+										<p>$ <%=producto.price%></p>
+										<p><%=producto.discount%> <span>cuotas de  </span>$ <%=( producto.price / producto.discount).toFixed(0) %></p>
 									</div>
 								</a>
 							</article>
