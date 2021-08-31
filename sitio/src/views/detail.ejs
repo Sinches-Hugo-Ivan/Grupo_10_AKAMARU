@@ -16,7 +16,7 @@
                         <li><a href="/">home</a>
                             <span>></span>
                         </li>
-                        <li><a href="#">categoría </a> > </li>
+                        <li><a href="/products/categorias/<%= producto.category %> "><%= producto.category %> </a> > </li>
                         <li><a href="#">producto</a></li>
                     </ul>
                 </div>
@@ -27,32 +27,22 @@
                     <!-- M á s    i m a g e n e s    d e l   p r o d u c t o -->
 
                     <div class="contenedora-img-list">
-                        <img class="list" src="\images\<%= producto.image1 %>" alt="">
-                        <img class="list" src="\images\<%= producto.image2 %>" alt="">
-                        <img class="list" src="\images\<%= producto.image3 %>" alt="">
-                        <img class="list" src="\images\<%= producto.image4 %>" alt="">
-                        <img class="list" src="\images\<%= producto.image5 %>" alt="">
+                        <% for( let index = 1; index < producto.images.length; index++ ) { %>
+                            <img onclick="document.getElementById('imagen-principal').setAttribute('src','/images/<%= producto.images[index] %>')" src="/images/<%= producto.images[index] %>" class="list">  
+                        <% } %>
                     </div>
                     <!-- I m a g e n    p r i n c i p a l -->
                     <div class="contenedora-img-principal">
-                        <img class="imagen-principal" src="<%= producto.image %>" alt="">
+                        <img class="imagen-principal" src="<%= producto.images[0] %>" alt="">
                     </div>
                     <!-- N o m b r e    p r o d u c t o -->
                     <div class="contenedora-product-descrip mb-3">
                         <div class="product-color">
                             <span>Color:</span>
-                            <input class="product-color-input" type="radio" name="color" value="color1">
-                            <img class="product-color-img" src="\images\color1.jpg" alt="">
-                            <input class="product-color-input" type="radio" name="color" value="color2">
-                            <img class="product-color-img" src="\images\color2.jpg" alt="">
-                            <input class="product-color-input" type="radio" name="color" value="color3">
-                            <img class="product-color-img" src="\images\color3.webp" alt="">
-                            <input class="product-color-input" type="radio" name="color" value="color4">
-                            <img class="product-color-img" src="\images\color4.webp" alt="">
-                            <input class="product-color-input" type="radio" name="color" value="color5">
-                            <img class="product-color-img" src="\images\color5.jpg" alt="">
-                            <input class="product-color-input" type="radio" name="color" value="color6">
-                            <img class="product-color-img" src="\images\color6.jpg" alt="">
+                            <% for( let index = 1; index < producto.images.length; index++ ) { %>
+                                <input class="product-color-input" type="radio" name="color" value="color1">
+                                <img class="product-color-img" src="/images/<%= producto.images[index] %> " alt="">
+                            <% } %>
                         </div>
                         <h3>
                             <%= producto.name %>

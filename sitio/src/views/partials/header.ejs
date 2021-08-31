@@ -10,14 +10,11 @@
             <div class="nav-left">
                 <ul class="menu menu_visible">
                     <li><a href="/" class="enlaces">Inicio</a></li>
-                    <li><a href="/" class="enlaces">Productos</a>
+                    <li><a href="/products" class="enlaces">Productos</a>
                         <ul class="submenu">
-                            <li><a href="/#" class="enlaces">Tazas</a></li>
-                            <li><a href="/#" class="enlaces">Mochilas y bolsos</a></li>
-                            <li><a href="/#" class="enlaces">Cartucheras</a></li>
-                            <li><a href="/#" class="enlaces">Accesorios</a></li>
-                            <li><a href="/#" class="enlaces">Figuras</a></li>
-                            <li><a href="/#" class="enlaces">Mangas</a></li>
+                            <% categorias.forEach(categoria => { %>
+                                <li><a href="/products/categorias/<%=categoria.title%> " class="enlaces"><%=categoria.title%> </a></li>
+                              <% }) %>
                         </ul>
                     </li>
                     <li><a href="/#" class="enlaces">Nosotros</a></li>

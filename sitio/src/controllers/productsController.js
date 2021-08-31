@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+let categorias = require('../data/categories_db');
 let productos = require('../data/products_db');
 const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
 
@@ -12,12 +13,15 @@ module.exports = {
     },
     save: (req, res) => {
         const { name, description, price, discount, category, colors } = req.body;
+        if(req.files){
+            var imagenes = req.files.map(imagen => imagen.filename)
+        }
         let producto = {
             id: productos[productos.length - 1].id + 1,
             name,
             description,
             price: +price,
-            image: req.file ? "/images/" + req.file.filename :"/images/default-image.png",
+            images: req.files.length != 0 ? imagenes :["default-image.png"],
             discount: +discount,
             category,
             colors
@@ -32,10 +36,12 @@ module.exports = {
     },
     detail: (req, res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
-
+        let categoria = categorias.filter(categoria => categoria.title === req.params.title);
         res.render('detail', {
             producto,
-            productos
+            productos,
+            categorias,
+            categoria
         })
     },
     search: (req, res) => {
@@ -79,6 +85,18 @@ module.exports = {
             productos,
         })
     } ,
+    categoriasProduct: (req, res) => {
+        let resultado = productos.filter(producto => producto.category === req.params.title);
+        let categoria = categorias.filter(categoria => categoria.title === req.params.title);
+        return res.render('categorias',{
+            resultado, 
+            categorias,
+            categoria,
+            productos,
+            title: req.params.title,
+             
+        })
+    },
     remove: (req, res) => {
         productos = productos.filter((producto) => producto.id !== +req.params.id);
         fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,2),"utf-8")

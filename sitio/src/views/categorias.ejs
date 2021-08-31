@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+    <body>
+
+        <!-- h e a d e r -->
+        <%- include('./partials/header.ejs') %>
+
+            <main class="main">
+
+                <h2 class=" titulo-Destacados">  Categorías </h2>
+                    <h3> <%= categoria.title %>  </h3>
+                <!-- C a t e g o r i a s   P r o d u c t o s   -->
+                <section class="conteiner-products">
+                     <% if (categoria === categoria) { %>
+                      <% resultado.forEach(producto => { %>
+                        <article class="product">
+                            <a href="/products/detail/<%= producto.id %>">
+                                <img class="img-product" src="/images/<%= producto.images[0] %> " alt="">
+                                <div class="product-description">
+                                    <h3 class="name-product">
+                                        <%= producto.name %>
+                                    </h3>
+                                    <p>$ <%=producto.price%>
+                                    </p>
+                                    <p>
+                                        <%=producto.discount%> <span>cuotas de </span>$ <%=( producto.price /
+                                                producto.discount).toFixed(0) %>
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                        <% }) %>
+                     <% } %> 
+                </section>
+                <section class="conteiner-products">
+
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <%- include('./partials/footer.ejs') %>
+
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+                    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+                    crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
