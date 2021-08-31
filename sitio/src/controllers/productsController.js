@@ -57,7 +57,8 @@ module.exports = {
 
         return res.render('productEdit', {
             productos,
-            producto
+            producto,
+            categorias
         })
     },
     update: (req, res) => {
@@ -83,6 +84,7 @@ module.exports = {
     vistaAdmin: (req, res) => {
         return res.render('listaProductsAdmin',{
             productos,
+            categorias
         })
     } ,
     categoriasProduct: (req, res) => {
