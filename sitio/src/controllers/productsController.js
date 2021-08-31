@@ -8,7 +8,7 @@ module.exports = {
     add: (req, res) => {
         res.render('productAdd', {
             productos,
-
+            categorias
         })
     },
     save: (req, res) => {
@@ -105,7 +105,8 @@ module.exports = {
     },
     productos: (req, res) => {
         res.render('vistaProduct', {
-            productos
+            productos,
+            categorias
         })
     }
 }

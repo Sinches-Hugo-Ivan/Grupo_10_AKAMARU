@@ -1,14 +1,20 @@
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const {productos} = require('../data/products_db');
+const categorias = require('../data/categories_db');
+
 
 module.exports = {
     register: (req, res) => {
-        return res.render('register')
+        return res.render('register',{
+            categorias
+        })
     },
 
     login: (req, res) => {
-        return res.render('login')
+        return res.render('login',{
+            categorias
+        })
     },
     processLogin: (req,res) =>{
         let errores = validationResult(req);
@@ -23,13 +29,16 @@ module.exports = {
         }else{
             return res.render('login',{
                 productos,
+                categorias,
                 errores : errores.mapped()
             } )
         }
 
     },
     cart: (req, res) => {
-        return res.render('cart')
+        return res.render('cart',{
+            categorias
+        })
     }
 
 }

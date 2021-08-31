@@ -14,11 +14,11 @@
 
                 <section class="container">
                     <h3 class="font-weight-bold">Acceso</h3>
-                    <form>
+                    <form action="" method="POST">
 
                         <!-- Grupo: Correo electronico -->
                         <div class="form-group mb-3">
-                            <label for="correo" class="font-weight-bold">Correo electrónico </label>
+                            <label for="email" class="font-weight-bold">Correo electrónico </label>
                             <input type="email" name="email" class="form-control"
                                 placeholder="Ingresa tu correo electrónico" id="email">
                             <span> </span>
@@ -71,7 +71,7 @@
                         <div class="google mb-3">
                             <button class="btn btn-primary btn-sm btn-block">Iniciar sesión con Google</button>
                         </div>
-
+                        <span class="text-danger"> <%= locals.errores && errores.email ? errores.email.msg : null %>   </span>
                     </form>
 
                 </section>
