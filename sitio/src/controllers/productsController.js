@@ -49,6 +49,7 @@ module.exports = {
         res.render('resultSearch', {
             result,
             productos,
+            categorias,
             search: req.query.search
         })
     },
