@@ -17,3 +17,9 @@ con discord para no perder la información.
 Tenemos que seguir haciendo sesiones de ayuda y hacer más reuniones entre semana.
 Comenzar a organizar mejor las tareas a realizar en cada reunión para no hacer reuniones
 extensas y en lo posible no re agendar reuniones.
+
+
+# Retroespectiva del Sprint 3
+
+Tenemos que hacer más reuniones en días y horarios fijos que resulten eficaces para todo el grupo. 
+Comenzar a actualizar el trello más seguido y dividir las tareas de manera más eficiente para no tener que realizar las actividades todos juntos, porque asi creamos reuniones muy extensas. Pero si seguir haciendo reuniones para ayudarnos entre nosotros ante algún problema en especifico que no podamos resolver de manera individual ante la tarea asignada.

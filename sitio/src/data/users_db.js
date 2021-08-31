@@ -1,5 +1,4 @@
-const path = require("path");
-const fs = require("fs");
-const users = JSON.parse(fs.readFileSync(path.join(__dirname,"users_db.json"), 'utf-8'));
+const fs = require('fs');
+const path = require('path');
 
-module.exports = users
+module.exports = JSON.parse(fs.readFileSync(path.join(__dirname,'users.json'),'utf-8'));
