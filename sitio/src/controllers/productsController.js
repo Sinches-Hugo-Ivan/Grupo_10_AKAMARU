@@ -45,11 +45,11 @@ module.exports = {
         })
     },
     search: (req, res) => {
-        let result = productos.filter(producto => producto.category === req.query.search)
-        return res.render('resultSearch', {
+        let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search));
+        res.render('resultSearch', {
             result,
             productos,
-            busqueda: req.query.search
+            search: req.query.search
         })
     },
     edit: (req, res) => {
