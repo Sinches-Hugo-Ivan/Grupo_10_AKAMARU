@@ -77,44 +77,5 @@
     ],
     "discount": 3,
     "category": "accesorios"
-  },
-  {
-    "id": 12,
-    "name": "Figura One Price",
-    "description": "Lorem ipsum tatattata",
-    "price": 300,
-    "images": [
-      "image-1628729832264.jpeg"
-    ],
-    "discount": 3,
-    "category": "figuras",
-    "colors": "blue"
-  },
-  {
-    "id": 13,
-    "name": "Gaara",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut elit at lacus convallis bibendum a sit amet nibh. Proin a condimentum magna. Integer ornare mollis nisl vel placerat. Fusce ut semper risus, vel fringilla quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere vestibulum semper. Morbi nec odio felis. Sed vestibulum magna augue, in imperdiet metus semper sed.",
-    "price": 400,
-    "images": [
-      "images-1629417211983.jpg",
-      "images-1629417212115.jpg",
-      "images-1629417212119.jpg",
-      "images-1629417212144.jpg"
-    ],
-    "discount": 3,
-    "category": "figuras"
-  },
-  {
-    "id": 14,
-    "name": "Taza Shenlong",
-    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis ipsum eget nisl imperdiet consequat. Cras viverra urna ac sapien vulputate rhoncus. Quisque vitae diam non tellus mattis mattis. Nam consequat nunc sem, nec consectetur ante molestie a. Nulla ut rutrum dolor. Quisque nisl tellus, tincidunt et dapibus ac, tincidunt in elit. Aliquam at tempor risus. ",
-    "price": 360,
-    "images": [
-      "images-1629418315453.jpg",
-      "images-1629418315597.jpg",
-      "images-1629418315602.jpg"
-    ],
-    "discount": 3,
-    "category": "tazas"
   }
 ]
