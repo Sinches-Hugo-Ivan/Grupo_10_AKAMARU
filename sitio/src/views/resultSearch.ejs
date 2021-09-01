@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+<body>
+	<!-- h e a d e r -->
+	<%- include('./partials/header.ejs') %>
+ 
+ 
+	 <main>
+ 
+		 <section class="containerSearch">
+			<% if (result.length> 0) { %>
+				<h3>Resultados de la búsqueda: <%= search %>
+				</h3>
+				<table class="table">
+					<tbody>
+						<% result.forEach(producto=> { %>
+							<article class="product">
+								<a href="/products/detail/<%= producto.id %>">
+									<img class="img-product" src="/images/<%= producto.images[0] %> " alt="">
+									<div class="product-description">
+										<h3 class="name-product">
+											<%= producto.name %>
+										</h3>
+										<p>$ <%=producto.price%>
+										</p>
+										<p>
+											<%=producto.discount%> <span>cuotas de </span>$ <%=( producto.price
+													/ producto.discount).toFixed(0) %>
+										</p>
+									</div>
+								</a>
+							</article>
+							<% }) %>
+
+
+					</tbody>
+				</table>
+				<% } else{ %>
+					<h3>No hay resultado para la búsqueda: <%= search %>
+					</h3>
+					<section class="conteiner-products">
+						<% productos.forEach(producto=> { %>
+							<article class="product">
+								<a href="/products/detail/:id">
+									<img class="img-product" src="/images/<%= producto.images[0] %> " alt="">
+									<div class="product-description">
+										<h3 class="name-product">
+											<%= producto.name %>
+										</h3>
+										<p>$ <%=producto.price%></p>
+										<p><%=producto.discount%> <span>cuotas de  </span>$ <%=( producto.price / producto.discount).toFixed(0) %></p>
+									</div>
+								</a>
+							</article>
+							<% }) %>
+					</section>
+					<% } %>
+		 </section>
+ 
+	 </main>
+ 
+ 
+ 
+	 <!-- Footer -->
+	 <%- include('./partials/footer.ejs') %>
+ 
+ 
+		 <!-- Option 1: Bootstrap Bundle with Popper -->
+		 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			 crossorigin="anonymous"></script>
+ 
+ 
+ 
+ 
+ </body>

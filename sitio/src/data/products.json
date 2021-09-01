@@ -1,29 +1,5 @@
 [
   {
-    "id": 1,
-    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
-    "images": ["goku-db.jpg"],
-    "price": 500,
-    "name": "Goku",
-    "discount": 3,
-    "category": "figuras"
-  },
-  {
-    "id": 2,
-    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.    ",
-    "images": [
-      "deathnote.webp",
-      "deathnote1.webp",
-      "deathnote2.webp",
-      "deathnote3.webp",
-      "deathnote4.webp"
-    ],
-    "price": 1500,
-    "name": "Producto2",
-    "discount": 5,
-    "category": "accesorios"
-  },
-  {
     "id": 3,
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in recusandae accusantium voluptates laborum quae minus unde alias veniam tempora ducimus quidem repellat, perferendis iusto. Minus velit itaque voluptatum.  ",
     "images": [
@@ -68,14 +44,300 @@
     "category": "figuras"
   },
   {
-    "id": 10,
-    "name": "Collar ",
-    "description": "Lorem ipsum ......",
-    "price": 250,
+    "id": 8,
+    "name": "Gorro Naruto",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 300,
     "images": [
-      "image-1628705132662.jpg"
+      "images-1630430184730.jpg",
+      "images-1630430184738.jpg",
+      "images-1630430184739.jpg"
+    ],
+    "discount": 2,
+    "category": "accesorios",
+    "colors": "sincolor"
+  },
+  {
+    "id": 9,
+    "name": "Gorra Dragon Ball ",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 450,
+    "images": [
+      "images-1630431572606.jpg",
+      "images-1630431572620.jpg",
+      "images-1630431572621.jpg"
+    ],
+    "discount": 3,
+    "category": "accesorios",
+    "colors": "sincolor"
+  },
+  {
+    "id": 10,
+    "name": "Collar Sharingan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh. ",
+    "price": 600,
+    "images": [
+      "images-1630431748012.jpeg",
+      "images-1630431748150.jpeg",
+      "images-1630431748195.jpeg",
+      "images-1630431748257.jpeg"
     ],
     "discount": 3,
     "category": "accesorios"
+  },
+  {
+    "id": 11,
+    "name": "Cartuchera Bulma",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 300,
+    "images": [
+      "images-1630432464968.jpg"
+    ],
+    "discount": 3,
+    "category": "cartucheras",
+    "colors": "sincolor"
+  },
+  {
+    "id": 12,
+    "name": "Cartuchera DB",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.  ",
+    "price": 500,
+    "images": [
+      "images-1630432520260.jpg"
+    ],
+    "discount": 6,
+    "category": "cartucheras"
+  },
+  {
+    "id": 13,
+    "name": "Naruto Uzumaki",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 700,
+    "images": [
+      "images-1630432718728.webp",
+      "images-1630432718747.webp",
+      "images-1630432718782.webp",
+      "images-1630432718811.webp"
+    ],
+    "discount": 6,
+    "category": "figuras",
+    "colors": "sincolor"
+  },
+  {
+    "id": 14,
+    "name": "Sakura ",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 700,
+    "images": [
+      "images-1630432826701.webp",
+      "images-1630432826728.webp",
+      "images-1630432826809.webp",
+      "images-1630432826812.webp"
+    ],
+    "discount": 6,
+    "category": "figuras",
+    "colors": "sincolor"
+  },
+  {
+    "id": 15,
+    "name": "Lady Tsunade",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 800,
+    "images": [
+      "images-1630432978392.webp",
+      "images-1630432978400.webp",
+      "images-1630432978421.webp",
+      "images-1630432978475.webp",
+      "images-1630432978503.webp",
+      "images-1630432978531.webp"
+    ],
+    "discount": 12,
+    "category": "figuras",
+    "colors": "sincolor"
+  },
+  {
+    "id": 16,
+    "name": "Naruto Zorro 9 Colas",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh. ",
+    "price": 800,
+    "images": [
+      "images-1630433142316.jpg",
+      "images-1630433142320.jpg",
+      "images-1630433142323.webp",
+      "images-1630433142327.webp",
+      "images-1630433142329.webp",
+      "images-1630433142334.webp"
+    ],
+    "discount": 6,
+    "category": "figuras"
+  },
+  {
+    "id": 17,
+    "name": "Mochila Pokemon",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 2000,
+    "images": [
+      "images-1630433276477.jpg",
+      "images-1630433276487.jpg",
+      "images-1630433276491.jpg"
+    ],
+    "discount": 12,
+    "category": "mochilas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 18,
+    "name": "Bolso Super Saiyan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 3500,
+    "images": [
+      "images-1630433365149.jpg",
+      "images-1630433365164.jpg"
+    ],
+    "discount": 6,
+    "category": "mochilas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 19,
+    "name": "Mochila Super Saiyan ",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 4500,
+    "images": [
+      "images-1630433417551.jpg"
+    ],
+    "discount": 6,
+    "category": "mochilas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 20,
+    "name": "Taza Dragon Ball Z",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 500,
+    "images": [
+      "images-1630433495266.jpg",
+      "images-1630433495291.jpg",
+      "images-1630433495291.jpg"
+    ],
+    "discount": 6,
+    "category": "tazas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 21,
+    "name": "Taza Death Note",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 650,
+    "images": [
+      "images-1630433563182.jpg"
+    ],
+    "discount": 3,
+    "category": "tazas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 22,
+    "name": "Taza Shenlong DB",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 750,
+    "images": [
+      "images-1630433629613.jpg",
+      "images-1630433629715.jpg"
+    ],
+    "discount": 3,
+    "category": "tazas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 23,
+    "name": "Taza Pokemon",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 670,
+    "images": [
+      "images-1630433734907.jpg",
+      "images-1630433734912.jpg",
+      "images-1630433734913.jpg",
+      "images-1630433734916.jpg"
+    ],
+    "discount": 3,
+    "category": "tazas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 24,
+    "name": "Taza",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 780,
+    "images": [
+      "images-1630433832813.webp",
+      "images-1630433832817.jpg",
+      "images-1630433832822.webp",
+      "images-1630433832823.jpg"
+    ],
+    "discount": 6,
+    "category": "tazas",
+    "colors": "sincolor"
+  },
+  {
+    "id": 25,
+    "name": "Billetera Naruto",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 590,
+    "images": [
+      "images-1630433912636.jpg",
+      "images-1630433912639.jpg",
+      "images-1630433912640.jpg"
+    ],
+    "discount": 3,
+    "category": "accesorios",
+    "colors": "sincolor"
+  },
+  {
+    "id": 26,
+    "name": "Boa One Piece ",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 850,
+    "images": [
+      "images-1630434089838.jpg",
+      "images-1630434089910.jpg",
+      "images-1630434089928.jpg",
+      "images-1630434089957.jpg"
+    ],
+    "discount": 6,
+    "category": "figuras",
+    "colors": "sincolor"
+  },
+  {
+    "id": 27,
+    "name": "Kakashi Naruto",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 680,
+    "images": [
+      "images-1630434219756.jpg",
+      "images-1630434219824.webp",
+      "images-1630434219941.jpg",
+      "images-1630434219968.webp"
+    ],
+    "discount": 6,
+    "category": "figuras",
+    "colors": "sincolor"
+  },
+  {
+    "id": 28,
+    "name": "Gaara Naruto",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non eros porttitor, porta nibh eget, ornare eros. Proin eget dolor ac sem ultrices fermentum. Sed ultricies porttitor est, et vestibulum arcu convallis in. Fusce quis scelerisque arcu. Aliquam erat volutpat. Duis nec tortor quis nisl pretium aliquet. Vivamus sed nibh.",
+    "price": 750,
+    "images": [
+      "images-1630434315409.jpg",
+      "images-1630434315415.jpg",
+      "images-1630434315420.jpg",
+      "images-1630434315428.jpg",
+      "images-1630434315430.jpg",
+      "images-1630434315437.webp"
+    ],
+    "discount": 6,
+    "category": "figuras",
+    "colors": "sincolor"
   }
 ]

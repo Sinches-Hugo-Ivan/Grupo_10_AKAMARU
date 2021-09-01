@@ -159,6 +159,31 @@ header ul a {
 }
  
 
+.buscador{
+    visibility:hidden;
+}
+.buscador.mostrar{
+    visibility:visible;
+
+}
+
+.form-control-search{
+   width: 300px;
+}
+
+.buscador btn {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    min-width: 10rem;
+    color:black;
+    background: #e4e1e1;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+     
+}
 
 
 /* t a b l e t */
@@ -184,8 +209,7 @@ header ul a {
         left: 0;
         top: 95px;
         width: 100%;
-        padding: 20px 0;
-    
+        padding: 20px 0;    
         left: 0%;
         transition: left 0.3s;
     }
@@ -321,4 +345,7 @@ header ul a {
             visibility: visible;
             padding: 30px;
         }
+
+       
+        
 }

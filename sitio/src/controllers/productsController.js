@@ -8,7 +8,7 @@ module.exports = {
     add: (req, res) => {
         res.render('productAdd', {
             productos,
-
+            categorias
         })
     },
     save: (req, res) => {
@@ -45,11 +45,12 @@ module.exports = {
         })
     },
     search: (req, res) => {
-        let result = productos.filter(producto => producto.category === req.query.search)
-        return res.render('resultSearch', {
+        let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search));
+        res.render('resultSearch', {
             result,
             productos,
-            busqueda: req.query.search
+            categorias,
+            search: req.query.search
         })
     },
     edit: (req, res) => {
@@ -57,7 +58,8 @@ module.exports = {
 
         return res.render('productEdit', {
             productos,
-            producto
+            producto,
+            categorias
         })
     },
     update: (req, res) => {
@@ -83,6 +85,7 @@ module.exports = {
     vistaAdmin: (req, res) => {
         return res.render('listaProductsAdmin',{
             productos,
+            categorias
         })
     } ,
     categoriasProduct: (req, res) => {
@@ -105,7 +108,8 @@ module.exports = {
     },
     productos: (req, res) => {
         res.render('vistaProduct', {
-            productos
+            productos,
+            categorias
         })
     }
 }

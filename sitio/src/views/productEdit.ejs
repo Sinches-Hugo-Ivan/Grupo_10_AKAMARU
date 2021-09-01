@@ -24,6 +24,17 @@
               <textarea class="form-control" id="floatingTextarea"
                 name="description"><%= producto.description %> </textarea>
             </div>
+            <div class="mb-3 categorias">
+              <label for="category" class="form-label">Categoría</label>
+              <select name="category" id="category" >
+              <option value="accesorios">Accesorios</option>
+              <option value="cartucheras">Cartucheras</option>
+              <option value="figuras">Figuras</option>
+              <option value="mangas">Mangas</option>
+              <option value="mochilas">Mochilas y Bolsos</option>
+              <option value="tazas">Tazas</option>
+            </select>
+              </div>
             <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Precio</label>
               <input type="text" class="form-control" id="formGroupExampleInput2" name="price" value="<%=producto.price%>">

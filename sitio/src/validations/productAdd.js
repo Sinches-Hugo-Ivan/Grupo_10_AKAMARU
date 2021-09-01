@@ -9,20 +9,7 @@ module.exports = [
         .isLength({ max: 500 }).withMessage("La descripción debe tener 500 caracteres como máximo"),
 
     body("image")
-        .custom((value, {req}) => {
-            let format = [".jpeg", ".jpg", ".png",]
-
-            if (req.file.length == 0) {
-                return true
-            } else {
-                for (let i = 0; i < req.file.length; i++) {
-                    if (!format.includes(path.extname(req.file[i].originalname))) {
-                        throw new Error('El formato de la imágen debe ser ${format.join(", ")}');
-                    }
-                }
-                return true
-            }
-        }),
+        .notEmpty().withMessage("Ingresa al menos una imágen"),
 
             body("category")
                 .notEmpty().withMessage("Debes seleccionar una categoría"),
