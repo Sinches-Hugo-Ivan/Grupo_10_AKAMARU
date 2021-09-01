@@ -82,7 +82,8 @@
       "images-1630431748195.jpeg",
       "images-1630431748257.jpeg"
     ],
-    "discount": 3
+    "discount": 3,
+    "category": "accesorios"
   },
   {
     "id": 11,
@@ -167,7 +168,8 @@
       "images-1630433142329.webp",
       "images-1630433142334.webp"
     ],
-    "discount": 6
+    "discount": 6,
+    "category": "figuras"
   },
   {
     "id": 17,
