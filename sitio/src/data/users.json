@@ -20,5 +20,15 @@
     "rol": "user",
     "genero": "Masculino",
     "fecha": "2018-12-09"
+  },
+  {
+    "id": 3,
+    "name": "Sofia",
+    "surname": "Parodi",
+    "email": "awa@gmail.com",
+    "image": "default-user.jpg",
+    "password": "$2a$12$a506/7vS7AnTwrMHkfveDeg8emrubz4wJ9KlKiCwDHwojFRnMCyeO",
+    "date": "2000-05-02",
+    "genero": "Femenino"
   }
 ]

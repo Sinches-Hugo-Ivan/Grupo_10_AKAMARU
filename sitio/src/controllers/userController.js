@@ -25,15 +25,18 @@ module.exports = {
                 email : req.body.email,
                 password : bcrypt.hashSync(req.body.password, 12),
                 date : req.body.date,
-                genero : req.body.genero
+                genero : req.body.genero,
+                image: "default-user.jpg"
             }
+            console.log(errors)
             users.push(nuevoUsuario); //Agrego el usuario al final del array
             fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(users,null,2), 'utf-8');
             res.redirect('/');
             } else {
-                res.render("register", {
+                  res.render("register", {
+                    categorias,
                     errors : errors.mapped()
-                })
+                }) 
             }
     },
 
@@ -59,7 +62,7 @@ module.exports = {
             }
             let userLogin = req.session.userLogin;
             if(recordar){
-                res.cookie('akamaru', req.session.userLogin,{
+                res.cookie('akamaru', userLogin, {
                     maxAge: 240000
                 })
             }
@@ -94,20 +97,23 @@ module.exports = {
         console.log(req.body);
         let errors = validationResult(req);
         if (errors.isEmpty()){
-            const {nombre, apellido, fecha, genero, correo, imagen} = req.body;
+            const {nombre, apellido, fecha, genero, imagen} = req.body;
             users.forEach(usuario => {
-                if(usuario.email === req.params.correo){
+                if(usuario.email === req.body.correo){
                     if(req.file){
                         usuario.image = req.file.filename;
+
                     }else{
                         usuario.image = usuario.image;
                     }
-                    usuario.email = correo,
-                    usuario.firstName= nombre,
-                    usuario.lastName = apellido,
-                    usuario.fecha = fecha,
-                    usuario.genero = genero,
-                    usuario.imagen
+                    req.session.login = {
+                        firstName: nombre,
+                        lastName: apellido,
+                        fecha: fecha,
+                        genero: genero,
+                        imagen: imagen
+                    }
+                    req.cookie('akamaru', req.session.login);
                     
                 }
                 // usuario.imagen = imagen,
