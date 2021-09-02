@@ -1,36 +1,20 @@
-[{
-    "id": 1,
-    "firstName":"Leo",
-    "lastName":"Messi",
-    "email": "Messi_10@gmail.com",
-    "password":"123Barca",
-    "image": "images/user.png"
-    
-},
-{
-    "id": 2,
-    "firstName":"Kiba",
-    "lastName":"Inuzuka",
-    "email":"Kiba_Akamaru@gmail.com",
-    "password":"123",
-    "image": "images/user.png"
-    
-},
-{
-    "id": 3,
-    "firstName":"Sasuke",
-    "lastName":"Uchiha",
-    "email":"Sasuke@gmail.com",
-    "password":"123",
-    "image": "images/user.png"
-   
-},
-{
-    "id": 4,
-    "firstName":"Sakura",
-    "lastName":"Haruno",
-    "email":"Sakura_H@gmail.com",
-    "password":"123",
-    "image": "images/user.png"
-  
-}]
+[
+    {
+      "id": 1,
+      "firstName": "Lio",
+      "lastName": "Messi",
+      "email": "pepe@gmail.com",
+      "image": "default-user.jpg",
+      "password": "$2a$10$BDWL1x23BB8Joe5KRpL16eZB7q.tCFDDWDaxBOpanc6FaVHXLEC3W",
+      "rol": "admin"
+    },
+    {
+      "id": 2,
+      "firstName": "Lola",
+      "lastName": "lalala",
+      "email": "lola@gmail.com",
+      "image": "default-user.jpg",
+      "password": "$2a$10$zgtn6xx0s4sS7iDGMHx9EeevS/N869h2HqgXGcuEdH9Ekl9yQU6DW",
+      "rol":"user"
+    }
+  ]

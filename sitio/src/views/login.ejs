@@ -31,7 +31,7 @@
                                 id="password">
                             <span> </span>
                         </div>
-
+                        <span class="text-danger"> <%= locals.errores && errores.email ? errores.email.msg : null %>   </span>
                         <!-- RECORDAR USUARIO -->
                         <div class="form-check mb-3">
                             <input type="checkbox" name="flexCheckChecked" class="form-check-input" value=""
@@ -44,7 +44,7 @@
                         <!-- LOGIN  -->
                         <div class="mb-3">
 
-                            <button class="btn btn-primary btn-sm">Iniciar</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Iniciar</button>
 
                         </div>
 
@@ -71,7 +71,6 @@
                         <div class="google mb-3">
                             <button class="btn btn-primary btn-sm btn-block">Iniciar sesión con Google</button>
                         </div>
-                        <span class="text-danger"> <%= locals.errores && errores.email ? errores.email.msg : null %>   </span>
                     </form>
 
                 </section>
