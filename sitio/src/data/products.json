@@ -94,7 +94,7 @@
       "images-1630432464968.jpg"
     ],
     "discount": 3,
-    "category": "cartucheras",
+    "category": "Cartucheras",
     "colors": "sincolor"
   },
   {
@@ -106,7 +106,7 @@
       "images-1630432520260.jpg"
     ],
     "discount": 6,
-    "category": "cartucheras"
+    "category": "Cartucheras"
   },
   {
     "id": 13,
@@ -120,7 +120,7 @@
       "images-1630432718811.webp"
     ],
     "discount": 6,
-    "category": "figuras",
+    "category": "Figuras",
     "colors": "sincolor"
   },
   {
@@ -135,7 +135,7 @@
       "images-1630432826812.webp"
     ],
     "discount": 6,
-    "category": "figuras",
+    "category": "Figuras",
     "colors": "sincolor"
   },
   {
@@ -152,7 +152,7 @@
       "images-1630432978531.webp"
     ],
     "discount": 12,
-    "category": "figuras",
+    "category": "Figuras",
     "colors": "sincolor"
   },
   {
@@ -169,7 +169,7 @@
       "images-1630433142334.webp"
     ],
     "discount": 6,
-    "category": "figuras"
+    "category": "Figuras"
   },
   {
     "id": 17,
@@ -182,7 +182,7 @@
       "images-1630433276491.jpg"
     ],
     "discount": 12,
-    "category": "mochilas",
+    "category": "Mochilas",
     "colors": "sincolor"
   },
   {
@@ -195,7 +195,7 @@
       "images-1630433365164.jpg"
     ],
     "discount": 6,
-    "category": "mochilas",
+    "category": "Mochilas",
     "colors": "sincolor"
   },
   {
@@ -207,7 +207,7 @@
       "images-1630433417551.jpg"
     ],
     "discount": 6,
-    "category": "mochilas",
+    "category": "Mochilas",
     "colors": "sincolor"
   },
   {
@@ -221,7 +221,7 @@
       "images-1630433495291.jpg"
     ],
     "discount": 6,
-    "category": "tazas",
+    "category": "Tazas",
     "colors": "sincolor"
   },
   {
@@ -233,7 +233,7 @@
       "images-1630433563182.jpg"
     ],
     "discount": 3,
-    "category": "tazas",
+    "category": "Tazas",
     "colors": "sincolor"
   },
   {
@@ -246,7 +246,7 @@
       "images-1630433629715.jpg"
     ],
     "discount": 3,
-    "category": "tazas",
+    "category": "Tazas",
     "colors": "sincolor"
   },
   {
@@ -261,7 +261,7 @@
       "images-1630433734916.jpg"
     ],
     "discount": 3,
-    "category": "tazas",
+    "category": "Tazas",
     "colors": "sincolor"
   },
   {
@@ -276,7 +276,7 @@
       "images-1630433832823.jpg"
     ],
     "discount": 6,
-    "category": "tazas",
+    "category": "Tazas",
     "colors": "sincolor"
   },
   {
@@ -290,7 +290,7 @@
       "images-1630433912640.jpg"
     ],
     "discount": 3,
-    "category": "accesorios",
+    "category": "Accesorios",
     "colors": "sincolor"
   },
   {
@@ -305,7 +305,7 @@
       "images-1630434089957.jpg"
     ],
     "discount": 6,
-    "category": "figuras",
+    "category": "Figuras",
     "colors": "sincolor"
   },
   {
@@ -320,7 +320,7 @@
       "images-1630434219968.webp"
     ],
     "discount": 6,
-    "category": "figuras",
+    "category": "Figuras",
     "colors": "sincolor"
   },
   {
@@ -337,7 +337,7 @@
       "images-1630434315437.webp"
     ],
     "discount": 6,
-    "category": "figuras",
+    "category": "Figuras",
     "colors": "sincolor"
   }
 ]

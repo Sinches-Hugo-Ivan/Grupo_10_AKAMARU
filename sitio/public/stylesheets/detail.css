@@ -1,64 +1,65 @@
 /*modifica slider de articulos en movil*/
 
 .main .product-destacado-h4 {
-    padding: 30px 10px 5px 10px;
-    font-weight: bold;
+    padding: 30px 10px 0px 10px;
 }
 
-.main .carousel-articulos-banner {
-    min-width: 320px;
+.main .relacionados{
+    margin: auto;
+    width: 90%;
 }
-
-.contiene-s {
-    background-color: #cdcdcd;
-    padding: 0 5px;
-    margin: 0 auto 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 95%;
-    height: 120px;
+.main .contenedor-relacionados{
+    margin:15px 15px;
 }
-
-.main .contiene-s article {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    width: 37%;
-    height: 110px;
+.main .producto-relacionado{
+    object-fit: contain;
+    width: 100%;
+    height: 250px;
+    border:1px solid gray;
 }
+/*  botones de carrusel de productos  */
 
-.caja1, .caja2, .caja3, .caja4 {
+.main .fa-chevron-left,.fa-chevron-right{
     display: block;
-    object-fit: cover;
-    /* para no deformar la img */
-    border: 1px black solid;
-    width: 300px;
-    height: 100%;
+    top:50%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #fff;
+    border-radius:50%;
 }
 
-.main .carousel-item .contiene-s .articulo-4 {
-    display: none;
+.main .glider-next{
+    border-radius: 50%;
+    top:40%;
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid gray;
+}
+.main .glider-prev{
+    border-radius: 50%;
+    top:40%;
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid gray;
+}
+.main .glider-next:hover{
+    box-shadow: 0px 0px 7px 2px gray;
+    transition: 0.1s;
+    color:dodgerblue;
+}
+.main .glider-prev:hover{
+    box-shadow: 0px 0px 7px 2px gray;
+    transition: 0.1s;
+    color:dodgerblue;
 }
 
-.main .carousel-item .contiene-s .articulo-3 {
-    display: none;
+.product-descrip  .description{
+    font-weight: normal;
 }
 
-/* centramos los botones del carousel */
 
-.carousel-control-prev {
-    padding-top: 55px;
-    padding-right: 8px;
-}
-
-.carousel-control-next {
-    padding-top: 55px;
-    padding-left: 8px;
-}
-
-/*hasta aca*/
 
 a {
     text-decoration: none;
@@ -159,12 +160,6 @@ main {
     border-radius: 5px;
 }
 
-/* letras que dicen color */
-
-/* .product-color span {
-    padding-right: 4px;
-} */
-
 /* Imagenes chiquitas para seleccionar */
 
 .product-color-img {
@@ -206,7 +201,7 @@ main {
 .product-precio-cuota {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 25%;
     height: 70px;
     font-size: 20px;
 }
@@ -277,37 +272,21 @@ main .product-precio-cuota .product-precio {
         width: 45%;
         height: 400px;
     }
-    .main .carousel-articulos-banner {
-        display: block;
-    }
-    .main .article-4 {
-        display: none;
-    }
-    .contiene-s {
-        padding: 0 50px;
-    }
-    .main .contiene-s article {
-        margin: 5px;
-        width: 100px;
-        height: 110px;
-    }
-    .main .carousel-item .contiene-s .articulo-3 {
-        display: block;
-    }
+
+
     .main .producto-slider {
         display: block;
         width: 100px;
-    }
-    /* cambiamos el tamaño de las cajas con width */
-    .caja1, .caja2, .caja3, .caja4 {
-        width: 100px;
-        display: block;
     }
 }
 
 /* tablet */
 
 @media (min-width:768px) {
+    .main .contenedor-relacionados:hover{
+        box-shadow: 0px 0px 12px 2px gray;
+        transition: 0.1s;
+    }
     .navegacion {
         display: inline;
     }
@@ -326,10 +305,12 @@ main .product-precio-cuota .product-precio {
     }
     /*lista de imagenes a la izquierda del contenido*/
     .contenedora-img-list {
+        margin-bottom: 230px;
         display: block;
         padding: 0px 30px;
     }
     .contenedora-img-list .list {
+        cursor: pointer;
         margin-bottom: 10px;
         display: block;
         width: 40px;
@@ -424,28 +405,10 @@ main .product-precio-cuota .product-precio {
         padding: 0 90px;
     }
     .main .product-destacado-h4 {
-        padding: 30px 17px 5px 17px;
+        padding: 30px 17px 0px 17px;
+        }
     }
-    .main .carousel-item .contiene-s .articulo-3 {
-        display: block;
-        width: 100px;
-    }
-    .main .carousel-item .contiene-s .articulo-4 {
-        display: block;
-        width: 100px;
-    }
-    .caja1, .caja2, .caja3, .caja4 {
-        width: 100px;
-        display: block;
-    }
-    /* .main .contiene-s article {
-        width: 20%;
-    } */
-}
-
-/*hasta aca*/
-
-/* Desktop */
+    
 
 @media(min-width:950px) {
     .contenedora {
@@ -469,42 +432,11 @@ main .product-precio-cuota .product-precio {
     .contenedora {
         padding: 0 60px;
     }
-    .main .contiene-s {
-        padding: 0 50px;
-        height: 190px;
-    }
     .main .product-destacado-h4 {
-        padding: 30px 90px 5px 90px;
+        padding: 30px 90px 0px 90px;
     }
-    .main .contiene-s article {
-        margin: 5px;
-        width: 190px;
-        height: 180px;
-    }
-    .main .carousel-item .contiene-s .articulo-3 {
-        width: 190px;
-    }
-    .main .carousel-item .contiene-s .articulo-4 {
-        width: 190px;
-    }
+
     .product-descrip {
         padding: 15px 90px;
     }
-    .caja1, .caja2, .caja3, .caja4 {
-        width: 190px;
-        margin: auto;
-    }
-    .carousel-control-prev {
-        padding-top: 45px;
-    }
-    .carousel-control-next {
-        padding-top: 45px;
-    }
-    /*modifica slider de articulos en desktop*/
-    /* .main .conteiner-products {
-        width: 90%;
-    } */
-    /* .main .contiene-s .articulo-4 {
-        display: block;
-    } */
 }

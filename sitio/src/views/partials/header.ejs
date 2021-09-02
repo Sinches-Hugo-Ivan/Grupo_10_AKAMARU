@@ -33,13 +33,22 @@
                     <button type="submit" class= "btn btn-outline-primary" >Buscar</button>
                 </form>
             </div>
-
             <!-- i c o n o s -->
             <div class="nav-right">
                 <ul class="menu-icons">
                     <li><a href="/products/search" type="button" class="icons"><i class="fas fa-search"></i></a></li>
                     <li><a href="/users/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="/users/login" class="icons"><i class="fas fa-user"></i></a></li>
+                    <% if (locals.userLogin){ %>
+                        <li><a class = "visible" href="/" ><img class = "icon-foto-perfil" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""></a>
+                            <ul class = "ul-session">
+                                <li><a href="/" class="submenu-perfil"><img class = "icon-foto-perfil-submenu" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""><%= locals.userLogin.name %></a></li>
+                                <li><a href="/users/edituser" class="menu-perfil">Editar Perfil</a></li>
+                                <li><a href="/users/logout" class="menu-perfil" >Cerrar sesion</a></li>
+                            </ul>
+                        </li>
+                    <% } else{%>
+                        <li><a href="/users/login" class="icons"><i class="fas fa-user"></i></a></li>
+                    <% } %>
                 </ul>
             </div>
 

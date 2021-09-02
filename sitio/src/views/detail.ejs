@@ -16,7 +16,9 @@
                         <li><a href="/">home</a>
                             <span>></span>
                         </li>
-                        <li><a href="/products/categorias/<%= producto.category %> "><%= producto.category %> </a> > </li>
+                        <li><a href="/products/categorias/<%= producto.category %> ">
+                                <%= producto.category %>
+                            </a> > </li>
                         <li><a href="#">producto</a></li>
                     </ul>
                 </div>
@@ -27,22 +29,24 @@
                     <!-- M á s    i m a g e n e s    d e l   p r o d u c t o -->
 
                     <div class="contenedora-img-list">
-                        <% for( let index = 0; index < producto.images.length; index++ ) { %>
-                            <img onclick="document.getElementById('imagen-principal').setAttribute('src','/images/<%= producto.images[index] %>')" src="/images/<%= producto.images[index] %>" class="list">  
-                        <% } %>
+                        <% for( let index=0; index < producto.images.length; index++ ) { %>
+                            <img onclick="document.getElementById('imagen-principal').setAttribute('src','/images/<%= producto.images[index] %>')"
+                                src="/images/<%= producto.images[index] %>" class="list">
+                            <% } %>
                     </div>
                     <!-- I m a g e n    p r i n c i p a l -->
                     <div class="contenedora-img-principal">
-                        <img class="imagen-principal" id="imagen-principal" src="/images/<%= producto.images[0] %>" alt="">
+                        <img class="imagen-principal" id="imagen-principal" src="/images/<%= producto.images[0] %>"
+                            alt="">
                     </div>
                     <!-- N o m b r e    p r o d u c t o -->
                     <div class="contenedora-product-descrip mb-3">
                         <div class="product-color">
                             <span>Color:</span>
-                            <% for( let index = 1; index < producto.images.length; index++ ) { %>
+                            <% for( let index=0; index < producto.images.length; index++ ) { %>
                                 <input class="product-color-input" type="radio" name="color" value="color1">
                                 <img class="product-color-img" src="/images/<%= producto.images[index] %> " alt="">
-                            <% } %>
+                                <% } %>
                         </div>
                         <h3>
                             <%= producto.name %>
@@ -74,87 +78,43 @@
                         <div class="product-carrito">
                             <button class="product-carrito-boton">Agregar al carrito</button>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- D e s c r i p c i ó n -->
                 <div class="product-descrip">
                     <h4>Descripción</h4>
-                    <p>
+                    <p class = "description">
                         <%= producto.description %>
                     </p>
                 </div>
-                <!-- s l i d e r   p r o d u c t -->
-                <div id="carouselExampleControls" class="carousel slide carousel-articulos-banner"
-                    data-bs-ride="carousel">
-                    <h4 class="product-destacado-h4">Productos Destacados</h4>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <section class="contiene-s">
-                                    <article>
-                                        <img class="caja1" src="/images/libreta-dn.jpg" alt="">
-                                    </article>
-                                    <article>
-                                        <img class="caja2" src="/images/goku-db.jpg" alt="">
-                                    </article>
-                                    <article class="articulo-3">
-                                        <img class="caja3" src="/images/carousel-img4.jpg" alt="">
-                                    </article>
-                                    <article class="articulo-4">
-                                        <img class="caja4" src="/images/gorro-dn.jpg" alt="">
-                                    </article>
-                            </section>
+                <!-- C a r o u s e l   P r o d u c t o s -->
+                <h4 class="product-destacado-h4">Productos Destacados</h4>
+                <div class="relacionados">
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <% relacionados.forEach(producto=> { %>
+
+                                <div class="contenedor-relacionados">
+                                    <a href="/products/detail/<%= producto.id %>"><img class="producto-relacionado"
+                                            src="/images/<%= producto.images[0] %>" alt=""></a>
+                                </div>
+                                <% }) %>
                         </div>
-                        <div class="carousel-item">
-                            <section class="contiene-s">
-                                <article>
-                                    <img class="caja1" src="/images/goku-db.jpg" alt="">
-                                </article>
-                                <article>
-                                    <img class="caja2" src="/images/gorro-dn.jpg" alt="">
-                                </article>
-                                <article class="articulo-3">
-                                    <img class="caja3" src="/images/libreta-dn.jpg" alt="">
-                                </article>
-                                <article class="articulo-4">
-                                    <img class="caja4" src="/images/carousel-img4.jpg" alt="">
-                                </article>
-                            </section>
-                        </div>
-                        <div class="carousel-item">
-                            <section class="contiene-s">
-                                <article>
-                                    <img class="caja1" src="/images/libreta-dn.jpg" alt="">
-                                </article>
-                                <article>
-                                    <img class="caja2" src="/images/goku-db.jpg" alt="">
-                                </article>
-                                <article class="articulo-3">
-                                    <img class="caja3" src="/images/carousel-img4.jpg" alt="">
-                                </article>
-                                <article class="articulo-4">
-                                    <img class="caja4" src="/images/taza-db.jpg" alt="">
-                                </article>
-                            </section>
-                        </div>
+                        <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                        <div role="tablist" class="dots"></div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </main>
 
             <!-- Footer -->
             <%- include('./partials/footer.ejs') %>
+           <script src = "/javascripts/glider.js"></script>  <!-- va primer glider.js-->
+            <script src = "/javascripts/productDetail.js"></script>
 
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                     crossorigin="anonymous"></script>
     </body>
