@@ -1,6 +1,7 @@
 const path = require('path');
 var express = require('express');
 var router = express.Router();
+const addValidation = require("../validations/productAdd");
 
 const multer = require("multer");
 
@@ -21,7 +22,7 @@ const {add,detail,search,save,edit,update,remove, productos,vistaAdmin,categoria
 /* /products */
 router.get('/', productos);
 router.get('/add',add);
-router.post('/add',upload.array('images'), save);
+router.post('/add',upload.array('images'), addValidation, save);
 router.get('/detail/:id',detail);
 router.get('/search',search);
 router.get('/edit/:id',edit);

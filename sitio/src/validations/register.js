@@ -1,4 +1,4 @@
-const {body} = require('express-validator'); //Destructuring
+const { body } = require('express-validator'); //Destructuring
 
 module.exports = [
     body("name")
@@ -27,7 +27,7 @@ module.exports = [
     body("date")
             .notEmpty().withMessage("Debes ingresar tu fecha de nacimiento"),
 
-    body("gender")
+    body("genero")
             .notEmpty().withMessage("Debes seleccionar una opción")
 ]
 

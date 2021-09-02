@@ -83,18 +83,19 @@
                         <span> </span>
                     </div>
 
-                    <div class="form-group col-md-6">
-                        <label for="gender" class="font-weight-bold"> Genero<span class="text-danger">*</span></label>
-                        <input list="gender" name="gender" type="text" class="form-control" placeholder="select"
-                            id="gender">
-                        <datalist id="gender">
-                            <option value="Masculino"></option>
-                            <option value="Femenino"></option>
-                        </datalist>
-                        <%if (locals.errors && errors.gender){%>
-                            <p style="color: red;"> <%=errors.gender.msg%> </p>
-                        <%}%>
-                        <span> </span>
+                        <div class="form-group col-md-6">
+                            <label for="genero" class="font-weight-bold"> Genero<span class="text-danger">*</span></label>
+                            <input list="Genero" name="genero" type="text" class="form-control" placeholder="select"
+                                id="genero">
+                            <datalist id="Genero">
+                                <option value="Masculino"></option>
+                                <option value="Femenino"></option>
+                            </datalist>
+                            <%if (locals.errors && errors.genero){%>
+                                <p style="color: red;"> <%=errors.genero.msg%> </p>
+                            <%}%>
+                            <span> </span>
+                        </div>
                     </div> 
 
 
@@ -110,7 +111,7 @@
 
                     <!-- BOTON -->
                     <div>
-                        <button class="btn btn-primary btn-sm ">Regístrarse</button>
+                        <button class="btn btn-primary btn-sm ">Registrarse</button>
 
                     </div>
 

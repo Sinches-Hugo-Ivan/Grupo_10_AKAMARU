@@ -23,6 +23,19 @@
     padding: 10px;
 }
 
+.buttonAdd{
+    text-align: center;
+
+}
+
+.action-buttonAdd {
+    color: steelblue;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid steelblue;
+}
+
+
 .fa-trash-alt {
     color: red;
 }
