@@ -1,10 +1,10 @@
 const { body } = require('express-validator'); //Destructuring
 
 module.exports = [
-    body("name")
+    body("firstName")
            .notEmpty().withMessage("Debes ingresar un nombre"),
     
-    body("surname")
+    body("lastName")
             .notEmpty().withMessage("Debes ingresar un apellido"),
     
     body("email")

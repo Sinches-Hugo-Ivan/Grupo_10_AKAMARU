@@ -20,19 +20,19 @@
                 <!-- Grupo: Nombre y Apellido -->
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
-                        <label for="name" class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
-                        <input type="text" name="name" class="form-control" placeholder="Tu nombre" id="name">
-                        <%if (locals.errors && errors.name){%>
-                            <p style="color: red;"> <%=errors.name.msg%> </p>
+                        <label for="firstName" class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                        <input type="text" name="firstName" class="form-control" placeholder="Tu nombre" id="firstName">
+                        <%if (locals.errors && errors.firstName){%>
+                            <p style="color: red;"> <%=errors.firstName.msg%> </p>
                         <%}%>
                         <span> </span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="surname" class="font-weight-bold">Apellido <span
+                        <label for="lastName" class="font-weight-bold">Apellido <span
                                 class="text-danger">*</span></label>
-                        <input type="text" name="surname" class="form-control" placeholder="Tu apellido" id="surname">
-                        <%if (locals.errors && errors.surname){%>
-                            <p style="color: red;"> <%=errors.surname.msg%> </p>
+                        <input type="text" name="lastName" class="form-control" placeholder="Tu apellido" id="lastName">
+                        <%if (locals.errors && errors.lastName){%>
+                            <p style="color: red;"> <%=errors.lastName.msg%> </p>
                         <%}%>
                         <span> </span>
                     </div>

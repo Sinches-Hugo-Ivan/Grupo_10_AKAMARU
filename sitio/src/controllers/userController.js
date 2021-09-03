@@ -20,8 +20,8 @@ module.exports = {
         if(errors.isEmpty()){
             let nuevoUsuario = {
                 id : users.length > 0 ? users[users.length - 1].id + 1 : 1, //id del usuario para ubicarlo en el JSON.
-                name : req.body.name, 
-                surname : req.body.surname,
+                firstName : req.body.firstName, 
+                lastName : req.body.lastName,
                 email : req.body.email,
                 password : bcrypt.hashSync(req.body.password, 12),
                 date : req.body.date,
