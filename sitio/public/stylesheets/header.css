@@ -149,13 +149,10 @@ header ul a {
     display: none;
 }
  
-.buscador{
-    visibility:hidden;
+#buscar{
+    display: none;
 }
-.buscador.mostrar{
-    visibility:visible;
 
-}
 
 .form-control-search{
    width: 300px;

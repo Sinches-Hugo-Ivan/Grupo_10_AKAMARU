@@ -27,8 +27,8 @@
                 </ul>
             </div>
 
-            <div id="buscador" class="buscador">
-                <form action="" class="d-flex" method="GET" >
+            <div id="buscar" class="buscador">
+                <form action="/products/search" class="d-flex" method="GET" >
                     <input type="search" class="form-control-search me-2" placeholder="Voy a tener suerte" name="search">
                     <button type="submit" class= "btn btn-outline-primary" >Buscar</button>
                 </form>
@@ -36,7 +36,7 @@
             <!-- i c o n o s -->
             <div class="nav-right">
                 <ul class="menu-icons">
-                    <li><a href="/products/search" type="button" class="icons"><i class="fas fa-search"></i></a></li>
+                    <li><a onclick = 'mostrar()' type="button" class="icons"><i class="fas fa-search"></i></a></li>
                     <li><a href="/users/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
                     <% if (locals.userLogin){ %>
                         <li><a class = "visible" href="/" ><img class = "icon-foto-perfil" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""></a>
@@ -58,4 +58,6 @@
             </button>
         </nav>
     </div>
+
+    <script src = "/javascripts/mostrarSearch.js"></script>
 </header>

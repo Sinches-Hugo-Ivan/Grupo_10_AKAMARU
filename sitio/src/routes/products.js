@@ -3,6 +3,9 @@ var express = require('express');
 var router = express.Router();
 const addValidation = require("../validations/productAdd");
 
+//Middlewares
+const adminUserCheck = require("../middlewares/adminUserCheck");
+
 const multer = require("multer");
 
 const storage = multer.diskStorage({
@@ -21,16 +24,16 @@ const {add,detail,search,save,edit,update,remove, productos,vistaAdmin,categoria
 
 /* /products */
 router.get('/', productos);
-router.get('/add',add);
+router.get('/add',adminUserCheck , add);
 router.post('/add',upload.array('images'), addValidation, save);
 router.get('/detail/:id',detail);
 router.get('/search',search);
-router.get('/edit/:id',edit);
-router.put('/edit/:id',update);
-router.get('/vistaAdmin', vistaAdmin);
+router.get('/edit/:id',adminUserCheck ,edit);
+router.put('/edit/:id',adminUserCheck ,update);
+router.get('/vistaAdmin',adminUserCheck , vistaAdmin);
 router.get('/categorias', categoriasProduct);
 router.get('/categorias/:title', categoriasProduct);
-router.delete('/remove/:id',remove);
+router.delete('/remove/:id',adminUserCheck ,remove);
 
 
 
