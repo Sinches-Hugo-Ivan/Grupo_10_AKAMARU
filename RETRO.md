@@ -19,6 +19,11 @@ Comenzar a organizar mejor las tareas a realizar en cada reunión para no hacer 
 extensas y en lo posible no re agendar reuniones.
 
 
+# Retroespectiva del Sprint 3
+
+Debemos continuar con las sesiones  de ayuda  y hacer mas reuniones fijas , dividir  las tareas  de manera mas eficiente ,dejar de postergar tareas y tardar menos tiempo  en mover  nuestras tarjetas para  revision grupal
+
+
 # Retroespectiva del Sprint 4
 
 Tenemos que hacer más reuniones en días y horarios fijos que resulten eficaces para todo el grupo. 
