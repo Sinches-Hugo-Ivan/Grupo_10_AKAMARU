@@ -19,7 +19,11 @@ Comenzar a organizar mejor las tareas a realizar en cada reunión para no hacer 
 extensas y en lo posible no re agendar reuniones.
 
 
-# Retroespectiva del Sprint 3
+# Retroespectiva del Sprint 4
 
 Tenemos que hacer más reuniones en días y horarios fijos que resulten eficaces para todo el grupo. 
 Comenzar a actualizar el trello más seguido y dividir las tareas de manera más eficiente para no tener que realizar las actividades todos juntos, porque asi creamos reuniones muy extensas. Pero si seguir haciendo reuniones para ayudarnos entre nosotros ante algún problema en especifico que no podamos resolver de manera individual ante la tarea asignada.
+
+# Retroespectiva del Sprint 5
+
+Tenemos que seguir buscando recursos para resolver el problema propuesto y no estancarse . Hacer más reuniones periodicas de revisión de código (miércoles 12:30hs y lunes 23:30hs) y pedir ayuda a tiempo. No perder más tiempo y sobre cargarse con las tareas. 
