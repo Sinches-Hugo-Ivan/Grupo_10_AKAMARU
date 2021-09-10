@@ -8,7 +8,7 @@
     "price": 300,
     "name": "Gorro ",
     "discount": 2,
-    "category": "accesorios"
+    "category": "Accesorios"
   },
   {
     "id": 5,
@@ -19,7 +19,7 @@
     "price": 400,
     "name": "Taza Dragon Ball",
     "discount": 6,
-    "category": "tazas"
+    "category": "Tazas"
   },
   {
     "id": 6,
@@ -30,7 +30,7 @@
     "price": 250,
     "name": "Figuras Naruto",
     "discount": 6,
-    "category": "figuras"
+    "category": "Figuras"
   },
   {
     "id": 7,
@@ -41,7 +41,7 @@
     "price": 250,
     "name": "Figuras Naruto opc2",
     "discount": 6,
-    "category": "figuras"
+    "category": "Figuras"
   },
   {
     "id": 8,
@@ -54,7 +54,7 @@
       "images-1630430184739.jpg"
     ],
     "discount": 2,
-    "category": "accesorios",
+    "category": "Accesorios",
     "colors": "sincolor"
   },
   {
@@ -68,7 +68,7 @@
       "images-1630431572621.jpg"
     ],
     "discount": 3,
-    "category": "accesorios",
+    "category": "Accesorios",
     "colors": "sincolor"
   },
   {
@@ -83,7 +83,7 @@
       "images-1630431748257.jpeg"
     ],
     "discount": 3,
-    "category": "accesorios"
+    "category": "Accesorios"
   },
   {
     "id": 11,

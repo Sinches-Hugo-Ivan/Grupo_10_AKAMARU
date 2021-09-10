@@ -70,7 +70,7 @@ module.exports = {
             }else{
                 req.session.userLogin['cookie'] = "off"
             };
-            res.redirect('/');
+            res.redirect('vistaPerfil');
         }else {
             return res.render('login', {
                 productos,
