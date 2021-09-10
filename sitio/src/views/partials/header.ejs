@@ -41,7 +41,7 @@
                     <% if (locals.userLogin){ %>
                         <li><a class = "visible" href="/" ><img class = "icon-foto-perfil" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""></a>
                             <ul class = "ul-session">
-                                <li><a href="/" class="submenu-perfil"><img class = "icon-foto-perfil-submenu" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""><%= locals.userLogin.name %></a></li>
+                                <li><a href="/users/vistaPerfil" class="submenu-perfil"><img class = "icon-foto-perfil-submenu" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""><%= locals.userLogin.name %></a></li>
                                 <li><a href="/users/edituser" class="menu-perfil">Editar Perfil</a></li>
                                 <li><a href="/users/logout" class="menu-perfil" >Cerrar sesion</a></li>
                             </ul>

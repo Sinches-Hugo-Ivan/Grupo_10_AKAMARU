@@ -1,0 +1,45 @@
+.main-vista-perfil{
+    background-color: #F2F3F4;
+    padding: 50px;
+}
+.contenedor-vista-perfil{
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #F2F3F4;
+    grid-template-columns:35% 65%;
+    display: grid;
+    width: 700px;
+    height: 240px;
+    margin: 50px auto ;
+}
+.contenedor_avatar{
+    width: 100%;
+    height: 240px;
+}
+.avatar-usuario{
+    border-radius: 50%;
+    padding: 20px;
+    object-fit: cover;
+    display: block;
+    width: 245px;
+    height: 100%;
+}
+.titulo-personal{
+    border-bottom: 1px solid #F2F3F4;
+}
+.contenedor-nombre-apellido{
+    display: grid;
+    grid-auto-rows: auto;
+    padding: 30px;
+
+}
+.contenedor-nombre-apellido span{
+    color:silver;
+}
+.nombre-usuario{
+    width: 100%;
+
+}
+.apellido-usuario{
+    width: 100%;
+}

@@ -24,9 +24,10 @@ module.exports = {
                 lastName : req.body.lastName,
                 email : req.body.email,
                 password : bcrypt.hashSync(req.body.password, 12),
-                date : req.body.date,
+                fecha : req.body.date,
                 genero : req.body.genero,
-                image: "default-user.jpg"
+                image: "default-user.jpg",
+                rol : "user"
             }
             console.log(errors)
             users.push(nuevoUsuario); //Agrego el usuario al final del array
@@ -62,12 +63,15 @@ module.exports = {
             }
             let userLogin = req.session.userLogin;
             if(recordar){
-                res.cookie('akamaru', userLogin, {
-                    maxAge: 240000
+                req.session.userLogin['cookie'] = "on"
+                res.cookie('akamaru', req.session.userLogin, {
+                    maxAge: 300000 // duracion de la cookie 5 min
                 })
-            }
+            }else{
+                req.session.userLogin['cookie'] = "off"
+            };
             res.redirect('/');
-        } else {
+        }else {
             return res.render('login', {
                 productos,
                 categorias,
@@ -85,6 +89,13 @@ module.exports = {
             categorias
         })
     },
+    vistaPerfil:(req,res) =>{
+        res.render('vistaPerfil',{
+            session : req.session.userLogin,
+            generos,
+            categorias,
+        });
+    },
     editperfil: (req,res) =>{
         console.log(req.session.userLogin);
         res.render('editPerfil',{
@@ -94,29 +105,42 @@ module.exports = {
         })
     },
     updateperfil: (req, res) => {
+        let cookie = req.session.userLogin.cookie; // guardo la cookie(que puede ser on,off) para mantenerla si esta en 'on'
         console.log(req.body);
         let errors = validationResult(req);
         if (errors.isEmpty()){
-            const {nombre, apellido, fecha, genero, imagen} = req.body;
+            const {nombre, apellido, fecha, genero, imagen, correo} = req.body;
             users.forEach(usuario => {
                 if(usuario.email === req.body.correo){
                     if(req.file){
                         usuario.image = req.file.filename;
-
                     }else{
                         usuario.image = usuario.image;
                     }
-                    req.session.login = {
-                        firstName: nombre,
-                        lastName: apellido,
+                    usuario.email = correo,
+                    usuario.firstName= nombre,
+                    usuario.lastName = apellido,
+                    usuario.fecha = fecha,
+                    usuario.genero = genero,
+                    usuario.image
+                    req.session.userLogin = {
+                        email: correo,                
+                        name: nombre,
+                        lastname: apellido,
                         fecha: fecha,
                         genero: genero,
-                        imagen: imagen
+                        cookie : cookie,
+                        imagen: usuario.image,
+                        rol : usuario.rol
                     }
-                    req.cookie('akamaru', req.session.login);
-                    
+                    if(req.session.userLogin.cookie === 'on'){
+                        console.log('entro');
+                        res.cookie('akamaru', req.session.userLogin,{ 
+                            maxAge: 300000 // duracion de la cookie 5 min
+                        });
+                    }
+                    console.log(req.session.userLogin)
                 }
-                // usuario.imagen = imagen,
             });
             fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(users, null, 2), 'utf-8');
             res.redirect('/')

@@ -113,6 +113,9 @@
 
 
 }
+.contenedor-boton button:hover{
+    background-color: #57595A;
+}
 .main span.mensaje-error-user{
     color:red;
     font-size: 14px;

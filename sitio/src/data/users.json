@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "firstName": "Lionel",
-    "lastName": "Messi",
+    "firstName": "Lionel300",
+    "lastName": "MessiDios30",
     "email": "pepe@gmail.com",
-    "image": "imagen-1630602931681.jpg",
+    "image": "imagen-1631234798853.jpg",
     "password": "$2a$10$BDWL1x23BB8Joe5KRpL16eZB7q.tCFDDWDaxBOpanc6FaVHXLEC3W",
     "rol": "admin",
     "genero": "Masculino",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "firstName": "Lola",
+    "firstName": "Lola11",
     "lastName": "lalala",
     "email": "lola@gmail.com",
     "image": "default-user.jpg",
@@ -28,7 +28,18 @@
     "email": "awa@gmail.com",
     "image": "default-user.jpg",
     "password": "$2a$12$a506/7vS7AnTwrMHkfveDeg8emrubz4wJ9KlKiCwDHwojFRnMCyeO",
-    "date": "2000-05-02",
+    "fecha": "2000-05-02",
     "genero": "Femenino"
+  },
+  {
+    "id": 4,
+    "firstName": "Ariel-ELTRA",
+    "lastName": "Benitezz",
+    "email": "ariel@g.com",
+    "password": "$2a$12$ivwQZaLGAh9CyExq3DX7ROLS9UvcdmpfDIym6IROkawvCytb7Zer6",
+    "fecha": "2021-02-12",
+    "genero": "Masculino",
+    "image": "imagen-1631234403596.jpg",
+    "rol": "user"
   }
 ]
