@@ -43,13 +43,13 @@
                     <% productos.forEach(producto=> { %>
                         <article class="product">
                             <a href="/products/detail/<%= producto.id %>">
-                                <img class="img-product" src="/images/<%= producto.images[0] %> " alt="">
+                                <img class="img-product" src="/images/<%= producto.imagenes[0].name %> " alt="">
                                 <div class="product-description">
                                     <h3 class="name-product">
                                         <%= producto.name %>
                                     </h3>
                                     <p>$ <%=producto.price%></p>
-                                    <p><%=producto.discount%> <span>cuotas de  </span>$ <%=( producto.price / producto.discount).toFixed(0) %></p>
+                                    <p><%=producto.cuotas%> <span>cuotas de  </span>$ <%=( producto.price / producto.cuotas).toFixed(0) %></p>
                                 </div>
                             </a>
                         </article>

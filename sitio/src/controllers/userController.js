@@ -1,12 +1,15 @@
 const path = require('path');
 const fs = require('fs');
-const users = require('../data/users_db');
+// const users = require('../data/users_db');
 let generos = require('../data/generos_db');
 
 const bcrypt = require('bcryptjs');
-const { validationResult } = require('express-validator');
+const { validationResult, body } = require('express-validator');
 const {productos} = require('../data/products_db');
 const categorias = require('../data/categories_db');
+
+const db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 module.exports = {
     register: (req, res) => {
@@ -16,29 +19,7 @@ module.exports = {
     },
 
     processRegister : (req,res) => {
-        const errors = validationResult(req);
-        if(errors.isEmpty()){
-            let nuevoUsuario = {
-                id : users.length > 0 ? users[users.length - 1].id + 1 : 1, //id del usuario para ubicarlo en el JSON.
-                firstName : req.body.firstName, 
-                lastName : req.body.lastName,
-                email : req.body.email,
-                password : bcrypt.hashSync(req.body.password, 12),
-                fecha : req.body.date,
-                genero : req.body.genero,
-                image: "default-user.jpg",
-                rol : "user"
-            }
-            console.log(errors)
-            users.push(nuevoUsuario); //Agrego el usuario al final del array
-            fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(users,null,2), 'utf-8');
-            res.redirect('/');
-            } else {
-                  res.render("register", {
-                    categorias,
-                    errors : errors.mapped()
-                }) 
-            }
+        
     },
 
     login: (req, res) => {
@@ -47,37 +28,7 @@ module.exports = {
         })
     },
     processLogin: (req, res) => {
-        let errores = validationResult(req);
-        const { email, password, recordar } = req.body;
-        if (errores.isEmpty()) {
-            let user = users.find(user => user.email === email)
-            req.session.userLogin = {
-                email: user.email,
-                imagen: user.image,
-                id: user.id,
-                name: user.firstName,
-                lastname: user.lastName,
-                rol: user.rol,
-                genero : user.genero,
-                fecha : user.fecha,
-            }
-            let userLogin = req.session.userLogin;
-            if(recordar){
-                req.session.userLogin['cookie'] = "on"
-                res.cookie('akamaru', req.session.userLogin, {
-                    maxAge: 300000 // duracion de la cookie 5 min
-                })
-            }else{
-                req.session.userLogin['cookie'] = "off"
-            };
-            res.redirect('vistaPerfil');
-        }else {
-            return res.render('login', {
-                productos,
-                categorias,
-                errores: errores.mapped()
-            });
-        }
+        
     },
     cerrarSession: (req,res) =>{
         req.session.destroy(); //destruye la sesion

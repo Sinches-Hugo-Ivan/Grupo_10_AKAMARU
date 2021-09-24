@@ -32,7 +32,7 @@ router.get('/edit/:id',adminUserCheck ,edit);
 router.put('/edit/:id',adminUserCheck ,update);
 router.get('/vistaAdmin',adminUserCheck , vistaAdmin);
 router.get('/categorias', categoriasProduct);
-router.get('/categorias/:title', categoriasProduct);
+router.get('/categorias/:id', categoriasProduct);
 router.delete('/remove/:id',adminUserCheck ,remove);
 
 

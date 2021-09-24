@@ -40,16 +40,16 @@ module.exports = (sequelize, dataTypes) => {
         /* Relaciones */
         User.associate = models => {
             User.belongsTo(models.Address,{
-                as :'direccion',
+                as :'address',
                 foreignKey : 'addressId'
             });
-        },
-        User.associate = models => {
-            User.hasMany(models.Tarjeta,{
-                as :'tarjetas',
-                foreignKey : 'userId'
-            });
-        }
+         }
+        // User.associate = models => {
+        //     User.hasMany(models.Tarjeta,{
+        //         as :'tarjetas',
+        //         foreignKey : 'userId'
+        //     });
+        // }
 
     return User;
 }

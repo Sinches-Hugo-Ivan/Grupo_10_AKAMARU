@@ -23,11 +23,11 @@ module.exports = (sequelize, dataTypes) => {
     const Tarjeta = sequelize.define(alias, cols, config)
 
     /* Relaciones */
-    Tarjeta.associate = models => {
-        Tarjeta.belongsTo(models.User,{
-            as :'usuario',
-            foreignKey : 'userId'
-        });
-    }
+    // Tarjeta.associate = models => {
+    //     Tarjeta.belongsTo(models.User,{
+    //         as :'usuario',
+    //         foreignKey : 'userId'
+    //     });
+    // }
     return Tarjeta;
 }

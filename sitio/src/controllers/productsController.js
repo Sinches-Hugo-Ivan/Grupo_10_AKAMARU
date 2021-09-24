@@ -1,9 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-let categorias = require('../data/categories_db');
-let productos = require('../data/products_db');
-const { validationResult } = require('express-validator');
-const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
+// let categorias = require('../data/categories_db');
+// let productos = require('../data/products_db');
+// const { validationResult } = require('express-validator');
+// const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
+
+const db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 module.exports = {
     add: (req, res) => {
@@ -42,25 +45,61 @@ module.exports = {
         }
     },
     detail: (req, res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id);
-        let categoria = categorias.filter(categoria => categoria.title === req.params.title);
-        let relacionados = productos.filter(articulo => articulo.category === producto.category); // guarda los productos relacionados en un array de objetos literales
-        res.render('detail', {
-            producto,
-            productos,
-            categorias,
-            categoria,
-            relacionados
+        let categorias = db.Category.findAll(); 
+        let producto = db.Product.findByPk(req.params.id,{
+                    include : [
+                {
+                    association : 'imagenes',
+                },
+                {
+                    association : 'category',
+                }
+             ]
         })
+        Promise.all([categorias,producto]) 
+        .then(([categorias,producto]) => {
+            // return res.send(producto); 
+            db.Product.findAll({
+                where : {
+                    id : {[Op.ne]: producto.id},
+                    categoryId : producto.category.id,
+                },
+                include :[
+                    {association: 'imagenes'},
+                    {association: 'category'}
+                ]
+            }).then((relacionados) => {          
+                return res.render('detail',{
+                relacionados,
+                producto,
+                categorias
+                })
+            })
+        }).catch(error => console.log(error))
     },
     search: (req, res) => {
-        let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search));
-        res.render('resultSearch', {
-            result,
-            productos,
-            categorias,
-            search: req.query.search
+        let categorias = db.Category.findAll();
+        let result = db.Product.findAll({
+            where : {
+            [Op.or] : [
+                {
+                    name :  {[Op.substring] : req.query.search}
+                },
+                {
+                    description : {[Op.substring] : req.query.search}
+                }
+            ]
+            },
+        include : [
+            {association : 'imagenes'}  
+        ]
         })
+        Promise.all([categorias,result]) 
+        .then(([categorias,result]) => res.render('resultSearch',{
+            result,
+            categorias,
+            search : req.query.search
+        })).catch(error => console.log(error))
     },
     edit: (req, res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
@@ -93,15 +132,26 @@ module.exports = {
             })
     },
     categoriasProduct: (req, res) => {
-        let resultado = productos.filter(producto => producto.category === req.params.title);
-            let categoria = categorias.filter(categoria => categoria.title === req.params.title);
+        let categoria = db.Category.findByPk(req.params.id);
+        let categorias = db.Category.findAll();
+        let resultado = db.Product.findAll({
+            where : {
+                categoryId : req.params.id
+            },
+            include : [
+                {association : 'imagenes'},
+                {association : 'category'},  
+            ]
+        })
+        Promise.all([categorias,resultado,categoria]) 
+        .then(([categorias,resultado,categoria]) =>{
+            // return res.send(resultado);
             return res.render('categorias', {
                 resultado,
                 categorias,
-                categoria,
-                productos,
-                title: req.params.title,
-            })
+                categoria
+        }).catch(error => console.log(error))
+    })
     },
     remove: (req, res) => {
         productos = productos.filter((producto) => producto.id !== +req.params.id);

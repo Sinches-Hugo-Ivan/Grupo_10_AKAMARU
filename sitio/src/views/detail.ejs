@@ -16,8 +16,8 @@
                         <li><a href="/">home</a>
                             <span>></span>
                         </li>
-                        <li><a href="/products/categorias/<%= producto.category %> ">
-                                <%= producto.category %>
+                        <li><a href="/products/categorias/<%= producto.category.name %> ">
+                                <%= producto.category.name %>
                             </a> > </li>
                         <li><a href="#">producto</a></li>
                     </ul>
@@ -29,23 +29,23 @@
                     <!-- M á s    i m a g e n e s    d e l   p r o d u c t o -->
 
                     <div class="contenedora-img-list">
-                        <% for( let index=0; index < producto.images.length; index++ ) { %>
-                            <img onclick="document.getElementById('imagen-principal').setAttribute('src','/images/<%= producto.images[index] %>')"
-                                src="/images/<%= producto.images[index] %>" class="list">
+                        <% for( let index=0; index < producto.imagenes.length; index++ ) { %>
+                            <img onclick="document.getElementById('imagen-principal').setAttribute('src','/images/<%= producto.imagenes[index].name %>')"
+                                src="/images/<%= producto.imagenes[index].name %>" class="list">
                             <% } %>
                     </div>
                     <!-- I m a g e n    p r i n c i p a l -->
                     <div class="contenedora-img-principal">
-                        <img class="imagen-principal" id="imagen-principal" src="/images/<%= producto.images[0] %>"
+                        <img class="imagen-principal" id="imagen-principal" src="/images/<%= producto.imagenes[0].name %>"
                             alt="">
                     </div>
                     <!-- N o m b r e    p r o d u c t o -->
                     <div class="contenedora-product-descrip mb-3">
                         <div class="product-color">
                             <span>Color:</span>
-                            <% for( let index=0; index < producto.images.length; index++ ) { %>
+                            <% for( let index=0; index < producto.imagenes.length; index++ ) { %>
                                 <input class="product-color-input" type="radio" name="color" value="color1">
-                                <img class="product-color-img" src="/images/<%= producto.images[index] %> " alt="">
+                                <img class="product-color-img" src="/images/<%= producto.imagenes[index].name %> " alt="">
                                 <% } %>
                         </div>
                         <h3>
@@ -54,8 +54,8 @@
                         <div class="contenedor-precio-opcion">
                             <div class="product-precio-cuota">
                                 <span class="product-precio">$ <%= producto.price %></span>
-                                <span class="product-cuota">En <%= producto.discount %>x $ <%= (producto.price /
-                                            producto.discount).toFixed(0) %></span>
+                                <span class="product-cuota">En <%= producto.cuotas %>x $ <%= (producto.price /
+                                            producto.cuotas).toFixed(0) %></span>
                             </div>
                             <div class="product-envio">
                                 <i class="fas fa-truck"></i>
@@ -97,7 +97,7 @@
 
                                 <div class="contenedor-relacionados">
                                     <a href="/products/detail/<%= producto.id %>"><img class="producto-relacionado"
-                                            src="/images/<%= producto.images[0] %>" alt=""></a>
+                                            src="/images/<%= producto.imagenes[0].name %>" alt=""></a>
                                 </div>
                                 <% }) %>
                         </div>

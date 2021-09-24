@@ -34,18 +34,14 @@ module.exports = (sequelize, dataTypes) => {
     /* Relaciones */
     Product.associate = models => {
         Product.belongsTo(models.Category,{
-            as :'categoria',
+            as :'category',
             foreignKey : 'categoryId'
-        });
-    },
-    Product.associate = models => {
+        })
+
         Product.hasMany(models.Image,{
             as :'imagenes',
             foreignKey : 'productId'
-        });
+        })
     }
-
-    return Product;
-
-
+return Product
 }

@@ -13,7 +13,7 @@
                     <li><a href="/products" class="enlaces">Productos</a>
                         <ul class="submenu">
                             <% categorias.forEach(categoria => { %>
-                                <li><a href="/products/categorias/<%=categoria.title%> " class="enlaces"><%=categoria.title%> </a></li>
+                                <li><a href="/products/categorias/<%=categoria.id%>" class="enlaces"><%=categoria.name%></a></li>
                               <% }) %>
                         </ul>
                     </li>

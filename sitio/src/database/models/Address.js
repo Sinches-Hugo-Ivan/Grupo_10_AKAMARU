@@ -30,6 +30,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const Address = sequelize.define(alias, cols, config)
+        /* Relaciones */
+        Address.associate = models => {
+            Address.hasMany(models.User,{
+                as :'users',
+                foreignKey : 'addressId'
+            })
+        }
 
     return Address;
 }
