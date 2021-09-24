@@ -24,16 +24,16 @@ const {add,detail,search,save,edit,update,remove, productos,vistaAdmin,categoria
 
 /* /products */
 router.get('/', productos);
-router.get('/add',adminUserCheck , add);
+router.get('/add', add);                               //adminUserCheck ,
 router.post('/add',upload.array('images'), addValidation, save);
 router.get('/detail/:id',detail);
 router.get('/search',search);
-router.get('/edit/:id',adminUserCheck ,edit);
-router.put('/edit/:id',adminUserCheck ,update);
-router.get('/vistaAdmin',adminUserCheck , vistaAdmin);
+router.get('/edit/:id',edit);                        //adminUserCheck ,
+router.put('/edit/:id',update);                    //adminUserCheck ,
+router.get('/vistaAdmin',vistaAdmin);               //adminUserCheck 
 router.get('/categorias', categoriasProduct);
 router.get('/categorias/:id', categoriasProduct);
-router.delete('/remove/:id',adminUserCheck ,remove);
+router.delete('/remove/:id',remove);              //adminUserCheck ,
 
 
 

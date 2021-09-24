@@ -126,10 +126,28 @@ module.exports = {
         res.redirect('/products/detail/' + req.params.id)
     },
     vistaAdmin: (req, res) => {
-        return res.render('listaProductsAdmin', {
-            productos,
-            categorias
+        {
+            let categorias = db.Category.findAll();
+            let productos = db.Product.findAll({
+                include : [
+                    {
+                        association : 'imagenes',
+                    },
+                    {
+                        association : 'category',
+                    }
+                ]
             })
+            Promise.all([categorias,productos])
+            .then(([categorias,productos]) =>{
+            return res.render('listaProductsAdmin',{
+                categorias,
+                productos  
+                })
+                // return res.send(resultado);
+            }).catch(error => console.log(error));
+    
+            }
     },
     categoriasProduct: (req, res) => {
         let categoria = db.Category.findByPk(req.params.id);
@@ -158,13 +176,29 @@ module.exports = {
             where : {
                 id : req.params.id
             }
-        }).then(() => res.redirect('/admin'))
+        }).then(() => res.redirect('listaProductsAdmin'))
         .catch(error => console.log(error))
      },
     productos: (req, res) => {
-        res.render('vistaProduct', {
-            productos,
-            categorias
+        let categorias = db.Category.findAll();
+        let productos = db.Product.findAll({
+            include : [
+                {
+                    association : 'imagenes',
+                },
+                {
+                    association : 'category',
+                }
+            ]
         })
+        Promise.all([categorias,productos])
+        .then(([categorias,productos]) =>{
+        return res.render('vistaProduct',{
+            categorias,
+            productos  
+            })
+            // return res.send(resultado);
+        }).catch(error => console.log(error));
+
     }
 }

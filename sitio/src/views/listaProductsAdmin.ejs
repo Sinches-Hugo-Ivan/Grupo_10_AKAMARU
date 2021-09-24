@@ -31,7 +31,7 @@
         <tr>
             <td><%= producto.name %></td>
             <td>$<%= producto.price %></td>
-            <td><img class = "img-product-admin" src="/images/<%= producto.images[0] %>" alt=""></td>
+            <td><img class = "img-product-admin" src="/images/<%= producto.imagenes[0].name %>" alt=""></td>
             <td class = "tdsize">
                 <form action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                     <button type="submit" class="action-button delete"><i class="fas fa-trash-alt"> </i> Eliminar</button>
