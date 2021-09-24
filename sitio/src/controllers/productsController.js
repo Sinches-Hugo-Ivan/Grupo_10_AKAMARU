@@ -154,10 +154,13 @@ module.exports = {
     })
     },
     remove: (req, res) => {
-        productos = productos.filter((producto) => producto.id !== +req.params.id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 2), "utf-8")
-        res.redirect("/");
-    },
+        db.Product.destroy({
+            where : {
+                id : req.params.id
+            }
+        }).then(() => res.redirect('/admin'))
+        .catch(error => console.log(error))
+     },
     productos: (req, res) => {
         res.render('vistaProduct', {
             productos,
