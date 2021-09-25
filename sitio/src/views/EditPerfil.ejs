@@ -56,7 +56,7 @@
                         <div class = "contenedor-input">
                             <select class = "editarGenero" id="genero" name="genero">
                                 <% generos.forEach(genero => { %>
-                                    <option  value = "<%= genero %>" <%genero == session.genero ? 'selected' : null %> ><%= genero %></option>
+                                    <option  value = "<%= genero %>" <%= genero == session.genero ? 'selected' : null %> ><%= genero %></option>
                                 <% }); %>
                             </select>
                             <p>Puedes actualizar tu genero.</p>

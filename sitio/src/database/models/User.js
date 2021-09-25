@@ -29,6 +29,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         addressId: {
             type: dataTypes.INTEGER,
+        },
+        date: {
+            type: dataTypes.DATE
         }
     };
     let config = {
