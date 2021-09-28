@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         description: {
-            type: dataTypes.STRING(500)
+            type: dataTypes.STRING(1000)
         },
         categoryId:{
             type: dataTypes.INTEGER

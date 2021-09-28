@@ -1,46 +1,64 @@
-const fs = require('fs');
-const path = require('path');
-
-
+const { validationResult } = require('express-validator');
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
 
 module.exports = {
     add: (req, res) => {
-        res.render('productAdd', {
-            productos,
-            categorias
-        })
+        db.Category.findAll()
+            .then(categorias => {
+                return res.render('productAdd', {
+                    categorias,
+                })
+            }).catch(error => console.log(error))
+
     },
-    save: (req, res) => {
-        const errors = validationResult(req);
 
-        if (errors.isEmpty()) {
-            const { name, description, price, discount, category, colors } = req.body;
-            if (req.files) {
-                var imagenes = req.files.map(imagen => imagen.filename)
-            }
-            let producto = {
-                id: productos[productos.length - 1].id + 1,
-                name,
-                description,
-                price: +price,
-                images: req.files.length != 0 ? imagenes : ["default-image.png"],
-                discount: +discount,
-                category,
-                colors
+    save : (req,res) => {
+        
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const {name,description,price,cuotas,categoryId,stock} = req.body;
+            db.Product.create({
+                ...req.body,
+                name : name.trim(),
+                description : description.trim(),
+                price,
+                stock,
+                cuotas,
+                categoryId,
+            }).then( product => {
 
-            }
-            productos.push(producto);
-            fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 2), 'utf-8')
-            res.redirect('/')
-        } else {
-            return res.render('productAdd', {
-                errors: errors.mapped(),
-                categorias
-            })
+                if(req.files){
+                    var images = [];
+                    var imagenes = req.files.map(imagen => imagen.filename);
+                    imagenes.forEach(img => {
+                        var image = {
+                            name : img,
+                            productId : product.id
+                        }
+                        images.push(image)
+                    });
+
+                    db.Image.bulkCreate(images,{validate : true})
+                        .then( () =>
+                        {console.log('imagenes agregadas'); res.redirect('/products/vistaAdmin')} )
+                }
+
+                
+            }).catch(error => console.log(error))
+          
+        }else{
+            db.Category.findAll()
+            .then(categorias => {
+                return res.render('productAdd',{
+                    categorias,
+                    errors : errors.mapped(),
+                    old : req.body
+                })
+            }).catch(error => console.log(error))
         }
     },
+
     detail: (req, res) => {
         let categorias = db.Category.findAll(); 
         let producto = db.Product.findByPk(req.params.id,{
@@ -98,16 +116,25 @@ module.exports = {
             search : req.query.search
         })).catch(error => console.log(error))
     },
-    edit: (req, res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id);
-        return res.render('productEdit', {
-            productos,
-            producto,
-            categorias
+    edit : (req,res) => {
+        let categorias = db.Category.findAll();
+        let producto = db.Product.findByPk(req.params.id,{include : [
+            {association : 'imagenes'},
+            
+        ]
+    }
+);
+        Promise.all([categorias,producto])
+        .then(([categorias,producto]) => {
+            return res.render('productEdit',{
+                categorias,
+                producto,
+            })
         })
+      
     },
     update: (req, res) => {
-            const {name, description,price,cuotas,categoryId,colors,stock} = req.body;
+            const {name, description,price,cuotas,categoryId,stock} = req.body;
     
             db.Product.update(
                 {
@@ -116,7 +143,6 @@ module.exports = {
                     price,
                     cuotas,
                     categoryId,
-                    colors,
                     stock
                 },
                 {
@@ -164,16 +190,17 @@ module.exports = {
                 {association : 'category'},  
             ]
         })
-        Promise.all([categorias,resultado,categoria]) 
-        .then(([categorias,resultado,categoria]) =>{
+        Promise.all([categorias, resultado, categoria])
+        .then(([categorias, resultado, categoria]) => {
             // return res.send(resultado);
             return res.render('categorias', {
                 resultado,
                 categorias,
-                categoria
-        }).catch(error => console.log(error))
-    })
-    },
+                categoria,
+        
+        })
+    }).catch(error => console.log(error))
+},
     remove: (req, res) => {
         db.Product.destroy({
             where : {

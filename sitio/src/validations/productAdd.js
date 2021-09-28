@@ -6,32 +6,21 @@ module.exports = [
 
     body("description")
         .notEmpty().withMessage("Ingresa una descripción del producto")
-        .isLength({ max: 500 }).withMessage("La descripción debe tener 500 caracteres como máximo"),
+        .isLength({ max: 1000 }).withMessage("La descripción debe tener 500 caracteres como máximo"),
 
-    body("image")
-        .notEmpty().withMessage("Ingresa al menos una imágen"),
+    body("categoryId")
+        .notEmpty().withMessage("Debes seleccionar una categoría"),
 
-            body("category")
-                .notEmpty().withMessage("Debes seleccionar una categoría"),
+    body("price")
+        .notEmpty().withMessage("Debes ingresar un precio"),
 
-            body("colors")
-                .notEmpty().withMessage("Debes seleccionar un color"),
+    body("cuotas")
+        .notEmpty().withMessage("Debes ingresar un numero"),
 
-            body("price")
-                .notEmpty().withMessage("Debes ingresar un precio"),
+    body("stock")
+        .notEmpty().withMessage("Debes seleccionar un color"),
 
-            body("discount")
-                .custom((value, { req }) => {
-                    if (value) {
-                        if (!Number.isInteger(parseInt(value))) {
 
-                            throw new Error('El descuento debe tener valor numérico');
-                        } else if (parseInt(value) > 100) {
 
-                            throw new Error('El descuento no puede ser mayor a 100');
-                        }
-                    }
-                    return true
-                })
 
 ]

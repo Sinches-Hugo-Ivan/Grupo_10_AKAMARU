@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `akamaru_db` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `akamaru_db`;
--- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: akamaru_db
 -- ------------------------------------------------------
--- Server version	8.0.26
+-- Server version	8.0.25
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -118,7 +118,7 @@ CREATE TABLE `images` (
   PRIMARY KEY (`id`),
   KEY `fk_Images_Products1_idx` (`productId`),
   CONSTRAINT `fk_Images_Products1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +127,7 @@ CREATE TABLE `images` (
 
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
-INSERT INTO `images` VALUES (3,'figura6.webp',3),(4,'6figuras.webp',4),(5,'images-1630430184730.jpg',5),(6,'images-1630430184738.jpg',5),(7,'images-1630430184739.jpg',5),(8,'images-1630431572606.jpg',6),(9,'images-1630431572620.jpg',6),(10,'images-1630431572621.jpg',6),(15,'images-1630432464968.jpg',8),(16,'images-1630432520260.jpg',9),(17,'images-1630432718728.webp',10),(18,'images-1630432718747.webp',10),(19,'images-1630432718782.webp',10),(20,'images-1630432718811.webp',10),(25,'images-1630432978392.webp',12),(26,'images-1630432978400.webp',12),(27,'images-1630432978421.webp',12),(28,'images-1630432978475.webp',12),(29,'images-1630432978503.webp',12),(30,'images-1630432978531.webp',12),(31,'images-1630433142316.jpg',13),(32,'images-1630433142320.jpg',13),(33,'images-1630433142323.webp',13),(34,'images-1630433142327.webp',13),(35,'images-1630433142329.webp',13),(36,'images-1630433142334.webp',13),(37,'images-1630433276477.jpg',14),(38,'images-1630433276487.jpg',14),(39,'images-1630433276491.jpg',14),(40,'images-1630433365149.jpg',15),(41,'images-1630433365164.jpg',15),(42,'images-1630433417551.jpg',16),(43,'images-1630433495266.jpg',17),(44,'images-1630433495291.jpg',17),(45,'images-1630433495291.jpg',17),(46,'images-1630433563182.jpg',18),(47,'images-1630433629613.jpg',19),(48,'images-1630433629715.jpg',19),(49,'images-1630433734907.jpg',20),(50,'images-1630433734912.jpg',20),(51,'images-1630433734913.jpg',20),(52,'images-1630433734916.jpg',20),(53,'images-1630433832813.webp',21),(54,'images-1630433832817.jpg',21),(55,'images-1630433832822.webp',21),(56,'images-1630433832823.jpg',21),(57,'images-1630433912636.jpg',22),(58,'images-1630433912639.jpg',22),(59,'images-1630433912640.jpg',22),(60,'images-1630434089838.jpg',23),(61,'images-1630434089910.jpg',23),(62,'images-1630434089928.jpg',23),(63,'images-1630434089957.jpg',23),(64,'images-1630434219756.jpg',24),(65,'images-1630434219824.webp',24),(66,'images-1630434219941.jpg',24),(67,'images-1630434219968.webp',24),(68,'images-1630434315409.jpg',25),(69,'images-1630434315415.jpg',25),(70,'images-1630434315420.jpg',25),(71,'images-1630434315428.jpg',25),(72,'images-1630434315430.jpg',25),(73,'images-1630434315437.webp',25);
+INSERT INTO `images` VALUES (3,'figura6.webp',3),(4,'6figuras.webp',4),(5,'images-1630430184730.jpg',5),(6,'images-1630430184738.jpg',5),(7,'images-1630430184739.jpg',5),(8,'images-1630431572606.jpg',6),(9,'images-1630431572620.jpg',6),(10,'images-1630431572621.jpg',6),(15,'images-1630432464968.jpg',8),(16,'images-1630432520260.jpg',9),(17,'images-1630432718728.webp',10),(18,'images-1630432718747.webp',10),(19,'images-1630432718782.webp',10),(20,'images-1630432718811.webp',10),(25,'images-1630432978392.webp',12),(26,'images-1630432978400.webp',12),(27,'images-1630432978421.webp',12),(28,'images-1630432978475.webp',12),(29,'images-1630432978503.webp',12),(30,'images-1630432978531.webp',12),(31,'images-1630433142316.jpg',13),(32,'images-1630433142320.jpg',13),(33,'images-1630433142323.webp',13),(34,'images-1630433142327.webp',13),(35,'images-1630433142329.webp',13),(36,'images-1630433142334.webp',13),(37,'images-1630433276477.jpg',14),(38,'images-1630433276487.jpg',14),(39,'images-1630433276491.jpg',14),(40,'images-1630433365149.jpg',15),(41,'images-1630433365164.jpg',15),(42,'images-1630433417551.jpg',16),(43,'images-1630433495266.jpg',17),(44,'images-1630433495291.jpg',17),(45,'images-1630433495291.jpg',17),(46,'images-1630433563182.jpg',18),(47,'images-1630433629613.jpg',19),(48,'images-1630433629715.jpg',19),(49,'images-1630433734907.jpg',20),(50,'images-1630433734912.jpg',20),(51,'images-1630433734913.jpg',20),(52,'images-1630433734916.jpg',20),(53,'images-1630433832813.webp',21),(54,'images-1630433832817.jpg',21),(55,'images-1630433832822.webp',21),(56,'images-1630433832823.jpg',21),(57,'images-1630433912636.jpg',22),(58,'images-1630433912639.jpg',22),(59,'images-1630433912640.jpg',22),(60,'images-1630434089838.jpg',23),(61,'images-1630434089910.jpg',23),(62,'images-1630434089928.jpg',23),(63,'images-1630434089957.jpg',23),(64,'images-1630434219756.jpg',24),(65,'images-1630434219824.webp',24),(66,'images-1630434219941.jpg',24),(67,'images-1630434219968.webp',24),(68,'images-1630434315409.jpg',25),(69,'images-1630434315415.jpg',25),(70,'images-1630434315420.jpg',25),(71,'images-1630434315428.jpg',25),(72,'images-1630434315430.jpg',25),(73,'images-1630434315437.webp',25),(75,'images-1632801078950.jpg',28);
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -168,12 +168,12 @@ CREATE TABLE `products` (
   `price` int NOT NULL,
   `cuotas` int NOT NULL,
   `stock` int NOT NULL,
-  `description` varchar(500) NOT NULL,
+  `description` varchar(1000) NOT NULL,
   `categoryId` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_PRODUCTS_CATEGORY_idx` (`categoryId`),
   CONSTRAINT `FK_Products_Categories` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,7 +182,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (3,'Naruto',250,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(4,'Naruto opc2',260,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(5,'Gorro Naruto',300,2,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',1),(6,'Gorra Dragon Ball',450,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',1),(8,'Cartuchera Bulma',300,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',2),(9,'Cartuchera DB',500,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',2),(10,'Naruto Uzumaki',700,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(12,'Lady Tsunade',800,8,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(13,'Naruto Zorro 9 Colas',800,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(14,'Mochila Pokemon',2000,12,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',5),(15,'Bolso Super Saiyan',3300,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',5),(16,'Mochila Super Saiyan',4500,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',5),(17,'Taza Dragon Ball Z',300,2,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(18,'Taza Death Note',650,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(19,'Taza Shenlong DB',750,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(20,'Taza Pokemon',670,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(21,'Taza',780,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(22,'Billetera Naruto',590,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',1),(23,'Boa One Piece',850,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(24,'Kakashi Naruto',680,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(25,'Gaara Naruto',750,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3);
+INSERT INTO `products` VALUES (3,'Naruto',260,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(4,'Naruto opc2',260,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(5,'Gorro Naruto',300,2,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',1),(6,'Gorra Dragon Ball',450,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',1),(8,'Cartuchera Bulma',300,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',2),(9,'Cartuchera DB',500,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',2),(10,'Naruto Uzumaki',700,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(12,'Lady Tsunade',800,8,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(13,'Naruto Zorro 9 Colas',800,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(14,'Mochila Pokemon',2000,12,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',5),(15,'Bolso Super Saiyan',3300,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',5),(16,'Mochila Super Saiyan',4500,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',5),(17,'Taza Dragon Ball Z',300,2,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(18,'Taza Death Note',650,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(19,'Taza Shenlong DB',750,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(20,'Taza Pokemon',670,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(21,'Taza',780,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',6),(22,'Billetera Naruto',590,3,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',1),(23,'Boa One Piece',850,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(24,'Kakashi Naruto',680,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(25,'Gaara Naruto',750,6,1,'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aliquam in',3),(28,'Espada Katana Sasuke Uchiha + Funda + Cinto + Bandana Naruto',2500,1,1,'ESPADA KATANA CON FUNDA SASUKE + CINTO + BANDANA:\r\n\r\n* INCLUYE:\r\n1 Espada Katana Ninja.\r\n1 Funda para Espada.\r\n1 Arnes para ajustar la Espada a la Cintura.\r\n1 Bandana\r\n* Medidas:\r\nEspada 70cm (largo) x 27mm (alto) x 12mm (profundidad).\r\nMango Espada 22.5cm (largo) x 36mm (alto) x 15mm (profundidad).\r\nFunda 48cm (larrgo) x 38mm (alto) x 17mm (profundidad).\r\nCinto 100cm.\r\nBroches 7.5cm x 4.5cm.\r\n\r\nLas imágenes son ilustrativas, el producto puede tener variaciones dependiendo del distribuidor/marca sin afectar las funciones y calidad del mismo.',1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,4 +258,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-27 20:48:04
+-- Dump completed on 2021-09-28  3:37:06

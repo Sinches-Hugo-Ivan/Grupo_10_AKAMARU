@@ -11,70 +11,63 @@
           
             <form action="/products/add" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label" >Nombre</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" name="name">
+                    <label for="name" class="form-label" >Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name">
                     <%if (locals.errors && errors.name){%>
                       <p style="color: red;"> <%=errors.name.msg%> </p>
                   <%}%>
                   </div>
 
                   <div class="mb-3">
-                    <label for="floatingTextarea">Descripción</label>
-                    <textarea class="form-control" id="floatingTextarea" name="description"></textarea>
+                    <label for="description">Descripción</label>
+                    <textarea class="form-control" id="description" name="description"></textarea>
                     <%if (locals.errors && errors.description){%>
                       <p style="color: red;"> <%=errors.description.msg%> </p>
                   <%}%>
                   </div>
 
                   <div class = "mb-3">
-                    <label for="productImagen" class = "form-label">Imagen</label>
-                    <input type="file" class ="form control" id = "productImagen" name = "images" multiple>
-                    <%if (locals.errors && errors.image){%>
-                      <p style="color: red;"> <%=errors.image.msg%> </p>
+                    <label for="images" class = "form-label">Imagen</label>
+                    <input type="file" class ="form control" id = "images" name = "images" multiple>
+                    <%if (locals.errors && errors.images){%>
+                      <p style="color: red;"> <%=errors.images.msg%> </p>
                   <%}%>
                 </div>
 
                 <div class="mb-3 categorias">
-                <label for="category" class="form-label">Categoría</label>
-                <select name="category" id="category" >
-                <option value="accesorios">Accesorios</option>
-                <option value="cartucheras">Cartucheras</option>
-                <option value="figuras">Figuras</option>
-                <option value="mangas">Mangas</option>
-                <option value="mochilas">Mochilas y Bolsos</option>
-                <option value="tazas">Tazas</option>
+                <label for="categoryId" class="form-label">Categoría</label>
+                <select name="categoryId" id="categoryId" >
+                  <% categorias.forEach(categoria => { %>
+                    <option value="<%= categoria.id %>" <%= locals.old && old.categoryId === categoria.id ? 'selected' : null%> ><%= categoria.name %></option>
+                   <% }) %>
               </select>
               <%if (locals.errors && errors.category){%>
                 <p style="color: red;"> <%=errors.category.msg%> </p>
             <%}%>
                 </div>
 
-                <div class="mb-3 categorias">
-                  <label for="colors" class="form-label">Elije un color </label>
-                <select name="colors" id="colors" class="colors">
-                <option value="red"> Rojo </option>
-                <option value="blue">Azul </option>
-                <option value="black">Negro</option>
-                <option value="sincolor">Sin color</option>
-              </select>
-              <%if (locals.errors && errors.colors){%>
-                <p style="color: red;"> <%=errors.colors.msg%> </p>
-            <%}%>
-                </div>
-
+              
                   <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Precio</label>
-                    <input type="number" class="form-control" id="formGroupExampleInput2" name="price">
+                    <label for="price" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="price" name="price">
                     <%if (locals.errors && errors.price){%>
                       <p style="color: red;"> <%=errors.price.msg%> </p>
                   <%}%>
                   </div>
 
                   <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Cuotas</label>
-                    <input type="number" class="form-control" id="formGroupExampleInput2" name="discount">
+                    <label for="cuotas" class="form-label">Cuotas</label>
+                    <input type="number" class="form-control" id="cuotas" name="cuotas">
                     <%if (locals.errors && errors.cuotas){%>
                       <p style="color: red;"> <%=errors.cuotas.msg%> </p>
+                  <%}%>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="stock" class="form-label">stock</label>
+                    <input type="text" class="form-control" id="stock" name="stock" >
+                    <%if (locals.errors && errors.stock){%>
+                      <p style="color: red;"> <%=errors.stock.msg%> </p>
                   <%}%>
                   </div>
                   

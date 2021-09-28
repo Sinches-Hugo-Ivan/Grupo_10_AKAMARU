@@ -17,7 +17,7 @@
                 value="<%= producto.name %>">
             </div>
             <div class="text-center">
-              <img src="<%= producto.imagenes[0].name %>" alt="">
+              <img src="/images/<%= producto.imagenes[0].name %> " alt="">
             </div>
             <div class="mb-3">
               <label for="floatingTextarea">Descripción</label>
@@ -40,8 +40,12 @@
               <input type="text" class="form-control" id="formGroupExampleInput2" name="price" value="<%=producto.price%>">
             </div>
             <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">stock</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="stock" value="<%=producto.stock%>">
+            </div>
+            <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Cuotas</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" name="discount" value="<%= producto.discount %>">
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="cuotas" value="<%= producto.cuotas %>">
             </div>
             <button class="btn btn-primary" type="submit">Guardar</button>
             </form>
