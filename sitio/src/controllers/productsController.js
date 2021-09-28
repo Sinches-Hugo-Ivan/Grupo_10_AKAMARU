@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-// let categorias = require('../data/categories_db');
-// let productos = require('../data/products_db');
-// const { validationResult } = require('express-validator');
-// const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
+
 
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
@@ -110,21 +107,27 @@ module.exports = {
         })
     },
     update: (req, res) => {
-        const { name, description, price, discount, category, colors } = req.body;
-        productos.forEach(producto => {
-            if (producto.id === +req.params.id) {
-                producto.id === +req.params.id;
-                producto.name = name;
-                producto.description = description;
-                producto.price = +price;
-                producto.discount = +discount;
-                producto.category = category;
-                producto.colors = colors
+            const {name, description,price,cuotas,categoryId,colors,stock} = req.body;
+    
+            db.Product.update(
+                {
+                    name : name.trim(),
+                    description : description.trim(),
+                    price,
+                    cuotas,
+                    categoryId,
+                    colors,
+                    stock
+                },
+                {
+                    where : {
+                        id : req.params.id
+                    }
+                }
+            ).then( () =>   res.redirect('/products/vistaAdmin'))
+            .catch(error => console.log(error))
             }
-        });
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 2), 'utf-8');
-        res.redirect('/products/detail/' + req.params.id)
-    },
+    ,
     vistaAdmin: (req, res) => {
         {
             let categorias = db.Category.findAll();
@@ -175,8 +178,12 @@ module.exports = {
         db.Product.destroy({
             where : {
                 id : req.params.id
-            }
-        }).then(() => res.redirect('listaProductsAdmin'))
+            },
+            include : [
+                {association : 'imagenes'},
+                {association : 'category'},  
+            ]
+        }).then(() => res.redirect('/products/vistaAdmin'))
         .catch(error => console.log(error))
      },
     productos: (req, res) => {
