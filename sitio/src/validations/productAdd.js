@@ -8,6 +8,17 @@ module.exports = [
         .notEmpty().withMessage("Ingresa una descripción del producto")
         .isLength({ max: 1000 }).withMessage("La descripción debe tener 500 caracteres como máximo"),
 
+     body('images')
+    .custom((value,{req}) => {
+      
+        if(req.files[0]){
+            return true
+        }else{
+            return false
+        }
+    })
+    .withMessage('No ha subido ningun archivo!'),
+    
     body("categoryId")
         .notEmpty().withMessage("Debes seleccionar una categoría"),
 
