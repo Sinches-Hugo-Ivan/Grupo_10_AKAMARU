@@ -29,7 +29,7 @@ module.exports = [
         .notEmpty().withMessage("Debes ingresar un numero"),
 
     body("stock")
-        .notEmpty().withMessage("Debes seleccionar un color"),
+        .notEmpty().withMessage("Debes seleccionar un numero"),
 
 
 
