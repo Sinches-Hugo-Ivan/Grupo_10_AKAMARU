@@ -14,8 +14,9 @@
                     <form action="/users/edituser/<%=session.email %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <h4 class = "titulo-info-personal">Informacion personal</h4>
                     <h5>Imagen de perfil</h5>
+                    <!-- <div id = "preview" style=" height: 200px;"></div> -->
                     <div class = "contenedor-imagen-perfil">
-                        <div class = "imagen-perfil">
+                        <div id = "preview" class = "imagen-perfil">
                             <img class = "foto-perfil" src="/images/users/<%= session.imagen %>" alt="">
                         </div>
                         <div class = "input-imagen">
@@ -76,6 +77,7 @@
 
             <!-- Footer -->
             <%- include('./partials/footer.ejs') %>
+            <script src = "/javascripts/validarpreimagen.js"></script>
 
                 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
                     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
