@@ -34,9 +34,13 @@ body {
     border: 1px solid gray;
      
 }
-
-
-
+.genero {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: .2rem;
+    width: 100%;
+    padding: 1.5rem 1rem;
+}
 
 .form-control {
     background-color: white;

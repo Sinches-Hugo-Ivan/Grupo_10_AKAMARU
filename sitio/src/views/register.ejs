@@ -15,60 +15,57 @@
             <h3 class="font-weight-bold">Crea tu cuenta </h3>
             <p class="text-muted mb-5">Los campos marcados con <span class="text-danger">*</span> son requeridos</p>
 
-            <form action="/users/register" method="POST">
+            <form action="/users/register" method="POST" id="form-register" novalidate>
 
                 <!-- Grupo: Nombre y Apellido -->
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
                         <label for="firstName" class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
-                        <input type="text" name="firstName" class="form-control" placeholder="Tu nombre" id="firstName">
+                        <input type="text" name="firstName" class="form-control <%= locals.errors && locals.errors.firstName ? 'is-invalid' : null %>" placeholder= "Nombre" id="firstName" value = "<%= locals.old && locals.old.firstName ? old.firstName : null%>">
                         <%if (locals.errors && errors.firstName){%>
                             <p style="color: red;"> <%=errors.firstName.msg%> </p>
                         <%}%>
-                        <span> </span>
+                        <span id="error-firstName" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="lastName" class="font-weight-bold">Apellido <span
                                 class="text-danger">*</span></label>
-                        <input type="text" name="lastName" class="form-control" placeholder="Tu apellido" id="lastName">
+                        <input type="text" name="lastName" class="form-control <%= locals.errors && locals.errors.lastName ? 'is-invalid' : null %>" placeholder="Apellido" id="lastName" value = "<%= locals.old && locals.old.lastName ? old.lastName : null%>">
                         <%if (locals.errors && errors.lastName){%>
                             <p style="color: red;"> <%=errors.lastName.msg%> </p>
                         <%}%>
-                        <span> </span>
+                        <span id="error-lastName" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
                     </div>
                 </div>
                 <!-- Grupo: Correo electronico -->
                 <div class="form-group mb-3">
                     <label for="email" class="font-weight-bold">Correo electrónico <span
                             class="text-danger">*</span></label>
-                    <input type="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico"
-                        id="email">
+                    <input type="email" name="email" class="form-control <%= locals.errors && locals.errors.email ? 'is-invalid' : null %>" placeholder="Ingresa tu correo electrónico" id="email" value = "<%= locals.old && locals.old.email ? old.email : null%>">
                         <%if (locals.errors && errors.email){%>
                             <p style="color: red;"> <%=errors.email.msg%> </p>
                         <%}%>
-                    <span> </span>
+                    <span id="error-email" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
                 </div>
                 <!-- Grupo: Contraseña -->
                 <div class="row g-3 mb-2">
                     <div class="form-group col-md-6">
                         <label for="password" class="font-weight-bold">Contraseña<span
                                 class="text-danger">*</span></label>
-                        <input type="password" name="password" class="form-control" placeholder="Tu contraseña"
-                            id="password">
+                        <input type="password" name="password" class="form-control <%= locals.errors && locals.errors.password ? 'is-invalid' : null %>" placeholder="Tu contraseña" id="password" value = "<%= locals.old && locals.old.password ? old.password : null%>">
                         <%if (locals.errors && errors.password){%>
                                 <p style="color: red;"> <%=errors.password.msg%> </p>
                         <%}%>
-                        <span> </span>
+                        <span id="error-password" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="password2" class="font-weight-bold"> Repetir Contraseña <span
                                 class="text-danger">*</span></label>
-                        <input type="password" name="password2" class="form-control"
-                            placeholder="Repeti tu contraseña" id="password2">
+                        <input type="password" name="password2" class="form-control <%= locals.errors && locals.errors.password2 ? 'is-invalid' : null %>" placeholder="Repeti tu contraseña" id="password2" value = "<%= locals.old && locals.old.password2 ? old.password2 : null%>">
                         <%if (locals.errors && errors.password2){%>
                                 <p style="color: red;"> <%=errors.password2.msg%> </p>
                         <%}%>
-                        <span> </span>
+                        <span id="error-password2" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
                     </div>
                 </div>
                 <!-- Grupo: Fecha de nacimiento y Genero -->
@@ -76,38 +73,28 @@
                     <div class="form-group col-md-6">
                         <label for="date" class="font-weight-bold"> Fecha de nacimiento <span
                                 class="text-danger">*</span></label>
-                        <input type="date" name="date" class="form-control" placeholder="dd/mm/aaaa" id="date">
+                        <input type="date" name="date" class="form-control <%= locals.errors && locals.errors.date ? 'is-invalid' : null %>" placeholder="dd/mm/aaaa" id="date" value = "<%= locals.old && locals.old.date ? old.date : null%>">
                         <%if (locals.errors && errors.date){%>
                             <p style="color: red;"> <%=errors.date.msg%> </p>
                         <%}%>
-                        <span> </span>
+                        <span id="error-date" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
                     </div>
 
                         <div class="form-group col-md-6">
                             <label for="genero" class="font-weight-bold"> Genero<span class="text-danger">*</span></label>
-                            <input list="Genero" name="genero" type="text" class="form-control" placeholder="select"
-                                id="genero">
-                            <datalist id="Genero">
-                                <option value="Masculino"></option>
-                                <option value="Femenino"></option>
-                            </datalist>
+                            <select name="genero" id="genero" class="form-select <%= locals.errors && locals.errors.genero ? 'is-invalid' : null %> genero" id="validationServer04" aria-describedby="validationServer04Feedback">
+                                <option value = "<%= locals.old && locals.old.genero ? old.genero : null %>" hidden>Selecciona</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
                             <%if (locals.errors && errors.genero){%>
                                 <p style="color: red;"> <%=errors.genero.msg%> </p>
                             <%}%>
-                            <span> </span>
+                            <span id="error-genero" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
                         </div>
-                    </div> 
+                        <span id="error-campos-vacios" class="text-danger small"><%= locals.errors && locals.errors.name ? errors.name.msg : null %></span>
 
-
-
-
-
-                    <!-- recaptcha -->
-                    <!--  <form action="?" method="POST">
-                        <div class="g-recaptcha" data-sitekey=" 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-
-                    </form> -->
-
+                    </div>
 
                     <!-- BOTON -->
                     <div>
@@ -133,7 +120,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
-
+        <script src = "/javascripts/registerValidator.js"></script>
 
 
 

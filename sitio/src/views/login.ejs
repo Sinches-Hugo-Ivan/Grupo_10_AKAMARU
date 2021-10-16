@@ -14,22 +14,22 @@
 
                 <section class="container">
                     <h3 class="font-weight-bold">Acceso</h3>
-                    <form action="" method="POST">
+                    <form id="form-login" action="" method="POST">
 
                         <!-- Grupo: Correo electronico -->
                         <div class="form-group mb-3">
                             <label for="email" class="font-weight-bold">Correo electrónico </label>
-                            <input type="email" name="email" class="form-control"
+                            <input type="email" name="email" class="form-control <%= locals.errors && locals.errors.email ? 'is-invalid' : null %>"
                                 placeholder="Ingresa tu correo electrónico" id="email">
-                            <span> </span>
+                            <span id="error-email" class="text-danger small"><%= locals.errors && locals.errors.email ? errors.name.msg : null %></span>
                         </div>
 
                         <!-- Grupo: Contraseña -->
                         <div class="form-group mb-3">
                             <label for="contraseña" class="font-weight-bold">Contraseña </label>
-                            <input type="password" name="password" class="form-control" placeholder="Tu contraseña"
+                            <input type="password" name="password" class="form-control <%= locals.errors && locals.errors.password ? 'is-invalid' : null %>" placeholder="Tu contraseña"
                                 id="password">
-                            <span> </span>
+                            <span id="error-password" class="text-danger small"><%= locals.errors && locals.errors.password ? errors.name.msg : null %></span>
                         </div>
                         <span class="text-danger"> <%= locals.errores && errores.email ? errores.email.msg : null %>   </span>
                         <!-- RECORDAR USUARIO -->
@@ -40,6 +40,7 @@
                                 Recuerdame
                             </label>
                         </div>
+                        <span id="error-campos-vacios" class="text-danger small"><%= locals.errors && locals.errors.password ? errors.name.msg : null %></span>
 
                         <!-- LOGIN  -->
                         <div class="mb-3">
@@ -47,6 +48,7 @@
                             <button type="submit" class="btn btn-primary btn-sm">Iniciar</button>
 
                         </div>
+                        
 
                         <!-- ENLACE A RESTABLECER CONTRASEÑA-->
 
@@ -90,6 +92,9 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                 crossorigin="anonymous"></script>
+
+            <script src = "/javascripts/loginValidator.js"></script>
+
 
 
 
