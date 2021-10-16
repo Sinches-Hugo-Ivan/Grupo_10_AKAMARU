@@ -10,52 +10,60 @@
         <div class="formulario mt-5">
           <h2>Editar <%= producto.name %>
           </h2>
-          <form action="/products/edit/<%=producto.id %>?_method=PUT" method="POST">
+          <form action="/products/edit/<%=producto.id %>?_method=PUT" method="POST" id="form-productEdit">
             <div class="mb-3">
-              <label for="formGroupExampleInput" class="form-label"> Nombre </label>
-              <input type="text" class="form-control" id="formGroupExampleInput" name="name"
+              <label for="name" class="form-label"> Nombre </label>
+              <input type="text" class="form-control <%=locals.errors && errors.name ? 'is-invalid' : null %>" id="name" name="name"
                 value="<%= producto.name %>">
+                <span id="errorName" class="text-danger small"> <%= locals.errors && locals.errors.name ? errors.name.msg : null %> </span>
             </div>
             <div class="text-center">
               <img src="/images/<%= producto.imagenes[0].name %> " alt="">
             </div>
             <div class="mb-3">
-              <label for="floatingTextarea">Descripción</label>
-              <textarea class="form-control" id="floatingTextarea"
+              <label for="description">Descripción</label>
+              <textarea class="form-control <%=locals.errors && errors.description ? 'is-invalid' : null %>" id="description"
                 name="description"><%= producto.description %> </textarea>
+                <span id="errorDescription" class="text-danger small"> <%= locals.errors && locals.errors.description ? errors.description.msg : null %> </span>
             </div>
             <div class="mb-3 categorias">
-              <label for="category" class="form-label">Categoría</label>
-              <select name="category" id="category" >
-              <option value="accesorios">Accesorios</option>
-              <option value="cartucheras">Cartucheras</option>
-              <option value="figuras">Figuras</option>
-              <option value="mangas">Mangas</option>
-              <option value="mochilas">Mochilas y Bolsos</option>
-              <option value="tazas">Tazas</option>
-            </select>
-              </div>
-            <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">Precio</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" name="price" value="<%=producto.price%>">
+              <label for="categoryId" class="form-label">Categoría</label>
+              <select name="categoryId" id="categoryId">
+                <% categorias.forEach(categoria=> { %>
+                  <option value="<%= categoria.id %>" <%=locals.old && old.categoryId===categoria.id ? 'selected' :
+                    null%> ><%= categoria.name %>
+                  </option>
+                  <% }) %>
+              </select>
+              <span id="errorCategoria" class="text-danger small"> <%= locals.errors && locals.errors.categoria ? errors.categoria.msg : null %> </span>
             </div>
             <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">stock</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" name="stock" value="<%=producto.stock%>">
+              <label for="price" class="form-label">Precio</label>
+              <input type="number" class="form-control <%=locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price"
+                value="<%=producto.price%>">
+                <span id="errorPrice" class="text-danger small"> <%= locals.errors && locals.errors.price ? errors.price.msg : null %> </span>
             </div>
             <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">Cuotas</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" name="cuotas" value="<%= producto.cuotas %>">
+              <label for="stock" class="form-label">Stock</label>
+              <input type="number" class="form-control <%=locals.errors && errors.stock ? 'is-invalid' : null %>" id="stock" name="stock"
+                value="<%=producto.stock%>">
+                <span id="errorStock" class="text-danger small"> <%= locals.errors && locals.errors.stock ? errors.stock.msg : null %> </span>
+            </div>
+            <div class="mb-3">
+              <label for="cuotas" class="form-label">Cuotas</label>
+              <input type="number" class="form-control <%=locals.errors && errors.cuotas ? 'is-invalid' : null %>" id="cuotas" name="cuotas"
+                value="<%= producto.cuotas %>">
+                <span id="errorCuotas" class="text-danger small"> <%= locals.errors && locals.errors.cuotas ? errors.cuotas.msg : null %> </span>
             </div>
             <button class="btn btn-primary" type="submit">Guardar</button>
-            </form>
+          </form>
 
         </div>
       </section>
 
       <!-- Footer -->
       <%- include('./partials/footer.ejs') %>
-
+      <script src="/javascripts/productEditValidation.js"></script>
   </body>
 
 </html>

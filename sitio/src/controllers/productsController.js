@@ -134,25 +134,50 @@ module.exports = {
       
     },
     update: (req, res) => {
-            const {name, description,price,cuotas,categoryId,stock} = req.body;
-    
-            db.Product.update(
-                {
-                    name : name.trim(),
-                    description : description.trim(),
-                    price,
-                    cuotas,
-                    categoryId,
-                    stock
-                },
-                {
-                    where : {
-                        id : req.params.id
-                    }
+        let categorias = db.Category.findAll();
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+        const {name, description,price,cuotas,categoryId,stock} = req.body;
+       db.Product.update(
+            {
+                ...req.body,
+                name : name.trim(),
+                description : description.trim(),
+                price,
+                cuotas,
+                categoryId,
+                stock
+            },
+            {
+                where : {
+                    id : req.params.id
                 }
-            ).then( () =>   res.redirect('/products/vistaAdmin'))
-            .catch(error => console.log(error))
-            }
+            } , 
+            Promise.all([categorias,producto])
+        ).then([categorias,producto], () =>   res.redirect('/products/vistaAdmin', {
+            categorias, 
+            producto
+        }))
+        .catch(error => console.log(error))
+        } 
+    else{
+      let producto =  db.Product.findByPk(req.params.id, {include : [
+        {association : 'imagenes'},
+        
+    ]
+})
+        Promise.all([categorias,producto])
+        .then(([categorias,producto]) => {
+            return res.render('productEdit',{
+                categorias,
+                producto,
+                errors : errors.mapped(),
+                old : req.body
+            })
+        }) 
+        .catch(error => console.log(error))
+       } 
+    }
     ,
     vistaAdmin: (req, res) => {
         {

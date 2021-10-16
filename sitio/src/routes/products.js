@@ -2,6 +2,7 @@ const path = require('path');
 var express = require('express');
 var router = express.Router();
 const addValidation = require("../validations/productAdd");
+const editValidation = require("../validations/productEdit");
 
 //Middlewares
 const adminUserCheck = require("../middlewares/adminUserCheck");
@@ -29,7 +30,7 @@ router.post('/add',upload.array('images'),addValidation,save);
 router.get('/detail/:id',detail);
 router.get('/search',search);
 router.get('/edit/:id',adminUserCheck, edit);                      
-router.put('/edit/:id',adminUserCheck , update);          //         
+router.put('/edit/:id',adminUserCheck , editValidation, update);          //         
 router.get('/vistaAdmin',adminUserCheck, vistaAdmin);               //
 router.get('/categorias', categoriasProduct);
 router.get('/categorias/:id', categoriasProduct);
