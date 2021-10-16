@@ -8,30 +8,41 @@
     <section class="container">
         <div class="formulario mt-5">
           <h2>Agregar Producto</h2>
+
+          <span id="errorEmpty" class="text-danger"></span>
           
-            <form action="/products/add" method="POST" enctype="multipart/form-data">
+            <form action="/products/add" method="POST" id="form-productAdd" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name" class="form-label" >Nombre</label>
                     <input type="text" class="form-control" id="name" name="name">
-                    <%if (locals.errors && errors.name){%>
+                    <span id="errorName" class="small text-danger">
+                      <%= locals.errors && errors.name ? errors.name.msg : null %>
+                    </span>
+                    <!--<%if (locals.errors && errors.name){%>
                       <p style="color: red;"> <%=errors.name.msg%> </p>
-                  <%}%>
+                  <%}%>-->
                   </div>
 
                   <div class="mb-3">
                     <label for="description">Descripción</label>
                     <textarea class="form-control" id="description" name="description"></textarea>
-                    <%if (locals.errors && errors.description){%>
+                    <span id="errorDesc" class="small text-danger">
+                      <%= locals.errors && errors.description ? errors.description.msg : null %>
+                    </span>
+                   <!-- <%if (locals.errors && errors.description){%>
                       <p style="color: red;"> <%=errors.description.msg%> </p>
-                  <%}%>
+                  <%}%> -->
                   </div>
 
                   <div class = "mb-3">
                     <label for="images" class = "form-label">Imagen</label>
                     <input type="file" class ="form control" id = "images" name = "images" multiple>
-                    <%if (locals.errors && errors.images){%>
+                    <span id="errorImage" class="small text-danger">
+                      <%= locals.errors && errors.images ? errors.images.msg : null %>
+                    </span>
+                    <!--<%if (locals.errors && errors.images){%>
                       <p style="color: red;"> <%=errors.images.msg%> </p>
-                  <%}%>
+                  <%}%> -->
                 </div>
 
                 <div class="mb-3 categorias">
@@ -41,34 +52,46 @@
                     <option value="<%= categoria.id %>" <%= locals.old && old.categoryId === categoria.id ? 'selected' : null%> ><%= categoria.name %></option>
                    <% }) %>
               </select>
-              <%if (locals.errors && errors.category){%>
+              <span id="errorcategory" class="small text-danger">
+                <%= locals.errors && errors.category ? errors.category.msg : null %>
+              </span>
+              <!-- <%if (locals.errors && errors.category){%>
                 <p style="color: red;"> <%=errors.category.msg%> </p>
-            <%}%>
+            <%}%> -->
                 </div>
 
               
                   <div class="mb-3">
                     <label for="price" class="form-label">Precio</label>
                     <input type="number" class="form-control" id="price" name="price">
-                    <%if (locals.errors && errors.price){%>
+                    <span id="errorPrice" class="small text-danger">
+                      <%= locals.errors && errors.price ? errors.price.msg : null %>
+                    </span>
+                    <!-- <%if (locals.errors && errors.price){%>
                       <p style="color: red;"> <%=errors.price.msg%> </p>
-                  <%}%>
+                  <%}%> -->
                   </div>
 
                   <div class="mb-3">
                     <label for="cuotas" class="form-label">Cuotas</label>
                     <input type="number" class="form-control" id="cuotas" name="cuotas">
-                    <%if (locals.errors && errors.cuotas){%>
+                    <span id="errorCuotas" class="small text-danger">
+                      <%= locals.errors && errors.cuotas ? errors.cuotas.msg : null %>
+                    </span>
+                    <!-- <%if (locals.errors && errors.cuotas){%>
                       <p style="color: red;"> <%=errors.cuotas.msg%> </p>
-                  <%}%>
+                  <%}%> -->
                   </div>
 
                   <div class="mb-3">
-                    <label for="stock" class="form-label">stock</label>
-                    <input type="text" class="form-control" id="stock" name="stock" >
-                    <%if (locals.errors && errors.stock){%>
+                    <label for="stock" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="stock" name="stock" >
+                    <span id="errorStock" class="small text-danger">
+                      <%= locals.errors && errors.stock ? errors.stock.msg : null %>
+                    </span>
+                    <!-- <%if (locals.errors && errors.stock){%>
                       <p style="color: red;"> <%=errors.stock.msg%> </p>
-                  <%}%>
+                  <%}%>-->
                   </div>
                   
                   <button class="btn btn-primary" type="submit">Guardar</button>
@@ -84,6 +107,6 @@
 
 
 
-
+<script src="/javascripts/productAddValidator.js"></script>
 </body>
 </html>
