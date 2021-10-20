@@ -46,6 +46,7 @@
 }
 
 .main .conteiner-products .product .product-description{ /*cambios en margin y padinng de p span y description*/
+    font-size: 0.6em;
     width: 100%;
     height: 100px;
     text-align: center;
