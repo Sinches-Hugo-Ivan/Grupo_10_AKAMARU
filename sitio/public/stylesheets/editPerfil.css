@@ -90,7 +90,7 @@
     border-radius:5px;
     border:1px solid #F2F3F4;     
 }
-.main .contenedor-input .editarGenero{
+.main .contenedor-input .form-control{
     background-color: #F2F3F4;
     padding: 5px;
     width: 100%;

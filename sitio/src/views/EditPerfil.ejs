@@ -23,7 +23,9 @@
                             </div>
                             <div class="input-imagen">
                                 <label for="archivo">Seleccionar Imagen de perfil</label>
-                                <input type="file" id="archivo" name="imagen">
+                                <input type="file"
+                                    class="form-control <%= locals.errores && locals.errores.images ? 'is-invalid' : null %> "
+                                    id="archivo" name="imagen">
                                 <span id="error-images" class="text-danger small">
                                     <%if (locals.errors && errors.images){%>
                                         <p style="color: red;">
@@ -77,7 +79,7 @@
                                 <label class="titulo-label" for="">Genero</label>
                             </div>
                             <div class="contenedor-input">
-                                <select class="editarGenero" id="genero" name="genero">
+                                <select class="form-control" id="genero" name="genero">
                                     <% generos.forEach(genero=> { %>
                                         <option value="<%= genero %>" <%=genero==session.genero ? 'selected' : null %> >
                                             <%= genero %>
@@ -93,12 +95,12 @@
                                 <input value="<%= session.email%>" type="email" name="correo" id="correo"
                                     style="display: none;">
                             </div>
-                            
+
                             <div class="contenedor-boton">
                                 <button type="submit">Guardar Cambios</button>
                                 <span id="error-empty" class="text-danger small"></span>
                             </div>
-                           
+
                         </div>
                     </form>
                 </div>
