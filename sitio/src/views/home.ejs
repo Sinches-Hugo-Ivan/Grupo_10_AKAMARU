@@ -48,8 +48,12 @@
                                     <h3 class="name-product">
                                         <%= producto.name %>
                                     </h3>
-                                    <p>$ <%=producto.price%></p>
-                                    <p><%=producto.cuotas%> <span>cuotas de  </span>$ <%=( producto.price / producto.cuotas).toFixed(0) %></p>
+                                    <p>$ <%=producto.price%>
+                                    </p>
+                                    <p>
+                                        <%=producto.cuotas%> <span>cuotas de </span>$ <%=( producto.price /
+                                                producto.cuotas).toFixed(0) %>
+                                    </p>
                                 </div>
                             </a>
                         </article>
@@ -57,6 +61,11 @@
                 </section>
             </main>
 
+
+            <!-- ChatBot -->
+            <script src="https://account.snatchbot.me/script.js"></script>
+            <script>window.sntchChat.Init(209015)</script>
+            
             <!-- Footer -->
             <%- include('./partials/footer.ejs') %>
 
