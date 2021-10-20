@@ -32,3 +32,7 @@ Comenzar a actualizar el trello más seguido y dividir las tareas de manera más
 # Retroespectiva del Sprint 5
 
 Tenemos que seguir buscando recursos para resolver el problema propuesto y no estancarse . Hacer más reuniones periodicas de revisión de código (miércoles 12:30hs y lunes 23:30hs) y pedir ayuda a tiempo. No perder más tiempo y sobre cargarse con las tareas. 
+
+# Retroespectiva del Sprint 6
+
+Tenemos que seguir con reuniones periodicas de revisión de código (miércoles 12:30hs y lunes 23:30hs) . Hacer más revisiones de codigo para mejorar nuestra pagina . No  re agendar reuniones . 
