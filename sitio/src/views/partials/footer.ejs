@@ -3,7 +3,12 @@
         <div class="container-footer">
             <div class="column0">
                 <img class="column0-img" src="\images\AKAMARU-banner.png" alt="">
-                <a href="/products/vistaAdmin">Administrador</a>
+
+                <% if (locals.userLogin && locals.userLogin.rol === 'admin' ) {%>
+                    <a href="/products/vistaAdmin">Administrador</a>
+                    <%}%>
+
+
             </div>
             <div class="column1">
                 <h3>Información de la Empresa </h3>
@@ -53,7 +58,7 @@
                     </div>
                 </div>
             </div>
-  
+
         </div>
         <div class="container-footer2">
             <div class="container-footer2a">
@@ -69,4 +74,5 @@
             </div>
         </div>
     </div>
-  </footer>
+
+</footer>

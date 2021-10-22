@@ -72,6 +72,8 @@ module.exports = {
                     fecha : user.date 
                 }
                 console.log(req.session.userLogin);
+                res.locals.userLogin = req.session.userLogin;
+                console.log(res.locals.userLogin);
                 if(recordar){
                     req.session.userLogin['cookie'] = "on"
                     res.cookie('akamaru', req.session.userLogin, {
