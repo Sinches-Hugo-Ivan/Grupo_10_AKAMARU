@@ -187,5 +187,15 @@ module.exports = {
         })
     },
 
+    
+    faq: (req, res) => {
+        db.Category.findAll()
+        .then(categorias =>{
+            return res.render('faq',{
+                categorias
+            })
+        })
+    },
+
 }
 
