@@ -3,7 +3,7 @@ const multer = require('multer');
 const path = require('path');
 
 var router = express.Router();
-const {login,register,cart,processLogin,processRegister,updateperfil,editperfil,cerrarSession,vistaPerfil} = require('../controllers/userController');
+const {login,register,cart,processLogin,processRegister,updateperfil,editperfil,cerrarSession,vistaPerfil,nosotros} = require('../controllers/userController');
 const loginValidator = require('../validations/loginValidator');
 const registerValidation = require("../validations/register");
 const userEditValidator = require('../validations/userEditValidator')
@@ -36,6 +36,7 @@ router.get('/cart', cart);
 router.get('/vistaPerfil',usersCheck,vistaPerfil);
 router.get('/edituser',usersCheck,editperfil);
 router.put('/edituser/:correo',upload.single('imagen'),userEditValidator,usersCheck, updateperfil);
+router.get('/nosotros', nosotros);
 
 
 module.exports = router;

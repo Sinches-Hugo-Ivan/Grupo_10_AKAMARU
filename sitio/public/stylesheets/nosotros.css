@@ -1,0 +1,13 @@
+/*body{
+    background-color: red;
+}
+*/
+.letraRoja{
+  color: red !important; 
+}
+
+
+.centrado{
+  margin:auto;
+  display:block;
+}

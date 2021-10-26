@@ -176,7 +176,16 @@ module.exports = {
             return res.redirect('/')
             res.redirect('/')
         }).catch(error => console.log(error))
-    }
+    },
+
+    nosotros: (req, res) => {
+        db.Category.findAll()
+        .then(categorias =>{
+            return res.render('nosotros',{
+                categorias
+            })
+        })
+    },
 
 }
 
