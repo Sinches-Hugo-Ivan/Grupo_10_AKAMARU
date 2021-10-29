@@ -67,13 +67,18 @@ window.addEventListener('load', () => {
     $('form-productEdit').addEventListener('submit', e => {
         e.preventDefault()
         let elementosForm = $('form-productEdit').elements;
+        let error = false;
+
         for (let i = 0; i < elementosForm.length - 1; i++) {
             if(!elementosForm[i].value){
-             
-                elementosForm.classList.add('is-invalid')
-                $('error-empty').innerHTML = "Los campos señalados son obligatorios"
+                elementosForm[i].classList.add('is-invalid')
+                $('errorEmpty').innerHTML = "Los campos señalados son obligatorios"
+                let error = true
             }
-            
+        }
+
+        if (!error) {
+            $('form-productEdit').submit()
         }
     })
 })
