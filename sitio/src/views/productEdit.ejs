@@ -10,50 +10,88 @@
         <div class="formulario mt-5">
           <h2>Editar <%= producto.name %>
           </h2>
-          <form action="/products/edit/<%=producto.id %>?_method=PUT" method="POST" id="form-productEdit">
+          <form action="/products/edit/<%=producto.id %>?_method=PUT" method="POST" id="form-productEdit"
+            name="form-productEdit" enctype="multipart/form-data">
+            <span id="errorEmpty" class="text-danger small">
+              <%= locals.errors && locals.errors ? errors.msg : null %>
+            </span>
             <div class="mb-3">
               <label for="name" class="form-label"> Nombre </label>
-              <input type="text" class="form-control <%=locals.errors && errors.name ? 'is-invalid' : null %>" id="name" name="name"
-                value="<%= producto.name %>">
-                <span id="errorName" class="text-danger small"> <%= locals.errors && locals.errors.name ? errors.name.msg : null %> </span>
+              <input type="text" class="form-control <%=locals.errors && errors.name ? 'is-invalid' : null %>" id="name"
+                name="name" value="<%= producto.name %>">
+              <span id="errorName" class="text-danger small">
+                <%= locals.errors && locals.errors.name ? errors.name.msg : null %>
+              </span>
             </div>
-            <div class="text-center">
-              <img src="/images/<%= producto.imagenes[0].name %> " alt="">
+            <div class="mb-3">
+              <label for="images" class="form-label"> Imagenes </label>
+              <div id="preview" class="mb-3 d-flex justify-content-between">
+                <% producto.imagenes.forEach((imagen,index)=> { %>
+                  <div class="w-25">
+                    <img class="w-100 h-100" src="/images/<%= imagen.name %> " alt="">
+                    <div>
+                      <a onclick="deleteImages('<%=imagen.id%>')" class="btn btn-danger p-1">Eliminar</a>
+                    </div>
+                  </div>
+                  <% }) %>
+              </div>
+              <div class="mb-3 d-flex justify-content-around m-5">
+                <label for="images" class="btn btn-outline-success btn- p-1">Agregar Imagenes</label>
+                <input hidden type="file" class="form-control" id="images" name="images" accept="images/*"
+                  onchange="addImages('<%=producto.id%>',this.files)" multiple>
+              </div>
+            </div>
+
+
+            <div>
+              <span id="errorImages" class="text-danger small">
+                <%= locals.errors && locals.errors.images ? errors.images.msg : null %>
+              </span>
             </div>
             <div class="mb-3">
               <label for="description">Descripción</label>
-              <textarea class="form-control <%=locals.errors && errors.description ? 'is-invalid' : null %>" id="description"
-                name="description"><%= producto.description %> </textarea>
-                <span id="errorDescription" class="text-danger small"> <%= locals.errors && locals.errors.description ? errors.description.msg : null %> </span>
+              <textarea class="form-control <%=locals.errors && errors.description ? 'is-invalid' : null %>"
+                id="description" name="description"><%= producto.description %> </textarea>
+              <span id="errorDescription" class="text-danger small">
+                <%= locals.errors && locals.errors.description ? errors.description.msg : null %>
+              </span>
             </div>
             <div class="mb-3 categorias">
               <label for="categoryId" class="form-label">Categoría</label>
-              <select name="categoryId" id="categoryId">
+              <select class="form-control" name="categoryId" id="categoryId">
                 <% categorias.forEach(categoria=> { %>
                   <option value="<%= categoria.id %>" <%=locals.old && old.categoryId===categoria.id ? 'selected' :
                     null%> ><%= categoria.name %>
                   </option>
                   <% }) %>
               </select>
-              <span id="errorCategoria" class="text-danger small"> <%= locals.errors && locals.errors.categoria ? errors.categoria.msg : null %> </span>
+              <span id="errorCategoria" class="text-danger small">
+                <%= locals.errors && locals.errors.categoria ? errors.categoria.msg : null %>
+              </span>
             </div>
             <div class="mb-3">
               <label for="price" class="form-label">Precio</label>
-              <input type="number" class="form-control <%=locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price"
-                value="<%=producto.price%>">
-                <span id="errorPrice" class="text-danger small"> <%= locals.errors && locals.errors.price ? errors.price.msg : null %> </span>
+              <input type="number" class="form-control <%=locals.errors && errors.price ? 'is-invalid' : null %>"
+                id="price" name="price" value="<%=producto.price%>">
+              <span id="errorPrice" class="text-danger small">
+                <%= locals.errors && locals.errors.price ? errors.price.msg : null %>
+              </span>
             </div>
             <div class="mb-3">
               <label for="stock" class="form-label">Stock</label>
-              <input type="number" class="form-control <%=locals.errors && errors.stock ? 'is-invalid' : null %>" id="stock" name="stock"
-                value="<%=producto.stock%>">
-                <span id="errorStock" class="text-danger small"> <%= locals.errors && locals.errors.stock ? errors.stock.msg : null %> </span>
+              <input type="number" class="form-control <%=locals.errors && errors.stock ? 'is-invalid' : null %>"
+                id="stock" name="stock" value="<%=producto.stock%>">
+              <span id="errorStock" class="text-danger small">
+                <%= locals.errors && locals.errors.stock ? errors.stock.msg : null %>
+              </span>
             </div>
             <div class="mb-3">
               <label for="cuotas" class="form-label">Cuotas</label>
-              <input type="number" class="form-control <%=locals.errors && errors.cuotas ? 'is-invalid' : null %>" id="cuotas" name="cuotas"
-                value="<%= producto.cuotas %>">
-                <span id="errorCuotas" class="text-danger small"> <%= locals.errors && locals.errors.cuotas ? errors.cuotas.msg : null %> </span>
+              <input type="number" class="form-control <%=locals.errors && errors.cuotas ? 'is-invalid' : null %>"
+                id="cuotas" name="cuotas" value="<%= producto.cuotas %>">
+              <span id="errorCuotas" class="text-danger small">
+                <%= locals.errors && locals.errors.cuotas ? errors.cuotas.msg : null %>
+              </span>
             </div>
             <button class="btn btn-primary" type="submit">Guardar</button>
           </form>
@@ -63,7 +101,10 @@
 
       <!-- Footer -->
       <%- include('./partials/footer.ejs') %>
-      <script src="/javascripts/productEditValidation.js"></script>
+        <script src="/javascripts/productEditValidation.js"></script>
+        <script src="/javascripts/productImage.js">
+        </script>
+
   </body>
 
 </html>

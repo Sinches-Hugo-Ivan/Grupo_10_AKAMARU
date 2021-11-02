@@ -1,5 +1,5 @@
 const $ = id => document.getElementById(id);
-
+let ExRegExt = /(jpg|jpeg|png|gif|webp)$/i;
 
 window.addEventListener('load', () => {
     console.log("productEditValidation connected success");
@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
             $('name').classList.add('is-valid')
             $('errorName').innerHTML = null
         }
-    });
+    })
     $('description').addEventListener('blur', () => {
         if (!$('description').value.trim()) {
             $('description').classList.add('is-invalid')
@@ -31,7 +31,16 @@ window.addEventListener('load', () => {
             $('description').classList.add('is-valid')
             $('errorDescription').innerHTML = null
         }
-    });
+    })
+    $('categoryId').addEventListener('click', () => {
+        if (!$('categoryId').value.trim()) {
+            $('errorCategoria').innerHTML = "seleccione una categoria"
+        } else {
+            $('categoryId').classList.remove('is-invalid')
+            $('categoryId').classList.add('is-valid')
+            $('errorCategoria').innerHTML = null
+        }
+    })
     $('price').addEventListener('blur', () => {
         if (!$('price').value.trim()) {
             $('price').classList.add('is-invalid')
@@ -42,7 +51,7 @@ window.addEventListener('load', () => {
             $('price').classList.add('is-valid')
             $('errorPrice').innerHTML = null 
         }
-    });
+    })
     $('stock').addEventListener('blur', () => {
         if (!$('stock').value.trim()) {
             $('stock').classList.add('is-invalid')
@@ -52,7 +61,7 @@ window.addEventListener('load', () => {
             $('stock').classList.add('is-valid')
             $('errorStock').innerHTML = null
         }
-    });
+    })
     $('cuotas').addEventListener('blur', () => {
         if (!$('cuotas').value.trim()) {
             $('cuotas').classList.add('is-invalid')
@@ -62,7 +71,7 @@ window.addEventListener('load', () => {
             $('cuotas').classList.add('is-valid')
             $('errorCuotas').innerHTML = null
         }
-    });
+    })
     // Envio del formulario 
     $('form-productEdit').addEventListener('submit', e => {
         e.preventDefault()
@@ -73,7 +82,7 @@ window.addEventListener('load', () => {
             if(!elementosForm[i].value){
                 elementosForm[i].classList.add('is-invalid')
                 $('errorEmpty').innerHTML = "Los campos señalados son obligatorios"
-                let error = true
+                error = true
             }
         }
 

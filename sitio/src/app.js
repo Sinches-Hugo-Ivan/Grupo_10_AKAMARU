@@ -14,6 +14,7 @@ const localsUserCheck = require('./middlewares/localsUserCheck');
 //requiere las Rutas 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var productImg = require('./routes/api/productos');
 var productsRouter = require('./routes/products');
 
 var app = express();
@@ -42,6 +43,7 @@ app.use(localsUserCheck);
 // RUTAS
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api/products', productImg);
 app.use('/products', productsRouter);
 
 
