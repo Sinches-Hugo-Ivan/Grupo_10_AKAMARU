@@ -33,8 +33,8 @@
             <td>$<%= producto.price %></td>
             <td><img class = "img-product-admin" src="/images/<%= producto.imagenes[0].name %>" alt=""></td>
             <td class = "tdsize">
-                <form action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                    <button type="submit" class="action-button delete"><i class="fas fa-trash-alt"> </i> Eliminar</button>
+                <form action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" id="formDelete<%=producto.id%>" style="display: inline-flex">
+                    <button onclick="confirmRemove(event,document.querySelector('#formDelete<%=producto.id%>'))" type="submit" class="action-button delete"><i class="fas fa-trash-alt"> </i> Eliminar</button>
                 </form>
             </td>
             <td class = "tdsize">
@@ -54,6 +54,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/javascripts/confirmRemove.js"></script>
 </body>
 </html>
