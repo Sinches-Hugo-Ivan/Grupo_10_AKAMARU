@@ -16,6 +16,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productImg = require('./routes/api/productos');
 var productsRouter = require('./routes/products');
+var peliculasRouter = require('./routes/peliculas');
 
 var app = express();
 
@@ -45,6 +46,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/products', productImg);
 app.use('/products', productsRouter);
+app.use('/peliculas', peliculasRouter);
 
 
 // catch 404 and forward to error handler

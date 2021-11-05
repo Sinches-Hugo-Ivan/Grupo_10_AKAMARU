@@ -12,52 +12,44 @@
                     <li><a href="/" class="enlaces">Inicio</a></li>
                     <li><a href="/products" class="enlaces">Productos</a>
                         <ul class="submenu">
-                            <% categorias.forEach(categoria=> { %>
-                                <li><a href="/products/categorias/<%=categoria.id%>" class="enlaces">
-                                        <%=categoria.name%>
-                                    </a></li>
-                                <% }) %>
+                            <% categorias.forEach(categoria => { %>
+                                <li><a href="/products/categorias/<%=categoria.id%>" class="enlaces"><%=categoria.name%></a></li>
+                              <% }) %>
                         </ul>
                     </li>
                     <li><a href="/users/nosotros" class="enlaces">Nosotros</a></li>
                     <li><a href="/users/faq" class="enlaces">FAQ</a></li>
+                    <li><a href="/peliculas/cine" class="enlaces">Cine</a></li>
                     <ul class="enlaces-resp">
                         <li><a href="/users/login" class="enlaces"><b>Iniciar sesión</b></a></li>
                         <li><a href="/users/register" class="enlaces"><b>Registrate</b></a></li>
-                        <li><a href="/users/cart" class="enlaces menu-perfil"><b>Carrito</b></a></li>
+                        <li><a href="/users/cart" class="enlaces"><b>Carrito</b></a></li>
                     </ul>
                 </ul>
             </div>
 
             <div id="buscar" class="buscador">
-                <form action="/products/search" class="d-flex" method="GET">
-                    <input type="search" class="form-control-search me-2" placeholder="Voy a tener suerte"
-                        name="search">
-                    <button type="submit" class="btn btn-outline-primary">Buscar</button>
+                <form action="/products/search" class="d-flex" method="GET" >
+                    <input type="search" class="form-control-search me-2" placeholder="Voy a tener suerte" name="search">
+                    <button type="submit" class= "btn btn-outline-primary" >Buscar</button>
                 </form>
             </div>
             <!-- i c o n o s -->
             <div class="nav-right">
                 <ul class="menu-icons">
-                    <li><a onclick='mostrar()' type="button" class="icons"><i class="fas fa-search"></i></a></li>
+                    <li><a onclick = 'mostrar()' type="button" class="icons"><i class="fas fa-search"></i></a></li>
+                    <li><a href="/users/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
                     <% if (locals.userLogin){ %>
-                        <li><a href="/users/cart" class="icons" data-bs-toggle="modal"
-                                data-bs-target="#modal-carrito"><i class="fas fa-shopping-cart"></i></a></li>
-                        <li><a class="visible" href="/"><img class="icon-foto-perfil"
-                                    src="/images/users/<%= locals.userLogin.imagen %>" alt=""></a>
-                            <ul class="ul-session">
-                                <li><a href="/users/vistaPerfil" class="submenu-perfil"><img
-                                            class="icon-foto-perfil-submenu"
-                                            src="/images/users/<%= locals.userLogin.imagen %>" alt="">
-                                        <%= locals.userLogin.name %>
-                                    </a></li>
+                        <li><a class = "visible" href="/" ><img class = "icon-foto-perfil" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""></a>
+                            <ul class = "ul-session">
+                                <li><a href="/users/vistaPerfil" class="submenu-perfil"><img class = "icon-foto-perfil-submenu" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""><%= locals.userLogin.name %></a></li>
                                 <li><a href="/users/edituser" class="menu-perfil">Editar Perfil</a></li>
-                                <li><a href="/users/logout" class="menu-perfil">Cerrar sesion</a></li>
+                                <li><a href="/users/logout" class="menu-perfil" >Cerrar sesion</a></li>
                             </ul>
                         </li>
-                        <% } else{%>
-                            <li><a href="/users/login" class="icons"><i class="fas fa-user"></i></a></li>
-                            <% } %>
+                    <% } else{%>
+                        <li><a href="/users/login" class="icons"><i class="fas fa-user"></i></a></li>
+                    <% } %>
                 </ul>
             </div>
 
@@ -68,49 +60,5 @@
         </nav>
     </div>
 
-    <script src="/javascripts/mostrarSearch.js"></script>
+    <script src = "/javascripts/mostrarSearch.js"></script>
 </header>
-<aside>
-    <div class="modal fade mt-5" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" id="miCarrito">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Mi carrito</h5>
-                </div>
-                <div class="modal-body" id="lista-carrito">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead id="cart-head">
-                                <tr>
-                                    <th colspan="3">Producto</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">SubTotal</th>
-                                </tr>
-                            </thead>
-                            <tfoot id="cart-footer">
-                                <tr>
-                                    <th colspan="4" class="text-end" id="totaltitle">TOTAL:</th>
-                                    <th>
-                                        <h5 id="total"></h5>
-                                    </th>
-                                </tr>
-                            </tfoot>
-                            <tbody>
-                                <span id="cart-empty" class="text-danger">El carrito esta vacio</span>
-                            </tbody>
-
-                        </table>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-danger p-1" id="btn-delete-cart">Eliminar
-                        carrito</button>
-                    <button type="button" class="btn btn-sm btn-success p-1" data-bs-dismiss="modal">Continuar con la
-                        compra</button>
-                    <a href="/compra" class="btn btn-sm btn-primary p-1" id="btn-next-buy"> Finalizar compra</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="./javascripts/carrito.js"></script>
-</aside>
