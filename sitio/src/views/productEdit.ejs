@@ -25,12 +25,12 @@
             </div>
             <div class="mb-3">
               <label for="images" class="form-label"> Imagenes </label>
-              <div id="preview" class="mb-3 d-flex justify-content-between">
+             <div id="preview" class="contenedor-imgs">   <!-- mb-3 d-flex justify-content-between --> 
                 <% producto.imagenes.forEach((imagen,index)=> { %>
-                  <div class="w-25">
-                    <img class="w-100 h-100" src="/images/<%= imagen.name %> " alt="">
-                    <div>
-                      <a onclick="deleteImages('<%=imagen.id%>')" class="btn btn-danger p-1">Eliminar</a>
+                  <div class="div-img">
+                    <img class="imagen-edit"  src="/images/<%= imagen.name %> " alt="">
+                    <div class = "div-eliminar-edit">
+                      <a onclick="deleteImages('<%=imagen.id%>')" class="btn-img-edit">Eliminar</a>
                     </div>
                   </div>
                   <% }) %>
@@ -38,7 +38,11 @@
 
             </div>
 
-
+            <div class="mb-3 d-flex justify-content-around m-5">
+              <label for="images" class="btn-add-edit">Agregar Imagenes</label><!-- btn btn-outline-success btn- p-1 -->
+              <input hidden type="file" class="form-control" id="images" name="images" accept="images/*"
+                onchange="addImages('<%=producto.id%>',this.files)" multiple>
+            </div>
             <div class="mb-3">
               <label for="description">Descripción</label>
               <textarea class="form-control <%=locals.errors && errors.description ? 'is-invalid' : null %>"
@@ -84,11 +88,8 @@
                 <%= locals.errors && locals.errors.cuotas ? errors.cuotas.msg : null %>
               </span>
             </div>
-            <div class="mb-3 d-flex justify-content-around m-5">
-              <label for="images" class="btn btn-outline-success btn- p-1">Agregar Imagenes</label>
-              <input hidden type="file" class="form-control" id="images" name="images" accept="images/*"
-                onchange="addImages('<%=producto.id%>',this.files)" multiple>
-            </div>
+            <!-- aca boton agregar -->
+
             <div>
               <span id="errorImages" class="text-danger small">
                 <%= locals.errors && locals.errors.images ? errors.images.msg : null %>

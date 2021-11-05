@@ -153,7 +153,23 @@ header ul a {
 #buscar{
     display: none;
 }
-
+.input-bscar{
+    margin-left:5px ;
+    color:grey;
+    border-top-left-radius:35px;
+    border-bottom-left-radius:35px;
+    padding: 5px 14px;
+    border:none;
+    box-shadow: 0px 2px 6px 0px #777;
+}
+.boton-buscar{
+    box-shadow: 0px 2px 6px 0px #777;
+    border-top-right-radius:35px;
+    border-bottom-right-radius:35px;
+    color:grey;
+    padding: 5px 14px;
+    border:none;
+}
 
 .form-control-search{
    width: 300px;
@@ -198,13 +214,13 @@ header ul a {
     }
     .ul-session{
         margin-top: 7px;
-        background-color: #fff;
+        /* background-color: #fff; */
         border-radius:1px;
         right: 5px;
         display: block;
         position: absolute;
         width: 170px;
-        height: 155px;
+        /* height: 155px; */
         padding: 0;
         visibility: hidden;
         display: block;
@@ -215,6 +231,7 @@ header ul a {
     }
 
     .submenu-perfil{
+        background-color: #fff;
         display: block;
         font-size: 16px;
         padding:8px;
@@ -222,11 +239,13 @@ header ul a {
         height: 100%;
     }
     .menu-perfil{
+        background-color: #fff;
         display: block;
         font-size: 16px;
         padding:12px;
         width: 170px;
         height: 100%;
+        /* box-shadow: 0px 0px 6px 1px #d3d3d3; */
     }
     .menu-perfil:hover{
         background-color: #eeeeee;    

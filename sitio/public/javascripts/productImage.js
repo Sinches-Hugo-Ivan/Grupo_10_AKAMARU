@@ -3,10 +3,10 @@ const showPreview = array => {
     preview.innerHTML = null;
     array.forEach((images,index) => {
         preview.innerHTML +=
-        ` <div class="w-25">
-                <img class="w-100 h-100" src="/images/${images.name}" alt="" multiple />
+        ` <div class="div-img">
+                <img class="imagen-edit" src="/images/${images.name}" alt="" multiple />
                 <div>
-                    <a onclick="deleteImages('${images.id}')" class="btn btn-danger p-1">Eliminar</a>
+                    <a onclick="deleteImages('${images.id}')" class="btn-img-edit">Eliminar</a>
                 </div>
             </div> `
     });

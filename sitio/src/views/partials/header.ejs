@@ -30,8 +30,8 @@
 
             <div id="buscar" class="buscador">
                 <form action="/products/search" class="d-flex" method="GET" >
-                    <input type="search" class="form-control-search me-2" placeholder="Voy a tener suerte" name="search">
-                    <button type="submit" class= "btn btn-outline-primary" >Buscar</button>
+                    <input type="search" class="input-bscar" placeholder="Buscar" name="search">
+                    <button type="submit" class= "boton-buscar" >Buscar</button>
                 </form>
             </div>
             <!-- i c o n o s -->
@@ -45,7 +45,12 @@
                             <ul class = "ul-session">
                                 <li><a href="/users/vistaPerfil" class="submenu-perfil"><img class = "icon-foto-perfil-submenu" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""><%= locals.userLogin.name %></a></li>
                                 <li><a href="/users/edituser" class="menu-perfil">Editar Perfil</a></li>
+                                <% if (locals.userLogin && locals.userLogin.rol === 'admin' ) {%>
+                                    <li ><a class="menu-perfil" href="/products/vistaAdmin">Administrador</a></li>
+                                        <!-- style = "background-color: #fff;padding: 10px 24px 10px 1px; margin-top:0px;" -->
+                                <%}%>
                                 <li><a href="/users/logout" class="menu-perfil" >Cerrar sesion</a></li>
+
                             </ul>
                         </li>
                     <% } else{%>
