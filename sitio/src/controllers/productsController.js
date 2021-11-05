@@ -153,11 +153,7 @@ module.exports = {
                         id: req.params.id
                     }
                 },
-                Promise.all([categorias, producto])
-            ).then([categorias, producto], () => res.redirect('/products/vistaAdmin', {
-                categorias,
-                producto
-            }))
+            ).then(() => res.redirect('/products/vistaAdmin'))
                 .catch(error => console.log(error))
         }
         else {

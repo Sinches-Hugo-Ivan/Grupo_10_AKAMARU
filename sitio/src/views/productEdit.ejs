@@ -35,19 +35,10 @@
                   </div>
                   <% }) %>
               </div>
-              <div class="mb-3 d-flex justify-content-around m-5">
-                <label for="images" class="btn btn-outline-success btn- p-1">Agregar Imagenes</label>
-                <input hidden type="file" class="form-control" id="images" name="images" accept="images/*"
-                  onchange="addImages('<%=producto.id%>',this.files)" multiple>
-              </div>
+
             </div>
 
 
-            <div>
-              <span id="errorImages" class="text-danger small">
-                <%= locals.errors && locals.errors.images ? errors.images.msg : null %>
-              </span>
-            </div>
             <div class="mb-3">
               <label for="description">Descripción</label>
               <textarea class="form-control <%=locals.errors && errors.description ? 'is-invalid' : null %>"
@@ -91,6 +82,16 @@
                 id="cuotas" name="cuotas" value="<%= producto.cuotas %>">
               <span id="errorCuotas" class="text-danger small">
                 <%= locals.errors && locals.errors.cuotas ? errors.cuotas.msg : null %>
+              </span>
+            </div>
+            <div class="mb-3 d-flex justify-content-around m-5">
+              <label for="images" class="btn btn-outline-success btn- p-1">Agregar Imagenes</label>
+              <input hidden type="file" class="form-control" id="images" name="images" accept="images/*"
+                onchange="addImages('<%=producto.id%>',this.files)" multiple>
+            </div>
+            <div>
+              <span id="errorImages" class="text-danger small">
+                <%= locals.errors && locals.errors.images ? errors.images.msg : null %>
               </span>
             </div>
             <button class="btn btn-primary" type="submit">Guardar</button>

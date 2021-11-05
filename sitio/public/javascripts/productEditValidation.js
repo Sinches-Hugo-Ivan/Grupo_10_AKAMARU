@@ -78,7 +78,7 @@ window.addEventListener('load', () => {
         let elementosForm = $('form-productEdit').elements;
         let error = false;
 
-        for (let i = 0; i < elementosForm.length - 1; i++) {
+        for (let i = 0; i < elementosForm.length - 2; i++) {
             if(!elementosForm[i].value){
                 elementosForm[i].classList.add('is-invalid')
                 $('errorEmpty').innerHTML = "Los campos señalados son obligatorios"
