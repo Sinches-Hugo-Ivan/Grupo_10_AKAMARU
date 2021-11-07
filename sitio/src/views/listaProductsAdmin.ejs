@@ -12,12 +12,30 @@
     <main class = "main">
     <h3 class = "tituloAdmin">Bienvenido al módulo administrador</h3>
 
-    <div class="buttonAdd">
-        <a href="/products/add" class="action-buttonAdd"><i class="far fa-plus-square"></i> Agregar producto</a>
+    <div class="contendor-botonAgregar">
+        <!-- b o t o n    a g r e g a r -->
+        <div class="buttonAdd">
+            <a href="/products/add" class="action-buttonAdd"><i class="far fa-plus-square"></i> Agregar producto</a>
+        </div>
     </div>
 
-    
-    <table class = "tablaProducts">
+    <!-- <div class = "contenedor-admin"> -->
+        <!-- b u s c a r -->
+        <!-- <div id="buscador-admin" class="buscador-admin">
+                <input type="search" class="seachAdmin" placeholder="Buscar Producto" id="search-admin">
+                <button type="buttom" class= "btn-admin" id = "buttom-search-admin"><i class="fas fa-search"></i></button>
+        </div> -->
+        <!-- p a g i n a d o r -->
+        <!-- <div class = "contenedor-paginador">
+            <nav aria-label="Page navigation example">
+                <ul id = "caja-paginador" class="pagination">
+              
+                </ul>
+            </nav>
+        </div>
+    </div> -->
+
+   <table class = "tablaProducts">
     <thead>
         <tr>
             <th>Nombre</th>
@@ -27,7 +45,8 @@
             <th></th>
         </tr>
     </thead>
-    <% productos.forEach(producto => { %>
+    <!-- <tbody id = "tabla-productos"></tbody> -->
+        <% productos.forEach(producto => { %>
         <tr>
             <td><%= producto.name %></td>
             <td>$<%= producto.price %></td>
@@ -42,11 +61,13 @@
                 
         </tr>
         <% }) %>
+
 </table>
     </main>
 
     <!-- Footer -->
     <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/scripts.ejs') %>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -55,6 +76,8 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/javascripts/confirmRemove.js"></script>
+        <script src="/javascripts/confirmRemove.js"></script>
+    <!-- <script src = "/javascripts/search.js"></script> -->
+
 </body>
 </html>

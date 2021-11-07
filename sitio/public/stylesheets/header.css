@@ -319,6 +319,16 @@ header ul a {
 
 /* d e s k t o p */
 @media (min-width:1024px) {
+    .cantidad-carrito{
+        /* display: none; */
+        color:#fff;
+        position:absolute;
+        padding: 1px 7px;
+        background-color: #2271b3;
+        border-radius: 80%;
+       right: 0px;
+       top:15px;
+    }
     
     .enlaces {
         display: inline;

@@ -123,6 +123,8 @@ $('form-register').addEventListener('submit', e => {
     let error = false;
     for (let i = 0; i < elementos.length - 1; i++) { 
         if(!elementos[i].value){
+            console.log("error")
+            console.log(elementosForm[i].value)
             elementos[i].classList.add('is-invalid')
             $('error-campos-vacios').innerHTML = 'Todos los campos son obligatorios';
             error = true

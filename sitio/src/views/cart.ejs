@@ -9,69 +9,45 @@
       <!-- h e a d e r -->
 <%- include('./partials/header.ejs') %>
 
+
     <main>
         <div class="carrito">
             <div class="titulos">
                 <h3 class="left-title">Carrito de compras</h3>
-                <div class="right-title">
+                <!-- <div class="right-title">
                     <p class="cantidad"><b>Cantidad</b></p>
                     <p class="precio"><b>Precio</b></p>
-                </div>
+                </div> -->
+ 
 
             </div>
-            <article class="art-carrito">
-                <div class="img-articulo">
-                    <img src="/images/Gatito.jpg" alt="producto">
+
+                <h3 class = "cart-empty">El carrito no tiene productos agregados</h3>
+
+            <table class = "tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th style = "color:#fff;">Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>SubTotal</th>
+                    </tr>
+                </thead>
+                <tbody id = "tabla-carrito"></tbody>
+            </table>
+            <div class="contenedor-btns-carrito">
+                <div>
+                
+                    <button class="actualizar"><a class = "seguir-comprando" href = "/products">Seguir comprando</a></button>
+                    <button type = "buttom"class="vaciar" onclick="empty()">Vaciar cesta</button>
                 </div>
-
-                <p class="titulo-prod">Producto</p>
-
-                <i class="fas fa-trash-alt"></i>
-
-    
-                <div class="cant-input">
-                    <input type="button" value="-" class="menos"><input type="number" class="cantidad-prod" name="cantidad-prod"
-                     min="1" max="100"><input type="button" value="+" class="mas">
-                </div>
-
-                <p class="precio-prod">$0000,00</p>
-            </article>
-
-            <article class="art-carrito">
-                <div class="img-articulo">
-                    <img src="/images/Gatito.jpg" alt="producto">
-                </div>
-
-                <p class="titulo-prod">Producto</p>
-
-                <i class="fas fa-trash-alt"></i>
-
-            
-            <div class="cant-input">
-                 <button class="input-boton">-</button><input type="number" class="cantidad-prod" name="cantidad-prod"
-                 min="1" max="100"><button class="input-boton">+</button>
             </div>
-
-                <p class="precio-prod">$0000,00</p>
-            </article>
-            
-            <section class="envio">
-                <div class="cp-envio">
-                <i class="fas fa-truck"></i>
-                <p class="envio-cp">Envío a C.P. 0000, Buenos Aires</p>
-                <p class="gratis">Gratis</p>
-            </div>
-
-                <div class="act-vac-cesta">
-                    <button class="actualizar">Actualizar cesta</button>
-                    <button class="vaciar">Vaciar cesta</button>
-                </div>
-            </section>
 
             <section class="finalizar-compra">
                 <div class="subt-precio">
-                    <p class="subtotal"><b>Subtotal:</b></p>
-                    <p class="precio">$0000,00</p>
+                    <p class="subtotal"><b>Total:</b></p>
+                    <p class="precio"></p>
                 </div>
 
             <div class="fin-compra-boton">
@@ -84,6 +60,6 @@
 
 <!-- Footer -->
 <%- include('./partials/footer.ejs') %>
-
+<%- include('./partials/scripts.ejs') %>
 </body>
 </html>

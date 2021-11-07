@@ -16,7 +16,6 @@ const confirmRemove = (event ,form) => {
           'El producto ha sido eliminado con éxito.',
           'success'
         )
-       
       }
     })
 

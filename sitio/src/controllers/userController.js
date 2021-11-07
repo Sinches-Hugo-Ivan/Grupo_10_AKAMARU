@@ -71,6 +71,7 @@ module.exports = {
                     genero : user.genre,
                     fecha : user.date 
                 }
+
                 console.log(req.session.userLogin);
                 res.locals.userLogin = req.session.userLogin;
                 console.log(res.locals.userLogin);
@@ -82,7 +83,43 @@ module.exports = {
                 }else{
                     req.session.userLogin['cookie'] = "off"
                 };
-                return res.redirect('vistaPerfil')
+
+                req.session.cart = []
+
+                db.Order.findOne({
+                        where : {
+                            userId : req.session.userLogin.id,
+                            status: "pending"
+                        },
+                        include : [
+                            {association : 'carts',
+                            include : [
+                                    {association : 'product',
+                                include : ['category','imagenes']
+                                    }
+                                ]    
+                            }
+                        ]
+                    })
+                    .then(order =>{
+                        if(order){
+                            order.carts.forEach(item => { 
+                                let product = {
+                                    id: item.productId,
+                                    nombre: item.product.name,
+                                    imagen: item.product.imagenes[0].name,
+                                    categoria: item.product.category.name,
+                                    cantidad: item.quantity,
+                                    precio: item.product.price,
+                                    total: item.product.price * item.quantity,
+                                    orderId: order.id
+                                }
+                                req.session.cart.push(product)
+                            });
+                        }
+                        return res.redirect('vistaPerfil')
+                    }).catch(error => console.log(error))
+                // return res.redirect('vistaPerfil')
             })
 
         }else{
@@ -95,6 +132,7 @@ module.exports = {
             })
         }
     },
+
 
     cerrarSession: (req,res) => {
         req.session.destroy(); //destruye la sesion

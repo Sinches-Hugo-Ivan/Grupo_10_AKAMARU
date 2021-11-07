@@ -3,7 +3,6 @@ const router = express.Router();
 const path = require('path');
 
 var { create, deleteImages, addImages } = require('../../controllers/api/productImages');
-
 const multer = require("multer");
 
 const storage = multer.diskStorage({

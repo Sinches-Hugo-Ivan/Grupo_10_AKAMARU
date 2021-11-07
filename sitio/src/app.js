@@ -48,6 +48,10 @@ app.use('/api/products', productImg);
 app.use('/products', productsRouter);
 app.use('/peliculas', peliculasRouter);
 
+var productsApiRouter = require('./routes/api/products');
+app.use('/api/products',productsApiRouter);
+app.use('/api/carts',require('./routes/api/carts'));
+// app.use('/api/users',require('./routes/api/users'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

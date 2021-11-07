@@ -6,17 +6,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        quantity: {
-            type: dataTypes.INTEGER,
-            // dafaultValue: null
-        },
-        total: {
-            type: dataTypes.INTEGER,
-        },
-        fechaCompra : {
-            type : dataTypes.DATE,
-        },
-        mediosDePagoId : {
+        orderId:{
             type: dataTypes.INTEGER,
         },
         userId : {
@@ -25,6 +15,10 @@ module.exports = (sequelize, dataTypes) => {
         productId : {
             type: dataTypes.INTEGER,
         },
+        quantity: {
+            type: dataTypes.INTEGER,
+        },
+
     };
     let config = {
         tableName: 'cart',
@@ -32,5 +26,16 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Cart = sequelize.define(alias, cols, config)
 
+    Cart.associate = models => {
+        Cart.belongsTo(models.Product,{
+            as :'product',
+            foreignKey : 'productId'
+        })
+        Cart.belongsTo(models.Order,{
+            as :'orders',
+            foreignKey : 'orderId',
+            onDelete : 'cascade'
+        })
+    }
     return Cart;
 }

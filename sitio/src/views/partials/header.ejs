@@ -39,8 +39,10 @@
                 <ul class="menu-icons">
                     <li><a onclick = 'mostrar()' type="button" class="icons"><i class="fas fa-search"></i></a></li>
                     <% if (locals.userLogin){ %>
-                        <li><a href="/users/cart" class="icons" data-bs-toggle="modal"
-                            data-bs-target="#modal-carrito"><i class="fas fa-shopping-cart"></i></a></li>
+                        <!-- icono carrito -->
+                        <li style = "position:relative;"><a href="/users/cart" class="icons"><i class="fas fa-shopping-cart"></i></a></li>
+                        <!-- <li><a href="/users/cart" class="icons" data-bs-toggle="modal"
+                            data-bs-target="#modal-carrito"><i class="fas fa-shopping-cart"></i></a></li> -->
                         <li><a class = "visible" href="/" ><img class = "icon-foto-perfil" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""></a>
                             <ul class = "ul-session">
                                 <li><a href="/users/vistaPerfil" class="submenu-perfil"><img class = "icon-foto-perfil-submenu" src= "/images/users/<%= locals.userLogin.imagen %>" alt=""><%= locals.userLogin.name %></a></li>
@@ -110,5 +112,4 @@
             </div>
         </div>
     </div>
-    <script src="./javascripts/carrito.js"></script>
 </aside>

@@ -4,17 +4,37 @@
 }
 
 .tablaProducts {
+    width: 80%;
     border: 1px solid grey;
-    margin: 50px auto 200px;
+    margin: 0px auto 200px;
+    box-shadow: 0px 4px 15px 2px #777;
+}
+.contendor-botonAgregar{
+    width: 80%; 
+    height:100%;
+    margin: 0px auto 20px;
+    display:grid;
+    justify-content:start;
+}
+.contenedor-admin{
+    width: 80%; 
+    height:100%;
+    margin: auto;
 }
 
+
+/* tabla de productos */
 .tablaProducts thead {
     border: 1px solid grey;
+}
+.titulosTabla{
+    font-size: 14px;
+    color:#fff;
 }
 
 .tablaProducts thead tr th {
     padding: 10px;
-    background-color: seagreen;
+    background-color: #0547A6;
 }
 
 .tablaProducts tr td {
@@ -22,32 +42,70 @@
     border-bottom: 1px solid grey;
     padding: 10px;
 }
+.tablaProducts tr:hover {
+    background-color: #dedede;
+}
+
+
+.buscador-admin {
+    /* display: none; */
+    justify-content: center;
+    width: 100%;
+}
+
+.seachAdmin{
+    padding:5px;
+}
+.btn-admin{
+    border:1px solid grey;
+    padding:5px 10px;
+}
 
 .buttonAdd{
     text-align: center;
 
 }
-
 .action-buttonAdd {
-    color: steelblue;
-    padding: 10px;
-    border-radius: 30px;
-    border: 1px solid steelblue;
+    color: #fff;
+    background-color: #039AD1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.action-buttonAdd:hover {
+    transition:0.5s;
+    color:#fff;
+    background-color:#026E95;
+}
+
+.fa-plus-square{
+    font-size: 14px;
+    cursor: pointer;
 }
 
 
-.fa-trash-alt {
-    color: red;
+.nombre-producto{
+    font-size: 12px;
 }
 
-.fa-edit {
-    color: steelblue;
+.fa-trash{
+    /* display: none; */
+    color:#fff;
+    font-size: 13px;
+    cursor: pointer;
 }
+
+.fa-edit{
+    /* display: none; */
+    color: #fff;
+    font-size: 14px;
+}
+
 
 .tablaProducts .img-product-admin {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     margin: center;
     padding: 5px;
 }
@@ -55,19 +113,100 @@
 .tablaProducts .tdsize {
     width: 140px;
     padding: 10px;
-    border-radius: 30px;
 }
 
 .tablaProducts .delete {
-    color: red;
+    display: none;
+    color: #fff;
     padding: 10px;
-    border: 1px solid red;
-    border-radius: 30px;
+    background-color: #D11B1E;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.tablaProducts .delete:hover {
+    transition:0.5s;
+    background-color: #580C0D ;
 }
 
 .tablaProducts .edit {
-    color: steelblue;
-    padding: 12px;
-    border: 1px solid steelblue;
-    border-radius: 30px;
+    background-color: #008f39;
+    padding: 10px;
+    border: none;  border-radius: 5px;
+    cursor: pointer;
+}
+.tablaProducts .edit:hover {
+    transition:0.5s;
+    background-color: #016629;
+    color:#fff;
+}
+.edit{
+    display: none;
+    font-size: 18px;
+    color: #fff;
+}
+.edit-movil{
+    display:block;
+    background-color: #008f39;
+    padding: 6px 8px;
+    border: none;  border-radius: 5px;
+    cursor: pointer;
+    margin:auto;
+    width: 30px;
+}
+.delete-movil{
+    display:block; 
+    color: #fff;
+    padding: 6px 8px;
+    background-color: #D11B1E;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+@media (min-width:530px) { 
+    .btn-admin{
+        border:1px solid grey;
+        padding:5px 20px;
+    }
+    .buscador-admin {
+        display: block;
+        }
+    .contenedor-admin{
+        display: flex;
+        justify-content:space-between;
+    }
+}
+@media (min-width:768px) {
+    .tablaProducts .img-product-admin {
+        width: 80px;
+        height: 80px;
+    }
+    .nombre-producto{
+        font-size: 16px;
+    }
+
+@media (min-width:1024px) {
+    }
+    .edit{
+        display:block;
+        font-size: 18px;
+        width: 100px;
+    }
+    .edit-movil{
+        display:none;
+    }    
+    .tablaProducts .delete{
+        display:block;
+        font-size: 18px;
+    }
+    .delete-movil{
+        display:none;  
+    }
+    .fa-trash{
+        display: inline;
+    }
+    .fa-edit{
+        display: inline;
+    }
 }
