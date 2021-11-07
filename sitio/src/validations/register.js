@@ -1,4 +1,5 @@
-const { body } = require('express-validator'); //Destructuring
+const { check, body } = require('express-validator'); //Destructuring
+const db = require('../database/models');
 
 module.exports = [
     body("firstName")
@@ -6,10 +7,24 @@ module.exports = [
     
     body("lastName")
             .notEmpty().withMessage("Debes ingresar un apellido"),
-    
-    body("email")
+
+    check("email")
             .notEmpty().withMessage("Debes ingresar un e-mail")
             .isEmail().withMessage("El mail ingresado no es válido"),
+
+    body("email")
+            .custom(value => {
+                console.log(value)
+                return db.User.findOne({
+                    where : {
+                        email : value
+                    }
+                }).then(user => {
+                    if(user){
+                        return Promise.reject('El email ya está registrado')
+                    }
+                })
+            }),
     
     body("password")
             .notEmpty().withMessage("Debes ingresar una contraseña")

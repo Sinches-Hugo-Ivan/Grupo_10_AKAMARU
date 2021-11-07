@@ -20,7 +20,6 @@ window.addEventListener('load', () => {
             $('firstName').classList.add('is-invalid')
             $('error-firstName').innerHTML = "El nombre es obligatorio"
         }else if($('firstName').value.length < 2){
-            console.log("entro");
             $('firstName').classList.add('is-invalid')
             $('error-firstName').innerHTML = "El nombre debe tener mas de 1 caracter"
         }else if(!regExString.test($('firstName').value)){
@@ -116,25 +115,119 @@ window.addEventListener('load', () => {
 
  /* deshabilitar formulario */
  
-$('form-register').addEventListener('submit', e => {
-    e.preventDefault();
+    $('form-register').addEventListener('submit', e => {
+        e.preventDefault();
 
-    let elementos = $('form-register').elements;
+    // let elementos = $('form-register').elements;
     let error = false;
-    for (let i = 0; i < elementos.length - 1; i++) { 
-        if(!elementos[i].value){
-            console.log("error")
-            console.log(elementosForm[i].value)
-            elementos[i].classList.add('is-invalid')
-            $('error-campos-vacios').innerHTML = 'Todos los campos son obligatorios';
-            error = true
-        }
-    }
+    // for (let i = 0; i < elementos.length - 1; i++) { 
+    //     if(!elementos[i].value){
+    //         console.log("error")
+    //         console.log(elementos[i])
+    //         console.log(elementos[i].value)
+    //         elementos[i].classList.add('is-invalid')
+    //         $('error-campos-vacios').innerHTML = 'Todos los campos son obligatorios';
+    //         error = true
+    //     }
+    // }
+
+            if($('firstName').value.length < 2){
+                $('firstName').classList.add('is-invalid')
+                $('error-firstName').innerHTML = "el nombre debe tener mas de 1 caracter"
+                error = true
+            }
+
+        
+
+            if(!$('firstName').value.trim()){
+                $('firstName').classList.add('is-invalid')
+                $('error-firstName').innerHTML = "El nombre es obligatorio"
+                error = true
+            }else if($('firstName').value.length < 2){
+                $('firstName').classList.add('is-invalid')
+                error = true
+                $('error-firstName').innerHTML = "El nombre debe tener mas de 1 caracter"
+            }else if(!regExString.test($('firstName').value)){
+                $('firstName').classList.add('is-invalid')
+                $('error-firstName').innerHTML = "Debe contener solo letras"
+                error = true
+            }
+
+
+
+            if(!$('lastName').value.trim()){
+                $('lastName').classList.add('is-invalid')
+                $('error-lastName').innerHTML = "El apellido es obligatorio"
+                error = true
+            }else if($('lastName').value.length < 2){
+                console.log("entro");
+                $('lastName').classList.add('is-invalid')
+                $('error-lastName').innerHTML = "El apellido debe tener mas de 1 caracter"
+                error = true
+            }else if(!regExString.test($('lastName').value)){
+                $('lastName').classList.add('is-invalid')
+                $('error-lastName').innerHTML = "Debe contener solo letras"
+                error = true
+            }
+
+
+            if(!$('email').value.trim()){
+                $('email').classList.add('is-invalid')
+                $('error-email').innerHTML = "El email es obligatorio"
+                error = true
+            }else if(!regExEmail.test($('email').value)){
+                $('email').classList.add('is-invalid')
+                $('error-email').innerHTML = "Debes ingresar un email válido"
+                error = true
+            }
+
+
+
+
+            if(!$('password').value.trim()){
+                $('password').classList.add('is-invalid')
+                $('error-password').innerHTML = "La contraseña es obligatoria"
+                error = true
+            }else if(!regExPass.test($('password').value)){
+                $('password').classList.add('is-invalid')
+                $('error-password').innerHTML = "La contraseña debe contener entre 8 y 12 caracteres, un numero y una minuscula"
+                error = true
+            }
+
+
+            if(!$('password2').value.trim()){
+                $('password2').classList.add('is-invalid')
+                $('error-password2').innerHTML = "Debe repetir la contraseña"
+                error = true
+            }else if($('password').value.trim() !== $('password2').value.trim()){
+                $('password2').classList.add('is-invalid')
+                $('error-password2').innerHTML = "La validación de la contraseña no coincide"
+                error = true
+            }
+
+
+
+
+            if(!$('genero').value.trim()){
+                $('error-genero').innerHTML = "seleccione un genero"
+                error = true
+            }
+
+
+            if(!$('date').value.trim()){
+                $('date').classList.add('is-invalid')
+                $('error-date').innerHTML = "coloque su fecha de nacimiento en formato dia/mes/año"
+                error = true
+            }
+
+
 
     if(!error){
         $('form-register').submit()
+    }else{
+        $('error-campos-vacios').innerHTML = 'Todos los campos son obligatorios'; 
     }
 
-})
+    })
 
 })

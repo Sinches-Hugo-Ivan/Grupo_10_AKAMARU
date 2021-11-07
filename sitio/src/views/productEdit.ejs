@@ -10,19 +10,6 @@
         <div class="formulario mt-5">
           <h2>Editar <%= producto.name %>
           </h2>
-          <form action="/products/edit/<%=producto.id %>?_method=PUT" method="POST" id="form-productEdit"
-            name="form-productEdit" enctype="multipart/form-data">
-            <span id="errorEmpty" class="text-danger small">
-              <%= locals.errors && locals.errors ? errors.msg : null %>
-            </span>
-            <div class="mb-3">
-              <label for="name" class="form-label"> Nombre </label>
-              <input type="text" class="form-control <%=locals.errors && errors.name ? 'is-invalid' : null %>" id="name"
-                name="name" value="<%= producto.name %>">
-              <span id="errorName" class="text-danger small">
-                <%= locals.errors && locals.errors.name ? errors.name.msg : null %>
-              </span>
-            </div>
             <div class="mb-3">
               <label for="images" class="form-label"> Imagenes </label>
              <div id="preview" class="contenedor-imgs">   <!-- mb-3 d-flex justify-content-between --> 
@@ -35,7 +22,6 @@
                   </div>
                   <% }) %>
               </div>
-
             </div>
 
             <div class="mb-3 d-flex justify-content-around m-5">
@@ -43,6 +29,18 @@
               <input hidden type="file" class="form-control" id="images" name="images" accept="images/*"
                 onchange="addImages('<%=producto.id%>',this.files)" multiple>
             </div>
+
+
+          <form action="/products/edit/<%=producto.id %>?_method=PUT" method="POST" id="form-productEdit"
+              name="form-productEdit" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="name" class="form-label"> Nombre </label>
+                <input type="text" class="form-control <%=locals.errors && errors.name ? 'is-invalid' : null %>" id="name"
+                  name="name" value="<%= producto.name %>">
+                <span id="errorName" class="text-danger small">
+                  <%= locals.errors && locals.errors.name ? errors.name.msg : null %>
+                </span>
+              </div>
             <div class="mb-3">
               <label for="description">Descripción</label>
               <textarea class="form-control <%=locals.errors && errors.description ? 'is-invalid' : null %>"
@@ -64,6 +62,7 @@
                 <%= locals.errors && locals.errors.categoria ? errors.categoria.msg : null %>
               </span>
             </div>
+
             <div class="mb-3">
               <label for="price" class="form-label">Precio</label>
               <input type="number" class="form-control <%=locals.errors && errors.price ? 'is-invalid' : null %>"
@@ -88,6 +87,9 @@
                 <%= locals.errors && locals.errors.cuotas ? errors.cuotas.msg : null %>
               </span>
             </div>
+            <span id="errorEmpty" class="text-danger small">
+              <%= locals.errors && locals.errors ? errors.msg : null %>
+            </span>
             <!-- aca boton agregar -->
 
             <div>

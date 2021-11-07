@@ -31,7 +31,7 @@ router.get('/login',userSinLoguearse,login);
 router.post('/login',loginValidator,processLogin);
 router.get('/logout', cerrarSession);
 router.get('/register',userSinLoguearse,register); 
-router.post('/register',processRegister); // registerValidation
+router.post('/register',registerValidation,processRegister);
 router.get('/cart', cart);
 router.get('/vistaPerfil',usersCheck,vistaPerfil);
 router.get('/edituser',usersCheck,editperfil);

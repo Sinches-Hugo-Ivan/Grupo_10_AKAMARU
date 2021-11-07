@@ -176,7 +176,7 @@ module.exports = {
         let cookie = req.session.userLogin.cookie; // guardo la cookie(que puede ser on,off) para mantenerla si esta en 'on'
         console.log(req.body);
         let errors = validationResult(req);
-        const {nombre, apellido, genero, correo, fecha} = req.body;
+        const {nombre, apellido, genero, correo, fecha, rol} = req.body;
         console.log("------------")
         db.User.findOne({
             where : {
@@ -189,7 +189,7 @@ module.exports = {
                 lastname : apellido,
                 genre : genero,
                 avatar : req.file ? req.file.filename : resultado.avatar,
-                date: fecha
+                date: fecha,
             },
             {
                  where : {email : correo }
@@ -201,7 +201,8 @@ module.exports = {
                 fecha: fecha,
                 genero: genero,
                 cookie: cookie,
-                imagen: req.file ? req.file.filename : resultado.avatar
+                imagen: req.file ? req.file.filename : resultado.avatar,
+                rol:rol
 
             }
             if(req.session.userLogin.cookie === 'on'){
@@ -210,6 +211,7 @@ module.exports = {
                     maxAge: 300000 // duracion de la cookie 5 min
                 });
             }
+            console.log("update-usuario")
             console.log(req.session.userLogin)
             return res.redirect('/')
             res.redirect('/')
