@@ -6,7 +6,17 @@
   color: red !important; 
 }
 
-
+.boton-nosotros{
+  color:#373839;
+  padding:16px;
+  font-size:22px;
+  text-decoration:none;
+  display:block;
+  margin:auto;
+  border:none;
+  background-color:#fafafa;
+  
+}
 .centrado{
   margin:auto;
   display:block;
