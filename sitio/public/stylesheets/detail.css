@@ -257,6 +257,7 @@ main .product-precio-cuota .product-precio {
 /* La descripción del producto en una caja */
 
 .product-descrip {
+    width: 100%;
     min-width: 300px;
     padding: 10px;
 }
@@ -444,6 +445,8 @@ main .product-precio-cuota .product-precio {
 
 @media(min-width:1024px) {
     .contenedora {
+        width: 1100px;
+        margin:auto;
         padding: 0 60px;
     }
     .main .product-destacado-h4 {
@@ -452,5 +455,15 @@ main .product-precio-cuota .product-precio {
 
     .product-descrip {
         padding: 15px 90px;
+    }
+}
+@media(min-width:1400px) {
+    .contenedora {
+        width: 1300px;
+        margin: auto;
+    }
+    .navegacion {
+        display: block;
+        margin-left:150px;
     }
 }
